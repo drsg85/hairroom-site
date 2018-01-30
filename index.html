@@ -4,166 +4,158 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,800" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <title>HairRoom</title>
   </head>
   <body>
-    <div class="site-header">
+    <header class="site-header">
       <nav class="main-nav">
-        <div class="wrapper">
-          <div class="main-nav__wrapper">
-            <div class="logo logo--header"><img src="./img/logo.png" alt="main logo"/></div>
-            <div class="info">
-              <ul class="info__list">
-                <li class="info__item">
-                  <p class="info__address">Калининград<br>Иванникова, 12</p>
-                </li>
-                <li class="info__item"><a class="info__phone" href="tel: 523766">52<span>.</span>37<span>.</span>66</a></li>
-              </ul>
-            </div>
-            <div class="menu-icon">
-              <div class="menu-icon__middle"></div>
-            </div>
-          </div>
-          <div class="main-menu">
-            <ul class="main-menu__list"></ul>
-            <li class="main-menu__item"><a class="main-menu__link" href="##">Салон</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#services">Услуги</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#price">Прайс</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#gallery">Галлерея</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#contacts">Контакты</a></li>
-          </div>
-          <div class="franchise"><a class="button__franchise" href="franchise.html">Франшиза</a></div>
+        <div class="logo">
+          <div class="logo__img"><img src="./img/logo.png" alt="HairRoom Logo"/></div>
         </div>
+        <ul class="info__list">
+          <li>
+            <p>Калининград<br>Иванникова, 12</p>
+          </li>
+          <li><a href="tel: 523766">52<span>.</span>37<span>.</span>66</a></li>
+        </ul>
+        <div class="menu-icon">
+          <div class="menu-icon__middle"></div>
+        </div>
+        <nav class="main-menu">
+          <ul class="main-menu__list">
+            <li><a href="#Салон">Салон</a></li>
+            <li><a href="#Услуги">Услуги</a></li>
+            <li><a href="#Прайс">Прайс</a></li>
+            <li><a href="#Галлерея">Галлерея</a></li>
+            <li><a href="#Контакты">Контакты</a></li>
+          </ul>
+        </nav>
       </nav>
       <section class="hero">
-        <div class="hero__wrapper">
+        <header class="hero__header">
           <h1 class="hero__title">Ваш идеальный салон красоты</h1>
+        </header>
+        <div class="hero__content">
           <p class="hero__copy">Быть свободной значит быть разной, меняте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!</p><a class="button button--online-record" href="#">online&nbsp;запись</a>
-          <div class="hero__img"><img src="./img/women.png" alt="women"/></div>
+          <div class="hero__img"><img src="./img/women.png" alt="Hair Room девушка"/></div>
           <p class="title__description">Hair Room kaliningrad</p>
-          <div class="socials">
-            <ul class="socials__list">
-              <li class="socials__item"><a class="socials__link" href="instagram.com">instagram</a></li>
-              <li class="socials__item"><a class="socials__link" href="facebook.com">facebook</a></li>
-              <li class="socials__item"><a class="socials__link" href="vk.com">vkontakte</a></li>
-            </ul>
-          </div>
+          <ul class="socials__list">
+            <li><a href="instagram.com">instagram</a></li>
+            <li><a href="facebook.com">facebook</a></li>
+            <li><a href="vk.com">vkontakte</a></li>
+          </ul>
         </div>
       </section>
       <nav class="scroll-spy">
         <ul class="scroll-spy__list">
-          <li class="scroll__spy-item"><a class="scroll__spy-link" href="##" data-label="Салон" id="#-link">Салон</a></li>
-          <li class="scroll__spy-item"><a class="scroll__spy-link" href="#services" data-label="Услуги" id="services-link">Услуги</a></li>
-          <li class="scroll__spy-item"><a class="scroll__spy-link" href="#price" data-label="Прайс" id="price-link">Прайс</a></li>
-          <li class="scroll__spy-item"><a class="scroll__spy-link" href="#gallery" data-label="Галлерея" id="gallery-link">Галлерея</a></li>
-          <li class="scroll__spy-item"><a class="scroll__spy-link" href="#contacts" data-label="Контакты" id="contacts-link">Контакты</a></li>
+          <li><a href="#" id="#-link">Салон</a></li>
+          <li><a href="#services" id="services-link">Услуги</a></li>
+          <li><a href="#price" id="price-link">Прайс</a></li>
+          <li><a href="#gallery" id="gallery-link">Галлерея</a></li>
+          <li><a href="#contacts" id="contacts-link">Контакты</a></li>
         </ul>
       </nav>
-    </div>
+    </header>
     <section class="about">
-      <div class="wrapper">
-        <div class="about__img"></div>
-        <div class="about__wrapper">
-          <div class="about__card"><sup class="title__sup">О салоне</sup>
-            <h4 class="about__title">HAIR ROOM - салон с&nbsp;вашим характером</h4>
-            <div class="tabs">
-              <ul class="tabs__list" id="tabs" role="tablist">
-                <li class="tabs__item tabs__current" data-tab="tab-1"><a class="tabs__link">Миссия</a></li>
-                <li class="tabs__item" data-tab="tab-2"><a class="tabs__link">Подход</a></li>
-                <li class="tabs__item" data-tab="tab-3"><a class="tabs__link">Мастера</a></li>
-              </ul>
-              <div class="tabs__content tabs__current" id="tab-1">
-                <p class="about__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера - это залог упеха студии HAIR ROOM</p>
-                <p class="about__copy about__copy--mrtop">Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.</p>
-              </div>
-            </div>
-            <div class="logo logo--about">
-              <div class="logo__outline"><img src="./img/logo-white.png" alt="logo white"/></div>
+      <div class="about__img"></div>
+      <div class="about__board">
+        <header class="about__header"><sup class="title__sup">О салоне</sup>
+          <h4 class="about__title">HAIR ROOM - салон с&nbsp;вашим характером</h4>
+        </header>
+        <div class="about__content">
+          <div class="tabs">
+            <ul class="tabs__list" id="tabs" role="tablist">
+              <li class="tabs__item tabs__current" data-tab="tab-1"><a class="tabs__link">Миссия</a></li>
+              <li class="tabs__item" data-tab="tab-2"><a class="tabs__link">Подход</a></li>
+              <li class="tabs__item" data-tab="tab-3"><a class="tabs__link">Мастера</a></li>
+            </ul>
+            <div class="tabs__content tabs__current" id="tab-1">
+              <p class="about__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера - это залог упеха студии HAIR ROOM</p>
+              <p class="about__copy about__copy--mrtop">Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.</p>
             </div>
           </div>
+        </div>
+        <div class="logo logo--about">
+          <div class="logo__outline"><img src="./img/logo-white.png" alt="logo white"/></div>
         </div>
         <div class="button__wrapper"><a class="button button--pink" href="#">online Запись</a><a class="button button--ghost" href="#price">прайс-лист</a></div>
       </div>
     </section>
     <section class="services">
-      <div class="wrapper">
-        <header class="services__header">
-          <h4 class="title__sup title__sup--mrtop">Мы предлагаем</h4>
-          <h3 class="title__section">Услуги</h3>
-        </header>
-        <article class="services__card">
-          <h5 class="services__card-title">Маникюр</h5>
-          <div class="services__card-img">
-            <div class="services__card-content">
-              <p class="title__description title__description--left">Hair Room Услуги</p>
-              <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="button__wrapper button__wrapper--centerX"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-лист</a></div>
-            </div>
+      <header class="services__header">
+        <p class="title__sup title__sup--mrtop">Мы предлагаем</p>
+        <p class="title__section">Услуги</p>
+      </header>
+      <article class="services__card">
+        <header class="services__card-title">Маникюр</header>
+        <div class="services__card-img">
+          <div class="services__card-content">
+            <p class="title__description title__description--left">Hair Room Услуги</p>
+            <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
+            <div class="button__wrapper button__wrapper--centerX"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-лист</a></div>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
     </section>
     <section class="price">
-      <div class="wrapper">
-        <header class="price__header">
-          <h4 class="title__sup title__sup--white">Цены на услуги</h4>
-          <h3 class="title__section title__section--white">Прайс-лист</h3>
-        </header>
-        <div class="price__wrapper">
-          <div class="price__group">
-            <h3 class="price__group-title">Уход<br>за волосами</h3>
-            <div class="price-inner__column">
-              <table class="price__table">
-                <caption class="price__caption">кератиновое выпрямление / восстановление</caption>
-                <caption class="price__column-description">Система богата белками и аминокислотами кератина. Подходит для сильно поврежденных волос и  имеет накопительный эффект.</caption>
-                <tr>
-                  <td>короткие</td>
-                  <td><b>2000 - 2500</b> <span>руб.</span></td>
-                </tr>
-                <tr>
-                  <td>до плеч</td>
-                  <td><b>2500 - 3000</b> <span>руб.</span></td>
-                </tr>
-                <tr>
-                  <td>до лопаток</td>
-                  <td><b>3000 - 3500</b> <span>руб.</span></td>
-                </tr>
-                <tr>
-                  <td>середина спины</td>
-                  <td><b>4000 - 4500</b> <span>руб.</span></td>
-                </tr>
-              </table>
-            </div>
-            <div class="price-inner__column">
-              <table class="price__table">
-                <caption class="price__caption">Тонировка с уходом</caption>
-                <caption class="price__column-description">Большой выбор красок европейских производителей, профессиональные мастера.</caption>
-                <tr>
-                  <td>короткие</td>
-                  <td><b>1500</b> <span>руб.</span></td>
-                </tr>
-                <tr>
-                  <td>Средние</td>
-                  <td><b>2000</b> <span>руб.</span></td>
-                </tr>
-                <tr>
-                  <td>Длинные</td>
-                  <td><b>3000</b> <span>руб.</span></td>
-                </tr>
-              </table>
-            </div>
-            <div class="price-inner__column">
-              <table class="price__table">
-                <caption class="price__caption">Укладка</caption>
-                <caption class="price__column-description">Учитываем все ваши пожелания.</caption>
-                <tr>
-                  <td>Любой длины</td>
-                  <td><b>800 - 2000<b> <span>руб.</span></td>
-                </tr>
-              </table>
-            </div>
+      <header class="price__header">
+        <p class="title__sup title__sup--white">Цены на услуги</p>
+        <p class="title__section title__section--white">Прайс-лист</p>
+      </header>
+      <div class="price__content">
+        <div class="price__group">
+          <h3 class="price__group-title">Уход<br>за волосами</h3>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">кератиновое выпрямление<br>/ восстановление</caption>
+              <caption class="price__column-description">Система богата белками и аминокислотами кератина. Подходит для сильно поврежденных волос и  имеет накопительный эффект.</caption>
+              <tr>
+                <td>короткие</td>
+                <td><b>2000 - 2500</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>до плеч</td>
+                <td><b>2500 - 3000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>до лопаток</td>
+                <td><b>3000 - 3500</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>середина спины</td>
+                <td><b>4000 - 4500</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Тонировка с уходом</caption>
+              <caption class="price__column-description">Большой выбор красок европейских производителей, профессиональные мастера.</caption>
+              <tr>
+                <td>короткие</td>
+                <td><b>1500</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Средние</td>
+                <td><b>2000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Длинные</td>
+                <td><b>3000</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Укладка</caption>
+              <caption class="price__column-description">Учитываем все ваши пожелания.</caption>
+              <tr>
+                <td>Любой длины</td>
+                <td><b>800 - 2000</b> <span>руб.</span></td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
@@ -190,47 +182,61 @@
         <h4 class="gallery__title">Следите за HAIR ROOM в социальных сетях</h4>
       </header>
       <div class="gallery__subscribe">
-        <h5 class="gallery__motto">Давайте дружить</h5>
-        <div class="gallery__logo"><img src="./img/insta_logo.png" alt="insta logo"/></div>
-        <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe">Подписаться</a>
+        <h5 class="gallery__slogan">Давайте дружить</h5>
+        <div class="gallery__content">
+          <div class="gallery__logo"><img src="./img/insta_logo.png" alt="instagram logo"/></div>
+          <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe">Подписаться</a>
+        </div>
       </div>
-      <div class="gallery__gallery"><img src="./img/hr_card1.png" alt="card"/><img src="./img/hr_card2.png" alt="card"/><img src="./img/hr_card3.png" alt="card"/><img src="./img/hr_card4.png" alt="card"/><img src="./img/hr_card5.png" alt="card"/><img src="./img/hr_card6.png" alt="card"/><img src="./img/hr_card7.png" alt="card"/><img src="./img/hr_card8.png" alt="card"/></div>
+      <div class="gallery__gallery">
+        <div class="gallery__img"><img src="./img/hr_card1.png" alt="HairRoom студия красоты"/></div>
+        <div class="gallery__img"><img src="./img/hr_card2.png" alt="HairRoom декорации"/></div>
+        <div class="gallery__img"><img src="./img/hr_card3.png" alt="HairRoom наращивание ресниц"/></div>
+        <div class="gallery__img"><img src="./img/hr_card4.png" alt="HairRoom окрас волос"/></div>
+        <div class="gallery__img"><img src="./img/hr_card5.png" alt="HairRoom"/></div>
+        <div class="gallery__img"><img src="./img/hr_card6.png" alt="HairRoom увеличение губ"/></div>
+        <div class="gallery__img"><img src="./img/hr_card7.png" alt="HairRoom миллирование"/></div>
+        <div class="gallery__img"><img src="./img/hr_card8.png" alt="HairRoom педикюр"/></div>
+      </div>
     </section>
-    <section class="map" id="map"></section>
-    <div class="map__board">
-      <p class="title__description title__description--right">Hair Room Kaliningrad</p>
-      <div class="map__info-block"><span class="map__info">E-mail</span>
-        <p class="map__contact">hairroom@gmail.com</p>
+    <section class="location">
+      <div class="map-label">
+        <div class="map-label__content">
+          <p class="title__description title__description--right">Hairroom Kaliningrad</p>
+          <p class="map-label__info-title">E-mail</p>
+          <p class="map-label__info-text">hairroom@gmail.com</p>
+          <p class="map-label__info-title">Телефон</p>
+          <p class="map-label__info-text">+7 4012 52-37-76</p>
+          <p class="map-label__info-title">Адрес</p>
+          <p class="map-label__info-text">г. Калининград,<br> ул. Иванникова, д.12<br><sub>(ориентир напротив гостиницы Radisson)</sub></p>
+        </div>
       </div>
-      <div class="map__info-block"><span class="map__info">Телефон</span>
-        <p class="map__contact">+7 4012 52-37-76</p>
-      </div>
-      <div class="map__info-block"><span class="map__info">Адрес</span>
-        <p class="map__contact">г. Калининград<br> ул. Иванникова, д.12</p>
-      </div>
-    </div>
+      <div class="location__map" id="map"></div>
+    </section>
     <footer class="site-footer">
-      <div class="site-footer__content">
-        <h3 class="site-footer__title">Hair Room</h3>
-        <h4 class="site-foooter__description-title">HAIR ROOM. Калининград</h4>
+      <header class="site-footer__header">
+        <div class="site-footer__logo"><img src="./img/hair_room_logo_footer.png" alt="Hair Room логотип"/></div>
+        <p class="site-footer__title-location">HAIR ROOM. Калининград</p>
         <p class="site-footer__description">Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа</p>
-        <h4 class="site-footer__description-title">Контакты
-          <h5 class="site-footer__info-title">Адрес</h5>
-          <p class="site-footer__info">г. Калининград, ул. Иванникова, д.12</p>
-          <h5 class="site-footer__info-title">Тел.</h5>
-          <p class="site-footer__info">+7 4012 52-37-76</p>
-          <h5 class="site-footer__info-title">e-mail</h5>
-          <p class="site-footer__info">hairroom@gmail.com</p>
-        </h4>
-        <h4 class="site-footer__description-title">Время работы
-          <h5 class="site-footer__info-title">Ежедневно</h5>
-          <p class="site-footer__info">с 10<sup>00</sup> до 20<sup>00</sup></p>
-          <h5 class="site-footer__info-title">Воскресенье</h5>
-          <p class="site-footer__info">- выходной</p>
-        </h4>
+      </header>
+      <div class="site-footer__content">
+        <p class="site-footer__contacts-title">Контакты</p>
+        <p class="site-footer__info-title">Адрес:</p>
+        <p class="site-footer__info-text">г. Калининград, ул. Иванникова, д. 12</p>
+        <p class="site-footer__info-title">Телефон:</p>
+        <p class="site-footer__info-text">+ 7 4012 52 37 76</p>
+        <p class="site-footer__info-title">E-mail:</p>
+        <p class="site-footer__info-text">hairroom@gmail.com</p>
+        <p class="site-footer__contacts-title">Время работы</p>
+        <p class="site-footer__info-title">Ежедневно:</p>
+        <p class="site-footer__info-text">С 10 <sup>00</sup> до 20<sup>00</sup></p>
+        <p class="site-footer__info-title">Воскресенье:</p>
+        <p class="site-footer__info-text site-footer__info-text--bold">- выходной</p>
       </div>
+      <p class="site-footer__copyright">copyright &copy; 2018<br><b>katz cant read</b></p>
     </footer>
     <script src="map.js"></script>
+    <script src="scripts.js"></script>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&amp;callback=initMap"></script>
   </body>
 </html>

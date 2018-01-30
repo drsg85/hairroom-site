@@ -53,7 +53,8 @@
 	        zoom: 16,
 	        disableDefaultUI: true,
 	        mapTypeId: google.maps.MapTypeId.ROADMAP,
-	        center: new google.maps.LatLng(54.721500, 20.505773)
+
+	        center: new google.maps.LatLng(54.722500, 20.505773)
 	    });
 	    map.mapTypes.set('styled_map', mapStyles);
 	    map.setMapTypeId('styled_map');
@@ -65,7 +66,10 @@
 	        animation: google.maps.Animation.BOUNCE,
 	        title: "HairRoom"
 	    });
-
+	    var content = '\n        <div class="">\n            <img src="./img/hr_logo_map.png" alt="logo map"/>\n        </div>\n        \n    ';
+	    var infowindow = new google.maps.InfoWindow({
+	        content: content
+	    });
 	    var icon = "./img/marker.svg";
 	    marker.setIcon(icon);
 	};
