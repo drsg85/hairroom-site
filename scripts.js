@@ -50,9 +50,14 @@
 
 	var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
+	var _Tabs = __webpack_require__(4);
+
+	var _Tabs2 = _interopRequireDefault(_Tabs);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var mobilemenu = new _MobileMenu2.default();
+	var tabs = new _Tabs2.default();
 
 /***/ }),
 /* 1 */,
@@ -10474,6 +10479,36 @@
 	return jQuery;
 	} );
 
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _jquery = __webpack_require__(3);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function Tabs() {
+	    (0, _jquery2.default)("#tab").addClass("tabs__active-bg");
+	    (0, _jquery2.default)(".tabs__item").on("click", TabsChanged);
+
+	    function TabsChanged() {
+	        var tab_id = (0, _jquery2.default)(this).attr('data-tab');
+	        (0, _jquery2.default)(".tabs__item").removeClass("tabs__current tabs__active-bg");
+	        (0, _jquery2.default)(".tabs__content").removeClass("tabs__current");
+	        (0, _jquery2.default)(this).addClass("tabs__current tabs__active-bg");
+	        (0, _jquery2.default)("#" + tab_id).addClass("tabs__current");
+	    }
+	}
+	exports.default = Tabs;
 
 /***/ })
 /******/ ]);

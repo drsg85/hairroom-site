@@ -66,10 +66,12 @@
 	        animation: google.maps.Animation.BOUNCE,
 	        title: "HairRoom"
 	    });
-	    var content = '\n        <div class="">\n            <img src="./img/hr_logo_map.png" alt="logo map"/>\n        </div>\n        \n    ';
+	    var content = '\n        <div class="map-label__infowindow">\n            <img src="./img/hair_room_logo_map.png" alt="logo map"/>\n            <div class="map-label__infowindow-content">\n                <p class="map-label__infowindow-title">Hair Room</p>\n                <p class="map-label__infowindow-description">\n                    \u0421\u0430\u043B\u043E\u043D \u043A\u0440\u0430\u0441\u043E\u0442\u044B\n                </p>\n                <p class="map-label__infowindow-address">\n                    \u0443\u043B. \u0418\u0432\u0430\u043D\u043D\u0438\u043A\u043E\u0432\u0430, \u0434.12\n                </p>\n            </div>\n        </div>\n        \n    ';
 	    var infowindow = new google.maps.InfoWindow({
 	        content: content
 	    });
+
+	    infowindow.open(map, marker);
 	    var icon = "./img/marker.svg";
 	    marker.setIcon(icon);
 	};

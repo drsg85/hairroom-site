@@ -25,11 +25,11 @@
         </div>
         <nav class="main-menu">
           <ul class="main-menu__list">
-            <li><a href="#Салон">Салон</a></li>
-            <li><a href="#Услуги">Услуги</a></li>
-            <li><a href="#Прайс">Прайс</a></li>
-            <li><a href="#Галлерея">Галлерея</a></li>
-            <li><a href="#Контакты">Контакты</a></li>
+            <li><a href="#about">Салон</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#price">Прайс</a></li>
+            <li><a href="#gallery">Галлерея</a></li>
+            <li><a href="#contacts">Контакты</a></li>
           </ul>
         </nav>
       </nav>
@@ -58,7 +58,7 @@
         </ul>
       </nav>
     </header>
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__img"></div>
       <div class="about__board">
         <header class="about__header"><sup class="title__sup">О салоне</sup>
@@ -67,13 +67,19 @@
         <div class="about__content">
           <div class="tabs">
             <ul class="tabs__list" id="tabs" role="tablist">
-              <li class="tabs__item tabs__current" data-tab="tab-1"><a class="tabs__link">Миссия</a></li>
+              <li class="tabs__item tabs__current" data-tab="tab-1" id="tab"><a class="tabs__link">Миссия</a></li>
               <li class="tabs__item" data-tab="tab-2"><a class="tabs__link">Подход</a></li>
               <li class="tabs__item" data-tab="tab-3"><a class="tabs__link">Мастера</a></li>
             </ul>
             <div class="tabs__content tabs__current" id="tab-1">
               <p class="about__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера - это залог упеха студии HAIR ROOM</p>
               <p class="about__copy about__copy--mrtop">Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.</p>
+            </div>
+            <div class="tabs__content" id="tab-2">
+              <p class="about__copy">Подход</p>
+            </div>
+            <div class="tabs__content" id="tab-3">
+              <p class="about__copy">Мастера</p>
             </div>
           </div>
         </div>
@@ -83,7 +89,7 @@
         <div class="button__wrapper"><a class="button button--pink" href="#">online Запись</a><a class="button button--ghost" href="#price">прайс-лист</a></div>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
       <header class="services__header">
         <p class="title__sup title__sup--mrtop">Мы предлагаем</p>
         <p class="title__section">Услуги</p>
@@ -99,7 +105,7 @@
         </div>
       </article>
     </section>
-    <section class="price">
+    <section class="price" id="price">
       <header class="price__header">
         <p class="title__sup title__sup--white">Цены на услуги</p>
         <p class="title__section title__section--white">Прайс-лист</p>
@@ -157,6 +163,234 @@
               </tr>
             </table>
           </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Ботокс<br>/ Биксипластия</caption>
+              <caption class="price__column-description">Предназначен для сухих, поврежденных волос! Глубоко воздействует на структуру волос, восстанавливает поврежденные участки на клеточном уровне!    </caption>
+              <tr>
+                <td>Короткие</td>
+                <td><b>2000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>До плеч</td>
+                <td><b>2500 - 3000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>До лопаток</td>
+                <td><b>3000 - 3500</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Середина спины</td>
+                <td><b>4000 - 4500</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Экспресс Уход</caption>
+              <caption class="price__column-description">Держится на волосах около 2 недель. Не разглаживает! Без утюжка! Питает волосы, придает блеск, убирает пушистость! Гладкие и послушные волосы обеспечены!</caption>
+              <tr>
+                <td>Короткие</td>
+                <td><b>2000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Средние</td>
+                <td><b>2000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Длинные</td>
+                <td><b>3000</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="price__group">
+          <h3 class="price__group-title">наращивание волос</h3>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">наращивание волос</caption>
+              <caption class="price__column-description">В стоимость работы входит: мытье головы + экспресс уход, наращивание(микро+стандарт), Стрижка, укладка. В стоимость не входят волосы!</caption>
+              <tr>
+                <td>до 150 капсул</td>
+                <td><b>4000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>до 200 капсул</td>
+                <td><b>4500</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Коррекция</caption>
+              <caption class="price__column-description">В данную услугу входит: снятие + перекапсулирование волос, мытье головы, наращивание, стрижка, укладка.</caption>
+              <tr>
+                <td>до 150 капсул</td>
+                <td><b>4000 - 5000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>до 200 капсул</td>
+                <td><b>5000 - 5500</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Снятие волос</caption>
+              <caption class="price__column-description">В данную услугу входит: Снятие, мытье головы, стрижка, укладка.</caption>
+              <tr>
+                <td>до 150 капсул</td>
+                <td><b>2000 - 3000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>до 200 капсул</td>
+                <td><b>3000</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="price__group">
+          <h3 class="price__group-title">Услуги маникюра</h3>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Маникюр<br>коминированный</caption>
+              <tr>
+                <td>Без последующего покрытия</td>
+                <td><b>400</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Покрытие гель-лаком<br> + коминированный<br>маникюр</caption>
+              <tr>
+                <td>Однотонное покрытие</td>
+                <td><b>1000</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Экспресс маникюр + покрытие</caption>
+              <caption class="price__column-description">Экспресс маникюр + покрытие за 1 час без выравнивания ногтевой пластины гелем + маникюр</caption>
+              <tr>
+                <td>Однотонное покрытие</td>
+                <td><b>800</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Дизайн ногтей</caption>
+              <caption class="price__column-description">Лунный маникюр + 50р (ноготь), + 300р(все ногти); Френч + 300р (все руки); градиент + 100р (ноготь), + 1000 (все руки); слайдер + 50р (ноготь); стразы; дизайн от руки от 100р</caption>
+              <tr>
+                <td>Cтоимость работ</td>
+                <td><b>50 - 1000</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Дополнительные услуги</caption>
+              <tr>
+                <td>Снятие покрытия</td>
+                <td><b>100</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Ремонт ногтя</td>
+                <td><b>100</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Укрепление акрилом</td>
+                <td><b>100</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="price__group">
+          <h3 class="price__group-title">наращивание ресниц</h3>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">наращивание ресниц</caption>
+              <tr>
+                <td>Неполные обьем</td>
+                <td><b>1000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Классический обьем</td>
+                <td><b>1200</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Полуторный обьем</td>
+                <td><b>1400</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">2D - 3D обьем</caption>
+              <tr>
+                <td>2D обьем</td>
+                <td><b>1000</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>3D обьем</td>
+                <td><b>1500</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>5D обьем</td>
+                <td><b>1800</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="price__group">
+          <h3 class="price__group-title">Дополнительные услуги</h3>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Окрашивание<br>+ коррекция бровей</caption>
+              <tr>
+                <td>Обычное</td>
+                <td><b>500</b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Хной</td>
+                <td><b>700</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Makeup</caption>
+              <tr>
+                <td>Дневной</td>
+                <td><b>800 - 1000 </b> <span>руб.</span></td>
+              </tr>
+              <tr>
+                <td>Вечерний</td>
+                <td><b>1500 - 2000</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Стрижка</caption>
+              <tr>
+                <td>Женская</td>
+                <td><b>300 - 1200</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="price-inner__column">
+            <table class="price__table">
+              <caption class="price__caption">Удаление волос воском</caption>
+              <caption class="price__column-description">Любая из перечисленных зон: верхняя губа, бакенбарды</caption>
+              <tr>
+                <td>Одна зона</td>
+                <td><b>150 - 200</b> <span>руб.</span></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </section>
@@ -176,7 +410,7 @@
         </article>
       </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <header class="gallery__header">
         <h3 class="title__sup">Социальные сети</h3>
         <h4 class="gallery__title">Следите за HAIR ROOM в социальных сетях</h4>
@@ -199,7 +433,7 @@
         <div class="gallery__img"><img src="./img/hr_card8.png" alt="HairRoom педикюр"/></div>
       </div>
     </section>
-    <section class="location">
+    <section class="location" id="contacts">
       <div class="map-label">
         <div class="map-label__content">
           <p class="title__description title__description--right">Hairroom Kaliningrad</p>
@@ -223,10 +457,8 @@
         <p class="site-footer__contacts-title">Контакты</p>
         <p class="site-footer__info-title">Адрес:</p>
         <p class="site-footer__info-text">г. Калининград, ул. Иванникова, д. 12</p>
-        <p class="site-footer__info-title">Телефон:</p>
-        <p class="site-footer__info-text">+ 7 4012 52 37 76</p>
-        <p class="site-footer__info-title">E-mail:</p>
-        <p class="site-footer__info-text">hairroom@gmail.com</p>
+        <p class="site-footer__info-title">Телефон:</p><a class="site-footer__info-text" href="tel: 523776">+ 7 4012 52 37 76</a>
+        <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto: hairroom@gmail.com">hairroom@gmail.com</a>
         <p class="site-footer__contacts-title">Время работы</p>
         <p class="site-footer__info-title">Ежедневно:</p>
         <p class="site-footer__info-text">С 10 <sup>00</sup> до 20<sup>00</sup></p>

@@ -11,7 +11,8 @@ body {
   font-size: 18px;
   overflow-x: hidden;
   background-image: url("./img/bg.png");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-color: #ee7aad; }
 
 ul {
   margin: 0; }
@@ -41,6 +42,9 @@ ul {
   position: relative;
   height: 105vh;
   background: rgba(238, 122, 173, 0.9); }
+  @media (max-width: 360px) {
+    .hero {
+      height: 110vh; } }
   .hero::after {
     content: url("./img/hr.png");
     position: absolute;
@@ -203,29 +207,30 @@ ul {
 
 .main-menu {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ee7aad;
   left: -100%;
-  display: none;
+  visibility: hidden;
   width: 100%;
   height: 100%;
-  z-index: 4; }
+  z-index: 4;
+  -webkit-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all; }
   .main-menu--shown {
-    display: block;
     left: 0;
-    opacity: 0.9;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    visibility: visible; }
   .main-menu__list {
     padding: 0; }
   .main-menu li {
@@ -437,7 +442,7 @@ ul {
     left: 50%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
-    bottom: 25px;
+    bottom: 10px;
     z-index: 3;
     border-color: #7c1651; }
   .button--pink {
@@ -498,11 +503,17 @@ ul {
     line-height: 15px;
     font-weight: 300;
     -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out; }
+    transition: 0.3s ease-in-out;
+    display: inherit; }
     .tabs__link:hover {
       color: #d74299; }
   .tabs__content {
-    padding-bottom: 80px; }
+    padding-bottom: 80px;
+    display: none; }
+  .tabs__current {
+    display: inherit; }
+    .tabs__current a {
+      color: #ee7aad; }
 
 .services {
   position: relative;
@@ -603,8 +614,7 @@ ul {
     background-size: cover;
     padding-bottom: 100px; }
   .gallery__img {
-    width: 50%;
-    height: 185px; }
+    width: 50%; }
     .gallery__img img {
       width: 100%;
       height: 100%; }
@@ -661,6 +671,53 @@ ul {
     .map-label__info-text sub {
       color: #c3c3c3;
       font-size: 0.75rem; }
+  .map-label__infowindow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px 20px; }
+  .map-label__infowindow-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 30px; }
+  .map-label__infowindow-title {
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: "Monserrat Light", sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #64080f; }
+  .map-label__infowindow-description {
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    color: #414042;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold; }
+  .map-label__infowindow-address {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #414042;
+    font-weight: bold;
+    font-size: 0.9em; }
+
+.gm-style-iw + div {
+  display: none; }
 
 .site-footer {
   background-color: #e6a9d2;
@@ -699,7 +756,8 @@ ul {
     font-family: "Open Sans", sans-serif;
     font-weight: bold; }
   .site-footer__info-text {
-    color: #414042; }
+    color: #414042;
+    text-decoration: none; }
   .site-footer__logo {
     padding: 40px 0; }
   .site-footer__copyright {
