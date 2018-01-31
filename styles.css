@@ -11,8 +11,7 @@ body {
   font-size: 18px;
   overflow-x: hidden;
   background-image: url("./img/bg.png");
-  background-repeat: no-repeat;
-  background-color: #ee7aad; }
+  background-repeat: no-repeat; }
 
 ul {
   margin: 0; }
@@ -44,7 +43,7 @@ ul {
   background: rgba(238, 122, 173, 0.9); }
   @media (max-width: 360px) {
     .hero {
-      height: 110vh; } }
+      height: 120vh; } }
   .hero::after {
     content: url("./img/hr.png");
     position: absolute;
@@ -572,7 +571,6 @@ ul {
     margin: 0; }
   .gallery__subscribe {
     background-image: url("./img/gallery_subscribe_bg.png");
-    background-size: cover;
     padding: 60px 30px;
     padding-bottom: 0;
     display: -webkit-box;
