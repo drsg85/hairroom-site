@@ -4,7 +4,9 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,800" rel="stylesheet"/>
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,800, 900" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600, 800" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <title>HairRoom</title>
   </head>
@@ -18,7 +20,7 @@
           <li>
             <p>Калининград<br>Иванникова, 12</p>
           </li>
-          <li><a href="tel: 523766">52<span>.</span>37<span>.</span>66</a></li>
+          <li><a href="tel: 523766">52<span>.</span>37<span>.</span>76</a></li>
         </ul>
         <div class="menu-icon">
           <div class="menu-icon__middle"></div>
@@ -40,7 +42,7 @@
         </header>
         <div class="hero__content">
           <p class="hero__copy">Быть свободной значит быть разной, меняте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!</p><a class="button button--online-record" href="#">online&nbsp;запись</a>
-          <div class="hero__img"><img src="./img/women-hero.png" alt="Hair Room девушка"/></div>
+          <div class="hero__img"><img src="./img/women.png" alt="Hair Room девушка"/></div>
           <p class="title__description title__description--right">Hair Room kaliningrad</p>
         </div>
       </section>
@@ -85,7 +87,7 @@
           </div>
         </div>
         <div class="logo logo--about">
-          <div class="logo__outline"><img src="./img/hr_logo_black.svg" alt="logo white"/></div>
+          <div class="logo__outline"></div>
         </div>
         <div class="button__wrapper button__wrapper--inline"><a class="button button--pink" href="#">online Запись</a><a class="button button--ghost" href="#price">прайс-лист</a></div>
       </div>
@@ -95,55 +97,11 @@
         <p class="title__sup title__sup--mrtop">Мы предлагаем</p>
         <p class="title__section">Услуги</p>
       </header>
-      <div class="services__cards">
+      <div class="services__cards owl-carousel owl-theme">
         <article class="services__card">
-          <header class="services__card-title">Наращивание волос</header>
+          <header class="services__card-title">Наращивание<br>волос</header>
           <div class="services__wrapper">
             <div class="services__card-img"></div>
-            <div class="services__card-content">
-              <p class="title__description title__description--left">Hair Room Услуги</p>
-              <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="button__wrapper button__wrapper--centerX"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-лист</a></div>
-            </div>
-          </div>
-        </article>
-        <article class="services__card">
-          <header class="services__card-title">Маникюр</header>
-          <div class="services__wrapper">
-            <div class="services__card-img services__card-img--bg2"></div>
-            <div class="services__card-content">
-              <p class="title__description title__description--left">Hair Room Услуги</p>
-              <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="button__wrapper button__wrapper--centerX"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-лист</a></div>
-            </div>
-          </div>
-        </article>
-        <article class="services__card">
-          <header class="services__card-title">Уход за волосами</header>
-          <div class="services__wrapper">
-            <div class="services__card-img services__card-img--bg3"></div>
-            <div class="services__card-content">
-              <p class="title__description title__description--left">Hair Room Услуги</p>
-              <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="button__wrapper button__wrapper--centerX"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-лист</a></div>
-            </div>
-          </div>
-        </article>
-        <article class="services__card">
-          <header class="services__card-title">Дополнительные услуги</header>
-          <div class="services__wrapper">
-            <div class="services__card-img services__card-img--bg4"></div>
-            <div class="services__card-content">
-              <p class="title__description title__description--left">Hair Room Услуги</p>
-              <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="button__wrapper button__wrapper--centerX"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-лист</a></div>
-            </div>
-          </div>
-        </article>
-        <article class="services__card">
-          <header class="services__card-title">Наращивание ресниц</header>
-          <div class="services__wrapper">
-            <div class="services__card-img services__card-img--bg5"></div>
             <div class="services__card-content">
               <p class="title__description title__description--left">Hair Room Услуги</p>
               <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
@@ -307,7 +265,7 @@
                 <caption class="price__caption">Маникюр<br>коминированный</caption>
                 <tr>
                   <td>Без последующего покрытия</td>
-                  <td><b>400</b> <span>руб.</span></td>
+                  <td><b>400</b>&nbsp;<span>руб.</span></td>
                 </tr>
               </table>
             </div>
@@ -385,19 +343,18 @@
       <div class="gallery__subscribe">
         <h5 class="gallery__slogan">Давайте дружить</h5>
         <div class="gallery__content">
-          <div class="gallery__logo"><img src="./img/insta_logo.png" alt="instagram logo"/></div>
           <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe">Подписаться</a>
         </div>
       </div>
       <div class="gallery__gallery">
-        <div class="gallery__img"><img src="./img/card-lg.jpg" alt="HairRoom студия красоты"/></div>
-        <div class="gallery__img"><img src="./img/card2-lg.jpg" alt="HairRoom декорации"/></div>
-        <div class="gallery__img"><img src="./img/card3-lg.jpg" alt="HairRoom наращивание ресниц"/></div>
-        <div class="gallery__img"><img src="./img/card4-lg.jpg" alt="HairRoom окрас волос"/></div>
-        <div class="gallery__img"><img src="./img/card5-lg.jpg" alt="HairRoom"/></div>
-        <div class="gallery__img"><img src="./img/card6-lg.jpg" alt="HairRoom увеличение губ"/></div>
-        <div class="gallery__img"><img src="./img/card7-lg.jpg" alt="HairRoom миллирование"/></div>
-        <div class="gallery__img"><img src="./img/card8-lg.jpg" alt="HairRoom педикюр"/></div>
+        <div class="gallery__img"></div>
+        <div class="gallery__img"></div>
+        <div class="gallery__img"></div>
+        <div class="gallery__img"></div>
+        <div class="gallery__img"></div>
+        <div class="gallery__img"></div>
+        <div class="gallery__img"></div>
+        <div class="gallery__img"></div>
       </div>
     </section>
     <section class="location" id="contacts">
@@ -416,7 +373,6 @@
     </section>
     <footer class="site-footer">
       <header class="site-footer__header">
-        <div class="site-footer__logo"><img src="./img/hr_logo_hor_black.svg" alt="Hair Room логотип"/></div>
         <p class="site-footer__title-location">HAIR ROOM. Калининград</p>
         <p class="site-footer__description">Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа</p>
       </header>
@@ -426,6 +382,8 @@
         <p class="site-footer__info-text">г. Калининград, ул. Иванникова, д. 12</p>
         <p class="site-footer__info-title">Телефон:</p><a class="site-footer__info-text" href="tel: 523776">+ 7 4012 52 37 76</a>
         <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto: hairroom@gmail.com">hairroom@gmail.com</a>
+      </div>
+      <div class="site-footer__time">
         <p class="site-footer__contacts-title">Время работы</p>
         <p class="site-footer__info-title">Ежедневно:</p>
         <p class="site-footer__info-text">С 10 <sup>00</sup> до 20<sup>00</sup></p>
