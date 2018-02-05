@@ -60,19 +60,19 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 5:
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 window.initMap = function () {
-    var mapStyles = new google.maps.StyledMapType(__webpack_require__(6));
+    var mapStyles = new google.maps.StyledMapType(__webpack_require__(8));
     var LatLng = new google.maps.LatLng(54.718749, 20.505773);
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
@@ -103,7 +103,7 @@ window.initMap = function () {
 
 /***/ }),
 
-/***/ 6:
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -202,6 +202,14 @@ module.exports = [{
         "lightness": 18
     }]
 }, {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+        "color": "#ffffff"
+    }, {
+        "lightness": 18
+    }]
+}, {
     "featureType": "road.local",
     "elementType": "geometry",
     "stylers": [{
@@ -230,6 +238,14 @@ module.exports = [{
     "elementType": "geometry",
     "stylers": [{
         "color": "#121212"
+    }, {
+        "lightness": 1
+    }]
+}, {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+        "color": "#ffffff"
     }, {
         "lightness": 1
     }]

@@ -12,9 +12,7 @@
   <body>
     <header class="site-header">
       <nav class="main-nav">
-        <div class="logo">
-          <div class="logo__img"><img src="./img/hr_logo_white.svg" alt="HairRoom Logo"/></div>
-        </div>
+        <div class="logo"><img src="./img/hr_logo_white.svg" alt="HairRoom Logo"/></div>
         <ul class="info__list">
           <li>
             <p>Калининград<br>Иванникова,&nbsp;12</p>
@@ -35,13 +33,25 @@
         </nav>
         <div class="main-nav__slogan"><a class="main-nav__link" href="http://instagram.com">Давайте дружить<br><span>instagram</span></a></div>
       </nav>
+      <nav class="scroll-spy">
+        <ul class="scroll-spy__list">
+          <li><a class="scroll-spy__link" id="about-link" data-label="Салон" href="#about">Салон</a></li>
+          <li><a class="scroll-spy__link" id="services-link" data-label="Услуги" href="#services">Услуги</a></li>
+          <li><a class="scroll-spy__link" id="price-link" data-label="Прайс" href="#price">Прайс</a></li>
+          <li><a class="scroll-spy__link" id="gallery-link" data-label="Галлерея" href="#gallery">Галлерея</a></li>
+          <li><a class="scroll-spy__link" id="contacts-link" data-label="Контакты" href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
       <section class="hero">
         <header class="hero__header">
           <h1 class="hero__title">Ваш идеальный салон красоты</h1>
         </header>
         <div class="hero__content">
-          <p class="hero__copy">Быть свободной значит быть разной, меняте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!</p>
-          <div class="hero__img"><img src="./img/women-lg.png" alt="Hair Room девушка"/></div><a class="button button--online-record" href="#">online&nbsp;запись</a>
+          <p class="hero__copy">Быть свободной значит быть разной, меняйте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!</p>
+          <picture class="hero__img">
+            <source media="(max-width: 700px)" srcset="./img/women.png"/>
+            <source media="(max-width: 1920px)" srcset="./img/women-lg.png"/><img src="./img/women-lg.png" alt="Hair Room девушка"/>
+          </picture><a class="button button--online-record" href="#">online&nbsp;запись</a>
           <p class="title__description title__description--right">Hair Room kaliningrad</p>
         </div>
         <ul class="socials__list">
@@ -60,8 +70,13 @@
         </ul>
       </nav>
     </header>
-    <section class="about" id="about">
-      <div class="about__img"><img src="./img/about_img-lg.jpg" alt="HairRoom изображение"/></div>
+    <section class="about"><a class="nav-link" id="about"></a>
+      <div class="about__img">
+        <picture>
+          <source srcset="./img/about_img-sm.jpg" media="(max-width: 700px)"/>
+          <source srcset="./img/about_img-lg.jpg" media="(min-width: 700px)"/><img src="./img/about_img-sm.jpg" alt="HairRoom изображение"/>
+        </picture>
+      </div>
       <div class="about__background">
         <div class="about__board">
           <header class="about__header"><sup class="title__sup">О салоне</sup>
@@ -93,7 +108,7 @@
         </div>
       </div>
     </section>
-    <section class="services" id="services">
+    <section class="services"><a class="nav-link" id="services"></a>
       <header class="services__header">
         <p class="title__sup title__sup--mrtop">Мы предлагаем</p>
         <p class="title__section">Услуги</p>
@@ -156,7 +171,7 @@
         </article>
       </div>
     </section>
-    <section class="price" id="price">
+    <section class="price"><a class="nav-link" id="price"></a>
       <div class="price__board">
         <header class="price__header">
           <p class="title__sup title__sup--white">Цены на услуги</p>
@@ -216,6 +231,114 @@
                   </tr>
                 </table>
               </div>
+              <div class="price-inner__column price-inner__column--pd">
+                <table class="price__table">
+                  <caption class="price__caption">Ботокс<br>/ Биксипластия</caption>
+                  <caption class="price__column-description">Предназначен для сухих, поврежденных волос! Глубоко воздействует на структуру волос, восстанавливает поврежденные участки на клеточном уровне!    </caption>
+                  <tr>
+                    <td>Короткие</td>
+                    <td><b>2000</b> <span>руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td>До плеч</td>
+                    <td><b>2500 - 3000</b> <span>руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td>До лопаток</td>
+                    <td><b>3000 - 3500</b> <span>руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td>Середина спины</td>
+                    <td><b>4000 - 4500</b> <span>руб.</span></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="price-inner__column">
+                <table class="price__table">
+                  <caption class="price__caption">Экспресс Уход</caption>
+                  <caption class="price__column-description">Держится на волосах около 2 недель. Не разглаживает! Без утюжка! Питает волосы, придает блеск, убирает пушистость! Гладкие и послушные волосы обеспечены!</caption>
+                  <tr>
+                    <td>Короткие</td>
+                    <td><b>2000</b> <span>руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td>Средние</td>
+                    <td><b>2000</b> <span>руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td>Длинные</td>
+                    <td><b>3000</b> <span>руб.</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="price__group">
+            <h3 class="price__group-title">наращивание волос</h3>
+            <div class="price-inner__column price-inner__column--right">
+              <table class="price__table">
+                <caption class="price__caption">наращивание волос</caption>
+                <caption class="price__column-description">В стоимость работы входит: мытье головы + экспресс уход, наращивание(микро+стандарт), Стрижка, укладка. В стоимость не входят волосы!</caption>
+                <tr>
+                  <td>до 150 капсул</td>
+                  <td><b>4000</b> <span>руб.</span></td>
+                </tr>
+                <tr>
+                  <td>до 200 капсул</td>
+                  <td><b>4500</b> <span>руб.</span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="price-inner__column price-inner__column--right">
+              <table class="price__table">
+                <caption class="price__caption">Коррекция</caption>
+                <caption class="price__column-description">В данную услугу входит: снятие + перекапсулирование волос, мытье головы, наращивание, стрижка, укладка.</caption>
+                <tr>
+                  <td>до 150 капсул</td>
+                  <td><b>4000 - 5000</b> <span>руб.</span></td>
+                </tr>
+                <tr>
+                  <td>до 200 капсул</td>
+                  <td><b>5000 - 5500</b> <span>руб.</span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="price-inner__column price-inner__column--right">
+              <table class="price__table">
+                <caption class="price__caption">Снятие волос</caption>
+                <caption class="price__column-description">В данную услугу входит: Снятие, мытье головы, стрижка, укладка.</caption>
+                <tr>
+                  <td>до 150 капсул</td>
+                  <td><b>2000 - 3000</b> <span>руб.</span></td>
+                </tr>
+                <tr>
+                  <td>до 200 капсул</td>
+                  <td><b>3000</b> <span>руб.</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="price__group price__group--big">
+            <h3 class="price__group-title">Услуги маникюра</h3>
+            <div class="price__conteiner">
+              <div class="price-inner__column">
+                <table class="price__table">
+                  <caption class="price__caption">Маникюр<br>коминированный</caption>
+                  <tr>
+                    <td>Без последующего покрытия</td>
+                    <td><b>400</b>&nbsp;<span>руб.</span></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="price-inner__column price-inner__column--pd">
+                <table class="price__table">
+                  <caption class="price__caption">Покрытие гель-лаком<br> + коминированный<br>маникюр</caption>
+                  <tr>
+                    <td>Однотонное покрытие</td>
+                    <td><b>1000</b> <span>руб.</span></td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -237,7 +360,7 @@
         </article>
       </div>
     </section>
-    <section class="gallery" id="gallery">
+    <section class="gallery"><a class="nav-link" id="gallery"></a>
       <header class="gallery__header">
         <h3 class="title__sup">Социальные сети</h3>
         <h4 class="gallery__title">Следите за HAIR ROOM<br>в социальных сетях</h4>
@@ -245,9 +368,7 @@
       <div class="gallery__subscribe">
         <h5 class="gallery__slogan">Давайте дружить</h5>
         <div class="gallery__content">
-          <div class="gallery__logo">
-            <ig src="./img/insta_logo.png" alt="instagram logo"></ig>
-          </div>
+          <div class="gallery__logo"><img src="./img/insta_logo.png" alt="instagram logo"/></div>
           <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe">Подписаться</a>
         </div>
       </div>
@@ -263,10 +384,10 @@
         <div class="gallery__img"><img src="./img/card8-sm.jpg" alt="HairRoom педикюр"/></div>
       </div>
     </section>
-    <section class="location" id="contacts">
+    <section class="location"><a class="nav-link" id="contacts"></a>
       <div class="map-label">
         <div class="map-label__content">
-          <p class="title__description title__description--right">Hairroom Kaliningrad</p>
+          <p class="title__description title__description--right title__description--map">Hairroom Kaliningrad</p>
           <p class="map-label__info-title">E-mail</p>
           <p class="map-label__info-text">hairroom@gmail.com</p>
           <p class="map-label__info-title">Телефон</p>
@@ -284,7 +405,15 @@
           <p class="site-footer__title-location">HAIR ROOM. Калининград</p>
           <p class="site-footer__description">Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа</p>
         </header>
-        <div class="site-footer__content">
+        <ul class="site-footer__navigation">
+          <li><a class="site-footer__navigation-title" href="#">Главная</a></li>
+          <li><a href="#about">О Салоне</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#services">Прайс-лист</a></li>
+          <li><a href="#services">Контакты</a></li>
+          <li><a href="#services">Франшиза</a></li>
+        </ul>
+        <div class="site-footer__contacts">
           <p class="site-footer__contacts-title">Контакты</p>
           <p class="site-footer__info-title">Адрес:</p>
           <p class="site-footer__info-text">г. Калининград<br>ул. Иванникова, д. 12</p>
