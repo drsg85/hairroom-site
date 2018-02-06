@@ -4,6 +4,14 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="theme-color" content="#ee7aad"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="theme-color" content="#ee7aad"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
@@ -38,7 +46,12 @@
           <h1 class="hero__title">Ваш<br> идеальный<br> салон<br> красоты</h1>
         </header>
         <p class="hero__copy">Быть свободной значит быть разной, меняйте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!</p>
-        <div class="hero__img"><img src="./img/women.png" alt="Hair Room девушка"/></div>
+        <div class="hero__img">
+          <picture><img src="./img/women.png" alt="Hair Room девушка"/>
+            <source media="(max-width: 700px)" srcset="./img/women.png"/>
+            <source media="(max-width: 1920px)" srcset="./img/women-lg.png"/>
+          </picture>
+        </div>
         <div class="hero__button"><a class="button button--online-record" href="#">online&nbsp;запись</a></div>
         <p class="title__description title__description--right">Hair Room kaliningrad</p>
         <ul class="socials">
@@ -83,7 +96,7 @@
           <div class="logo logo--about">
             <div class="logo__outline"><img src="./img/hr_logo_black.svg" alt="logo white"/></div>
           </div>
-          <div class="button__wrapper button__wrapper--inline"><a class="button button--pink" href="#">online Запись</a><a class="button button--ghost" href="#price">прайс-лист</a></div>
+          <div class="about__button"><a class="button button--pink" href="#">online Запись</a><a class="button button--ghost" href="#price">прайс-лист</a></div>
         </div>
       </div>
     </section>
