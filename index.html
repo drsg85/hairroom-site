@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <title>HairRoom</title>
   </head>
@@ -13,24 +13,24 @@
     <header class="site-header">
       <nav class="main-nav">
         <div class="logo"><img src="./img/hr_logo_white.svg" alt="HairRoom Logo"/></div>
-        <ul class="info">
-          <li>
-            <p>Калининград<br>Иванникова,&nbsp;12</p>
-          </li>
-          <li><a href="tel: 523766">52<span>.</span>37<span>.</span>76</a></li>
-        </ul>
-        <div class="menu-icon">
+        <div class="info">
+          <p class="info__address">Калининград<br>Иванникова,&nbsp;12</p><a class="info__phone" href="tel:523766">52<span>.</span>37<span>.</span>76</a>
+        </div>
+        <div class="menu-icon menu-icon--close-x">
           <div class="menu-icon__middle"></div>
         </div>
-        <nav class="main-menu">
-          <ul class="main-menu__list">
+        <nav class="main-menu main-menu--shown">
+          <ul>
             <li><a href="#about">Салон</a></li>
             <li><a href="#services">Услуги</a></li>
             <li><a href="#price">Прайс</a></li>
             <li><a href="#gallery">Галлерея</a></li>
             <li><a href="#contacts">Контакты</a></li>
-          </ul><a class="button button--franschize" href="#franshize">Франшиза</a>
-          <div class="main-nav__slogan"><a class="main-nav__link" href="http://instagram.com">Давайте дружить<br><span>instagram</span></a></div>
+            <div class="main-menu__franchise"><a href="#">Франшиза</a></div>
+          </ul>
+          <div class="be-friends"><a href="http://instagram.com"> 
+              <p class="be-friends__text">Давайте дружить </p>
+              <p class="be-friends__social">instagram</p></a></div>
         </nav>
       </nav>
       <section class="hero">

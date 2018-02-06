@@ -43,60 +43,54 @@ ul {
       padding-left: 55px; } }
   @media (min-width: 1200px) {
     .main-nav {
-      padding-left: 4.5%;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      max-width: 88%;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; } }
-  @media (min-width: 1200px) {
-    .main-nav__wrapper {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+              align-items: center;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding-bottom: 50px; } }
-  .main-nav__slogan {
-    display: none;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-    width: 170px; }
-    .main-nav__slogan span {
-      font-size: 1.125rem;
-      display: block;
-      padding-top: 5px;
-      letter-spacing: 6px; }
-      @media (min-width: 700px) {
-        .main-nav__slogan span {
-          letter-spacing: 1px; } }
+      padding-left: 4.5%;
+      max-width: 88%; } }
+
+.be-friends {
+  position: absolute;
+  bottom: 25px;
+  padding: 5px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase; }
+  .be-friends__text {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid white;
+    font-size: 0.7rem; }
+  .be-friends__social {
+    margin: 0;
+    padding: 0;
+    padding-top: 4px;
+    letter-spacing: 3px; }
+  .be-friends span {
+    font-size: 1.125rem;
+    display: block;
+    padding-top: 5px;
+    letter-spacing: 6px; }
     @media (min-width: 700px) {
-      .main-nav__slogan {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 80px;
-        font-size: 0.6875rem; } }
-    @media (min-width: 1200px) {
-      .main-nav__slogan {
-        top: 60px; } }
-    @media (min-width: 1600px) {
-      .main-nav__slogan {
-        top: 70px; } }
-  .main-nav__link {
-    font-size: 0.6rem;
-    padding-bottom: 5px;
-    border: 2px solid #611336;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    font-family: "Open Sans", sans-serif;
-    color: #611336;
-    text-decoration: none; }
+      .be-friends span {
+        letter-spacing: 1px; } }
+  @media (min-width: 700px) {
+    .be-friends {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 80px;
+      font-size: 0.6875rem; } }
+  @media (min-width: 1200px) {
+    .be-friends {
+      top: 60px; } }
+  @media (min-width: 1600px) {
+    .be-friends {
+      top: 70px; } }
 
 .hero {
   position: relative;
@@ -262,82 +256,54 @@ ul {
           height: auto; } }
 
 .info {
-  padding-top: 20px;
-  padding-left: 20px;
   margin: 0;
-  list-style: none; }
+  padding-top: 15px;
+  padding-left: 20px;
+  text-align: center; }
   @media (min-width: 700px) {
     .info {
       padding-top: 25px; } }
-  .info li {
-    color: #2e2d2c; }
-  .info p {
+  .info__address {
     margin: 0;
-    font-size: 0.8rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase; }
-    @media (min-width: 700px) {
-      .info p {
-        font-size: 1.1rem; } }
-    @media (min-width: 1200px) {
-      .info p {
-        font-size: 1.75rem;
-        font-weight: 500; } }
-  .info a {
+  .info__phone {
     color: #2e2d2c;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.6rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    font-size: 1.55rem;
+    font-weight: 700;
+    text-decoration: none; }
     @media (min-width: 700px) {
-      .info a {
+      .info__phone {
         font-size: 2.25rem; } }
     @media (min-width: 1200px) {
-      .info a {
+      .info__phone {
         font-size: 2.75rem; } }
     @media (min-width: 1600px) {
-      .info a {
+      .info__phone {
         font-size: 3.75rem; } }
-    .info a span {
+    .info__phone span {
+      -webkit-transform: translateY(-0.5rem);
+              transform: translateY(-0.5rem);
+      display: inline-block;
+      vertical-align: middle;
       color: #ee7aad;
-      margin: 0 2px;
-      margin-bottom: 12px; }
-      @media (min-width: 700px) {
-        .info a span {
-          margin-bottom: 15px; } }
-      @media (min-width: 1600px) {
-        .info a span {
-          margin-bottom: 25px; } }
+      margin: 0 2px; }
 
 .logo {
-  background-color: #000;
-  border-radius: 5px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   height: 85px;
   width: 86px;
   padding: 15px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #000;
   -webkit-box-shadow: 0px 25px 58px -11px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 25px 58px -11px rgba(0, 0, 0, 0.24); }
-  @media (min-width: 700px) {
-    .logo {
-      height: 120px;
-      width: 120px; } }
-  @media (min-width: 1200px) {
-    .logo {
-      height: 144px;
-      width: 144px; } }
-  @media (min-width: 1600px) {
-    .logo {
-      height: 188px;
-      width: 188px; } }
   .logo--about {
     position: absolute;
     left: 50%;
@@ -350,22 +316,21 @@ ul {
     width: 150px;
     height: 150px;
     padding: 30px; }
-  .logo__outline {
-    border-radius: 50%; }
   .logo img {
     width: 100%;
     height: 100%; }
 
 .menu-icon {
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: 25px;
+  top: 18px;
   z-index: 5;
   width: 50px;
   height: 50px;
+  border: 2px solid #ee7aad;
   background-color: #ee7aad;
-  -webkit-box-shadow: 0px 25px 58px -11px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 25px 58px -11px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 24px 0 rgba(0, 0, 0, 0.125);
+          box-shadow: 0px 10px 24px 0 rgba(0, 0, 0, 0.125);
   border-radius: 50%; }
   @media (min-width: 700px) {
     .menu-icon {
@@ -378,14 +343,14 @@ ul {
     position: absolute;
     left: 12px;
     top: 31px;
-    -webkit-transform: origin 0% 50%;
-            transform: origin 0% 50%;
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
     display: block;
     height: 4px;
     width: 25px;
     background-color: #ffffff;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
   .menu-icon__middle {
     position: absolute;
     left: 12px;
@@ -394,8 +359,8 @@ ul {
     height: 4px;
     width: 25px;
     background-color: #ffffff;
-    -webkit-transform: all 0.3s ease-in-out;
-            transform: all 0.3s ease-in-out; }
+    -webkit-transform: all 0.3s ease-out;
+            transform: all 0.3s ease-out; }
   .menu-icon::after {
     content: '';
     position: absolute;
@@ -407,10 +372,12 @@ ul {
     height: 4px;
     width: 25px;
     background-color: #ffffff;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
   .menu-icon--close-x {
-    border: 1px solid rgba(255, 255, 255, 0.2); }
+    border: 2px solid #ffffff;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
     .menu-icon--close-x::before {
       left: 12px;
       top: 22px;
@@ -428,6 +395,8 @@ ul {
 
 .main-menu {
   position: fixed;
+  left: -110%;
+  z-index: 4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,64 +410,39 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ee7aad;
-  left: -100%;
-  visibility: hidden;
-  width: 100%;
   height: 100%;
-  z-index: 4;
+  width: 100%;
+  padding-bottom: 70px;
+  background-color: #ee7aad;
+  visibility: hidden;
   -webkit-transition: 0.3s ease-out all;
   transition: 0.3s ease-out all; }
-  @media (min-width: 1200px) {
-    .main-menu {
-      position: static;
-      width: auto;
-      height: auto;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      visibility: visible;
-      background: none; } }
+  .main-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .main-menu li {
+    margin: 0;
+    padding: 15px 0;
+    text-align: center; }
+  .main-menu a {
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase; }
+  .main-menu__franchise {
+    margin-top: 5px; }
+    .main-menu__franchise a {
+      display: inline-block;
+      vertical-align: top;
+      padding: 10px 20px;
+      border: 2px solid #ffffff;
+      border-radius: 30px; }
   .main-menu--shown {
     left: 0;
     visibility: visible; }
-  .main-menu__list {
-    padding: 0;
-    text-align: center; }
-    @media (min-width: 1200px) {
-      .main-menu__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        border-radius: 50px;
-        background-color: #c11e8b;
-        -webkit-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.37);
-                box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.37);
-        margin-left: 3.85%; } }
-  .main-menu li {
-    padding-bottom: 30px;
-    list-style: none; }
-    @media (min-width: 1200px) {
-      .main-menu li {
-        padding: 12px 20px;
-        -webkit-transition: 0.3s ease-in-out all;
-        transition: 0.3s ease-in-out all; }
-        .main-menu li:hover {
-          background-color: #ee7aad;
-          border-radius: 30px;
-          -webkit-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.4);
-                  box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.4); }
-        .main-menu li:hover a {
-          color: #000; } }
-    @media (min-width: 1600px) {
-      .main-menu li {
-        padding: 12px 40px; } }
-  .main-menu a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Open Sans", sans-serif; }
 
 @media (min-width: 700px) {
   .about {
