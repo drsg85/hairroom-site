@@ -170,9 +170,9 @@ ul {
   .hero__button {
     position: absolute;
     bottom: 25px;
-    left: 0;
+    left: 30px;
     z-index: 4;
-    text-align: center;
+    text-align: left;
     width: 100%; }
     @media (min-width: 700px) {
       .hero__button {
@@ -465,9 +465,7 @@ ul {
   @media (min-width: 1200px) {
     .about__content {
       padding-left: 80px; } }
-  .about__button {
-    width: 100%;
-    margin-bottom: 80px;
+  .about__buttons {
     text-align: center; }
 
 .price {
@@ -724,13 +722,11 @@ ul {
   margin-bottom: 15px; }
   @media (min-width: 700px) {
     .title__sup {
-      font-family: "Open Sans SemiBold", sans-serif;
       font-weight: normal;
       letter-spacing: 5px; } }
   .title__sup--mrtop {
     padding-top: 100px;
     margin: 0;
-    font-family: "Open Sans SemiBold", sans-serif;
     color: #d74299; }
     @media (min-width: 700px) {
       .title__sup--mrtop {
@@ -770,8 +766,7 @@ ul {
       font-size: 1.33rem;
       color: #ffffff;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      font-family: "Open Sans SemiBold", sans-serif; }
+      letter-spacing: 2px; }
       @media (min-width: 700px) {
         .title__description--right {
           top: 150px;
@@ -829,85 +824,53 @@ ul {
     text-transform: uppercase;
     letter-spacing: 1px;
     -webkit-transition: 0.3s ease-in-out all;
-    transition: 0.3s ease-in-out all;
-    font-family: "Open Sans SemiBold", sans-serif; }
+    transition: 0.3s ease-in-out all; }
     .socials a:hover {
       color: #6c1a3e; }
 
 .button {
   display: inline-block;
-  border: 3px solid #7c1651;
+  vertical-align: top;
+  margin-bottom: 30px;
+  padding: 8px 40px;
+  width: 260px;
   color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 35px;
   cursor: pointer; }
   .button--online-record {
-    display: inline-block;
-    vertical-align: top;
-    width: 315px;
+    border: 2px solid #7c1651;
+    margin-bottom: 0;
     background-color: rgba(237, 99, 182, 0.24);
+    background-color: rgba(238, 122, 173, 0.5);
     border-width: 2px;
     border-color: #7c1651;
     -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    line-height: 2;
-    text-align: center; }
-    @media (min-width: 700px) {
-      .button--online-record {
-        position: static;
-        height: 39px;
-        width: 250px;
-        margin-bottom: 50px;
-        padding: 0 50px;
-        vertical-align: middle;
-        line-height: 35px;
-        font-size: 1rem;
-        -webkit-transform: translate(0);
-                transform: translate(0); } }
-    @media (min-width: 1200px) {
-      .button--online-record {
-        width: 310px; } }
+    transition: 0.3s ease-in-out; }
     .button--online-record:hover {
-      background-color: #fff;
+      background-color: #ffffff;
       color: #7c1651; }
   .button--pink {
-    width: 240px;
-    margin-bottom: 30px;
-    padding: 10px 0;
-    text-align: center;
-    font-family: "Open Sans SemiBold", sans-serif;
-    font-weight: 600;
-    color: #3b0f22;
+    color: #222222;
+    border: 2px solid #ee7aad;
     background-color: #ee7aad;
-    -webkit-box-shadow: 0px 20px 58px -11px rgba(0, 0, 0, 0.8);
-            box-shadow: 0px 20px 58px -11px rgba(0, 0, 0, 0.8);
-    border: none; }
-    @media (min-width: 700px) {
-      .button--pink {
-        width: 310px;
-        margin-bottom: 0px;
-        margin-right: 40px; } }
+    -webkit-box-shadow: 0px 20px 58px -11px rgba(77, 39, 56, 0.8);
+            box-shadow: 0px 20px 58px -11px rgba(77, 39, 56, 0.8); }
     .button--pink:hover {
       -webkit-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
       background-color: #fff;
       color: #ee7aad; }
   .button--ghost {
-    width: 240px;
-    padding: 10px 0;
-    background-color: rgba(244, 207, 228, 0.12);
-    border-color: #7c1752;
-    text-align: center;
-    font-family: "Open Sans SemiBold", sans-serif;
-    font-weight: 600;
-    color: #3b0f22; }
-    @media (min-width: 700px) {
-      .button--ghost {
-        padding: 8px 0;
-        color: #fff; } }
+    border: 2px solid #7c1651;
+    color: #7c1651;
+    background-color: rgba(244, 207, 228, 0.12); }
     .button--ghost:hover {
       background-color: #ee7aad;
       -webkit-transition: 0.3s ease-in-out;
@@ -918,7 +881,6 @@ ul {
     margin-bottom: 15px;
     -webkit-transition: 0.3s ease-in-out all;
     transition: 0.3s ease-in-out all;
-    font-family: "Open Sans SemiBold", sans-serif;
     letter-spacing: 1px; }
     @media (min-width: 700px) {
       .button--card {
@@ -1114,8 +1076,7 @@ ul {
       padding-left: 15px;
       color: #8a185a;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      font-family: "Open Sans SemiBold", sans-serif; }
+      letter-spacing: 1px; }
     .services__card-img {
       position: relative;
       display: inline-block;
@@ -1378,13 +1339,11 @@ ul {
   .map-label__info-title {
     color: #fff;
     font-size: 0.75rem;
-    font-family: "Open Sans SemiBold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px; }
   .map-label__info-text {
     color: #fff;
-    font-size: 1.25rem;
-    font-family: "Open Sans SemiBold", sans-serif; }
+    font-size: 1.25rem; }
     .map-label__info-text sub {
       color: #c3c3c3;
       font-size: 0.75rem; }
@@ -1550,7 +1509,6 @@ ul {
       letter-spacing: 4px; }
     .site-footer__navigation a {
       text-transform: uppercase;
-      font-family: "Open Sans SemiBold", sans-serif;
       text-decoration: none;
       color: #414042; }
   .site-footer__copyright {
