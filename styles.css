@@ -94,8 +94,7 @@ ul {
 
 .hero {
   position: relative;
-  padding: 35px 30px;
-  padding-left: 33px;
+  padding: 35px 40px;
   padding-bottom: 0;
   background-color: #ee7aad;
   background: -webkit-gradient(linear, left top, right top, from(rgba(198, 22, 141, 0.85)), to(rgba(219, 102, 154, 0.9)));
@@ -139,7 +138,7 @@ ul {
         text-shadow: 0 0, -12px 7px 0 #6a1444; } }
   .hero__copy {
     display: inline-block;
-    max-width: 300px;
+    width: 300px;
     color: #222222;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
@@ -170,9 +169,9 @@ ul {
   .hero__button {
     position: absolute;
     bottom: 25px;
-    left: 30px;
+    left: 0;
     z-index: 4;
-    text-align: left;
+    text-align: center;
     width: 100%; }
     @media (min-width: 700px) {
       .hero__button {
@@ -649,8 +648,7 @@ ul {
     width: 135px;
     margin-bottom: 30px;
     color: #1c1e23;
-    font-family: "Monserrat Black", sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     text-align: left; }
     .shares__text--white {
       color: white; }
@@ -1388,7 +1386,6 @@ ul {
     margin: 0;
     margin-bottom: 5px;
     text-align: center;
-    font-family: "Monserrat Light", sans-serif;
     font-size: 0.875rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1483,7 +1480,6 @@ ul {
   .site-footer__contacts-title {
     margin-top: 40px;
     color: #6f1e4e;
-    font-family: "Monserrat Regular", sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 4px; }

@@ -10445,22 +10445,19 @@ var _MobileMenu = __webpack_require__(2);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _Tabs = __webpack_require__(3);
-
-var _Tabs2 = _interopRequireDefault(_Tabs);
-
-var _ScrollSection = __webpack_require__(4);
+var _ScrollSection = __webpack_require__(3);
 
 var _ScrollSection2 = _interopRequireDefault(_ScrollSection);
 
-var _ScrollSpy = __webpack_require__(5);
+var _ScrollSpy = __webpack_require__(4);
 
 var _ScrollSpy2 = _interopRequireDefault(_ScrollSpy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import Tabs from './modules/Tabs';
 var mobilemenu = new _MobileMenu2.default();
-var tabs = new _Tabs2.default();
+// const tabs = new Tabs();
 var scrollSpy = new _ScrollSpy2.default();
 var scrollSection = new _ScrollSection2.default();
 
@@ -10526,37 +10523,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Tabs() {
-    (0, _jquery2.default)("#tab").addClass("tabs__active-bg");
-    (0, _jquery2.default)(".tabs__item").on("click", TabsChanged);
-
-    function TabsChanged() {
-        var tab_id = (0, _jquery2.default)(this).attr('data-tab');
-        (0, _jquery2.default)(".tabs__item").removeClass("tabs__current tabs__active-bg");
-        (0, _jquery2.default)(".tabs__content").removeClass("tabs__current");
-        (0, _jquery2.default)(this).addClass("tabs__current tabs__active-bg");
-        (0, _jquery2.default)("#" + tab_id).addClass("tabs__current");
-    }
-}
-exports.default = Tabs;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _jquery = __webpack_require__(0);
@@ -10594,7 +10560,7 @@ var ScrollSection = function () {
 exports.default = ScrollSection;
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10610,7 +10576,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _noframework = __webpack_require__(6);
+var _noframework = __webpack_require__(5);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
@@ -10666,7 +10632,7 @@ var ScrollSpy = function () {
 exports.default = ScrollSpy;
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 /*!
