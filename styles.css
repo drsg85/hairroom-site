@@ -140,7 +140,7 @@ ul {
   .hero__copy {
     display: inline-block;
     max-width: 300px;
-    color: #2e2d2c;
+    color: #222222;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 1rem;
@@ -200,7 +200,7 @@ ul {
       .info__address {
         font-size: 1.1rem; } }
   .info__phone {
-    color: #2e2d2c;
+    color: #222222;
     font-size: 1.55rem;
     font-weight: 700;
     text-decoration: none; }
@@ -465,20 +465,6 @@ ul {
   @media (min-width: 1200px) {
     .about__content {
       padding-left: 80px; } }
-  .about__copy {
-    margin: 0;
-    margin-bottom: 55px;
-    color: #010101;
-    font-family: "Open Sans", sans-serif;
-    line-height: 2rem; }
-    @media (min-width: 700px) {
-      .about__copy {
-        max-width: 410px; } }
-    @media (min-width: 1200px) {
-      .about__copy {
-        max-width: 470px; } }
-    .about__copy--mrtop {
-      margin: 0; }
   .about__button {
     width: 100%;
     margin-bottom: 80px;
@@ -960,74 +946,63 @@ ul {
       -webkit-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out; }
 
-.tabs__list {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-  margin-left: -10px;
-  list-style: none; }
-  .tabs__list::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-    height: 1px;
-    width: 150%;
-    background-color: rgba(153, 153, 153, 0.25); }
-
-.tabs__link {
-  display: inline-block;
-  vertical-align: top;
-  padding: 10px;
-  color: #999999;
-  font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 2px;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out; }
-  @media (min-width: 700px) {
-    .tabs__link {
-      letter-spacing: 7px; } }
-  .tabs__link:hover {
-    color: #d74299; }
-
-.tabs__content {
-  padding-bottom: 45px;
-  display: none; }
-  @media (min-width: 1200px) {
-    .tabs__content {
-      width: 460px; } }
-
-.tabs__current {
-  display: inherit; }
-  .tabs__current a {
+.tabs {
+  margin-bottom: 40px; }
+  .tabs__list {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    list-style: none; }
+    .tabs__list::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      height: 1px;
+      width: 150%;
+      background-color: rgba(153, 153, 153, 0.25); }
+  .tabs__list-item--current .tabs__link {
     position: relative;
     color: #d74299; }
-    .tabs__current a::before {
+    .tabs__list-item--current .tabs__link::after {
+      content: "";
       position: absolute;
-      height: 2px;
-      bottom: -17px;
       left: 0;
-      content: '';
+      bottom: 0;
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+      height: 1px;
       width: 100%;
-      visibility: hidden;
-      background-color: #ee7aad;
-      -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-      -webkit-transition: 0.3s ease-in-out all 0s;
-      transition: 0.3s ease-in-out all 0s; }
-    .tabs__current a:hover, .tabs__current a:active {
-      color: #ee7aad; }
-      .tabs__current a:hover::before, .tabs__current a:active::before {
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1); }
+      width: calc(100% - 20px);
+      background-color: #ee7aad; }
+  .tabs__link {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    color: #999999;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out; }
+    .tabs__link:hover {
+      color: #d74299; }
+  .tabs__content {
+    display: none; }
+    .tabs__content--current {
+      display: block; }
+  .tabs__copy {
+    color: #222222;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.75; }
 
 .services {
   position: relative;
