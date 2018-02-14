@@ -10486,24 +10486,31 @@ var MobileMenu = function () {
     function MobileMenu() {
         _classCallCheck(this, MobileMenu);
 
+        this.body = (0, _jquery2.default)("body");
+        this.blackout = (0, _jquery2.default)(".main-menu--blackout");
         this.mainMenu = (0, _jquery2.default)(".main-menu");
+        this.mainMenuShown = (0, _jquery2.default)(".main-menu--shown");
         this.menuIcon = (0, _jquery2.default)(".menu-icon");
-        this.menuLinks = (0, _jquery2.default)(".main-menu__list a");
+        this.menuLinks = (0, _jquery2.default)(".main-menu a");
         this.events();
     }
 
     _createClass(MobileMenu, [{
         key: "events",
-        value: function events() {
+        value: function events(e) {
             this.menuIcon.click(this.toggleTheMenu.bind(this));
             this.menuLinks.click(this.toggleTheMenu.bind(this));
             this.menuLinks.on("tap", this.toggleTheMenu.bind(this));
+            // this.body.click(
+            //     this.mainMenu.removeClass("main-menu--shown")
+            // );
         }
     }, {
         key: "toggleTheMenu",
         value: function toggleTheMenu() {
             this.mainMenu.toggleClass("main-menu--shown");
             this.menuIcon.toggleClass("menu-icon--close-x");
+            this.blackout.toggleClass("main-menu--blackout-on");
         }
     }]);
 
@@ -10537,7 +10544,8 @@ var ScrollSection = function () {
     function ScrollSection() {
         _classCallCheck(this, ScrollSection);
 
-        this.link = (0, _jquery2.default)(".main-menu__list a");
+        this.link = (0, _jquery2.default)(".main-menu a");
+        this.mainMenu = (0, _jquery2.default)(".main-menu");
         this.events();
     }
 
@@ -10549,7 +10557,8 @@ var ScrollSection = function () {
                 var section = (0, _jquery2.default)(this).attr("href");
                 (0, _jquery2.default)("html, body").animate({
                     scrollTop: (0, _jquery2.default)(section).offset().top
-                }, 1000);
+                }, 800);
+                this.mainMenu.toggleClass("main-menu--shown");
             });
         }
     }]);
