@@ -65,7 +65,7 @@
       <div class="about__img">
         <picture>
           <source media="(min-width: 700px)" srcset="./img/about_img-md.jpg"/>
-          <source media="(min-width: 1200px)" srcset="./img/about_img-lg.jpg"/><img src="./img/about_img-lg.jpg" alt="HairRoom изображение"/>
+          <source media="(min-width: 1200px)" srcset="./img/about_img-lg.jpg"/><img src="./img/about_img-sm.jpg" alt="HairRoom изображение"/>
         </picture>
       </div>
       <div class="about__board">
@@ -498,18 +498,7 @@
           <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe">Подписаться</a>
         </div>
       </div>
-      <div class="gallery__gallery">
-        <div class="gallery__img"><img src="./img/card1-sm.jpg" alt="HairRoom студия красоты"/></div>
-        <div class="gallery__img gallery__img--subscribe"><img src="./img/card__subscribe.jpg" alt="подписаться"/></div>
-        <div class="gallery__img"><img src="./img/card2-sm.jpg" alt="HairRoom декорации"/></div>
-        <div class="gallery__img"><img src="./img/card3-sm.jpg" alt="HairRoom наращивание ресниц"/></div>
-        <div class="gallery__img"><img src="./img/card4-sm.jpg" alt="HairRoom окрас волос"/></div>
-        <div class="gallery__img"><img src="./img/card5-sm.jpg" alt="HairRoom"/></div>
-        <div class="gallery__img"><img src="./img/card6-sm.jpg" alt="HairRoom увеличение губ"/></div>
-        <div class="gallery__img"><img src="./img/card7-sm.jpg" alt="HairRoom миллирование"/></div>
-        <div class="gallery__img"><img src="./img/card5-sm.jpg" alt="HairRoom педикюр"/></div>
-        <div class="gallery__img"><img src="./img/card5-sm.jpg" alt="HairRoom педикюр"/></div>
-      </div>
+      <div class="instafeed" id="instafeed"></div>
     </section>
     <section class="location"><a class="nav-link" id="contacts"></a>
       <div class="map-label">
@@ -568,6 +557,7 @@
     </nav>
     <script src="map.js"></script>
     <script src="scripts.js"></script>
+    <script src="instagram.js"></script>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&amp;callback=initMap"></script>
   </body>
 </html>
