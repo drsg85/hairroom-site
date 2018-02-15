@@ -5,7 +5,8 @@ const notify = require("gulp-notify");
 const config = {
     entry: {
         scripts: "./src/js/scripts.js",
-        map: "./src/js/map.js"
+        map: "./src/js/map.js",
+        instagram: "./src/js/instagram.js"
     },
     output: {
         filename: "[name].js"

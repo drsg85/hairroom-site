@@ -10617,7 +10617,7 @@ var ScrollSpy = function () {
                             (0, _jquery2.default)(matchingSpyLink).addClass('scroll-spy__link--current');
                         }
                     },
-                    offset: "40%"
+                    offset: "20%"
                 });
 
                 new Waypoint({
@@ -10629,7 +10629,7 @@ var ScrollSpy = function () {
                             (0, _jquery2.default)(matchingSpyLink).addClass('scroll-spy__link--current');
                         }
                     },
-                    offset: "20%"
+                    offset: "-20%"
                 });
             });
         }

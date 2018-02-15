@@ -39,9 +39,27 @@
     }
 
     &__header {
+        // positioning
+        position: relative;
+
         // box model
         margin-top: 70px;
         margin-bottom: 25px;
+
+        &::after {
+            content: url("./img/finger.png");
+
+            // positioning
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+
+            @include atDesktop {
+                // box model
+                display: none;
+            }
+        }
     }
 
     &__suptitle {

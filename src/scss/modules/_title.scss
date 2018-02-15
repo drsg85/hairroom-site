@@ -99,15 +99,15 @@
                 vertical-align: top;
             }
 
-            // @include atDesktop {
-            //     // positioning
-            //     top: -180px;
-            //     right: -155px;
+            @include atDesktop {
+                // positioning
+                top: 220px;
+                right: -155px;
 
-            //     // typography
-            //     font-family: $textFont;
-            //     font-size: 1.875rem;
-            // }
+                // typography
+                font-family: $textFont;
+                font-size: 1.875rem;
+            }
 
         }
 

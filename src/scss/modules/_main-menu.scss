@@ -38,6 +38,14 @@
         visibility: visible;
         background: none;
     }
+
+    @include atDesktop{
+        // positionning
+        position: static;
+
+        // box model
+        // flex-wrap: wrap;
+    }
     
     ul {
         // box model
@@ -50,6 +58,8 @@
         @include atDesktop {
             // box model
             display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
 
             // visual
             background-color: #c11e8b;
@@ -104,9 +114,6 @@
     }
 
     &__franchise {
-        // box model
-        margin-top: 5px;
-
         a {
             // box model
             display: inline-block;
@@ -118,6 +125,7 @@
             border-radius: 30px;
 
             @include atDesktop {
+
                 // visual
                 border: 5px solid $secondaryColor;
                 
@@ -134,13 +142,13 @@
             }
         }
 
-        @include atDesktop {
-            // box model
+        @include atDesktopLarge {
             // positioning
             position: absolute;
-            top: 45px;
             right: 225px;
-            // display: none;
+
+            // box model
+            display: block;
         }
     }
     

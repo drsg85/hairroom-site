@@ -85,7 +85,7 @@ html(lang="ru")
                 picture
                     source(media="(min-width: 700px)" srcset="./img/about_img-md.jpg")
                     source(media="(min-width: 1200px)" srcset="./img/about_img-lg.jpg")
-                    img(src="./img/about_img-lg.jpg" alt="HairRoom изображение")
+                    img(src="./img/about_img-sm.jpg" alt="HairRoom изображение")
 
             .about__board
                 header.about__header
@@ -448,36 +448,36 @@ html(lang="ru")
                     p.gallery__text Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.
                     a.button.button--subscribe Подписаться
 
-            .gallery__gallery
-                .gallery__img
-                    img(src="./img/card1-sm.jpg" alt="HairRoom студия красоты")
+            .instafeed#instafeed
+                //- .gallery__img
+                //-     img(src="./img/card1-sm.jpg" alt="HairRoom студия красоты")
 
-                .gallery__img.gallery__img--subscribe
-                    img(src="./img/card__subscribe.jpg" alt="подписаться")
+                //- .gallery__img.gallery__img--subscribe
+                //-     img(src="./img/card__subscribe.jpg" alt="подписаться")
 
-                .gallery__img
-                    img(src="./img/card2-sm.jpg" alt="HairRoom декорации")
+                //- .gallery__img
+                //-     img(src="./img/card2-sm.jpg" alt="HairRoom декорации")
 
-                .gallery__img
-                    img(src="./img/card3-sm.jpg" alt="HairRoom наращивание ресниц")
+                //- .gallery__img
+                //-     img(src="./img/card3-sm.jpg" alt="HairRoom наращивание ресниц")
 
-                .gallery__img
-                    img(src="./img/card4-sm.jpg" alt="HairRoom окрас волос")
+                //- .gallery__img
+                //-     img(src="./img/card4-sm.jpg" alt="HairRoom окрас волос")
 
-                .gallery__img
-                    img(src="./img/card5-sm.jpg" alt="HairRoom")
+                //- .gallery__img
+                //-     img(src="./img/card5-sm.jpg" alt="HairRoom")
 
-                .gallery__img
-                    img(src="./img/card6-sm.jpg" alt="HairRoom увеличение губ")
+                //- .gallery__img
+                //-     img(src="./img/card6-sm.jpg" alt="HairRoom увеличение губ")
                     
-                .gallery__img
-                    img(src="./img/card7-sm.jpg" alt="HairRoom миллирование")
+                //- .gallery__img
+                //-     img(src="./img/card7-sm.jpg" alt="HairRoom миллирование")
 
-                .gallery__img
-                    img(src="./img/card5-sm.jpg" alt="HairRoom педикюр")
+                //- .gallery__img
+                //-     img(src="./img/card5-sm.jpg" alt="HairRoom педикюр")
 
-                .gallery__img
-                    img(src="./img/card5-sm.jpg" alt="HairRoom педикюр")
+                //- .gallery__img
+                //-     img(src="./img/card5-sm.jpg" alt="HairRoom педикюр")
 
         section.location
             a#contacts.nav-link
@@ -544,4 +544,5 @@ html(lang="ru")
 
         script(src="map.js")
         script(src="scripts.js")
+        script(src="instagram.js")
         script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&callback=initMap")

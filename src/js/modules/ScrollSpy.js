@@ -21,20 +21,21 @@ class ScrollSpy {
                         $(matchingSpyLink).addClass('scroll-spy__link--current');
                     }
                  },
-                 offset: ("40%")
+                 offset: ("20%")
             });
 
             new Waypoint({
                 element: currentNavSection,
                 handler: function(direction) {
-                    if(direction == "up") {
+                    if(direction == "up" ) {
                         let matchingSpyLink = "#" + currentNavSection.getAttribute('id') + "-link";
                         self.ScrollSpyLinks.removeClass('scroll-spy__link--current');
                         $(matchingSpyLink).addClass('scroll-spy__link--current');
                     }
-                },
-                offset: ("20%")
+                 },
+                 offset: ("-20%")
             });
+
         });
     }
 }

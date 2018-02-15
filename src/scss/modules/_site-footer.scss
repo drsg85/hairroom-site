@@ -237,22 +237,24 @@
         // padding-bottom: 40px;
 
         // typography
-        text-align: center;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-family: $textFont;
         color: $notationColor;
-
+        
         @include atTabletsPortrait {
             // box model
             display: none;
         }
-
+        
         @include atTabletsLandscape {
             // box model
             display: block;
             margin: 0 auto;
             margin-bottom: 0;
+
+            // typography
+            text-align: center;
         }
 
         @include atDesktop {

@@ -28,6 +28,7 @@
     "webpack-stream": "^4.0.0"
   },
   "dependencies": {
+    "instafeed": "^2.0.0",
     "owl.carousel": "^2.2.0",
     "waypoints": "^4.0.1"
   }

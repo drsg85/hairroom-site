@@ -15,8 +15,14 @@
         // positioning
         top: 45px;
         right: 0;
+        
+        // box model
+        display: none;
+    }
 
-
+    @include atDesktopLarge {
+        // box model
+        display: block;
     }
 
     &__text {
@@ -32,17 +38,19 @@
         font-size: 0.7rem;
 
         @include atDesktop {
-            // visual
-            border-bottom: 1px solid $secondaryColor;
-
+            
             // box model
             padding-right: 25px;
+            
+            // visual
+            border-bottom: 1px solid $secondaryColor;
 
             // typography
             color: $secondaryColor;
             font-family: $textFont;
             font-weight: 600;
         }
+
     }
 
     &__social {

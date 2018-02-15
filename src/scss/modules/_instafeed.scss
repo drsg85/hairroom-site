@@ -1,0 +1,25 @@
+.instafeed {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+
+    // typography
+    font-size: 0;
+    text-align: center;
+
+    &__image {
+        // box model
+        display: inline-block;
+        height: 320px;
+        width: 320px;
+        padding: 10px;
+
+        img {
+            // box model
+            height: 100%;
+            width: 100%;
+
+            object-fit: cover;
+        }
+    }
+}

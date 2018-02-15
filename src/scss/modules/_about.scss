@@ -8,21 +8,21 @@
 
         // visual
         // background-image: url("./img/pink.png");
-        background-color: #e3d8e8;;
-        // background: linear-gradient(to bottom, #f7e9f4 10%, #fbf9fa);
+        background-color: #e3d8e8;
+        background: linear-gradient(to bottom, #f7e9f4 10%, #fbf9fa);
 
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     z-index: -1;
-        //     top: 0;
-        //     left: 0;
-        //     right: 0;
-        //     bottom: 0;
-        //     height: 100%;
-        //     width: 100%;
-        //     background: linear-gradient(to bottom,rgba(233, 220, 230, 1),rgba(232, 197, 224, 1));
-        // }
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(#fefdfe, 1.5) 20%,rgba(232, 197, 224, 1));
+        }
     }
 
     @include atDesktop {
@@ -35,7 +35,7 @@
         padding-left: 85px;
 
         // visual
-        background-image: url("./img/pattern.jpg");
+        background-image: url("./img/pattern-lg.png");
         background-size: cover;
     }
 
@@ -77,9 +77,13 @@
 
             @include atDesktop {
                 // box model
-                width: 860px;
                 height: 100%;
                 margin-top: -50px;
+            }
+
+            @include atDesktopLarge {
+                // box model
+                width: 860px;
             }
         }
     }
@@ -95,8 +99,8 @@
         
         @include atTabletsPortrait {
             // box model
-            // margin-top: -150px;
-            // margin-left: 55px;
+            margin-top: -150px;
+            margin-left: 55px;
             padding: 50px;
 
             // visual
@@ -184,31 +188,6 @@
         }
     }
 
-    // &__background {
-    //     position: relative;
-    //     background-image: url("./img/pattern.jpg");
-
-    //     &::before {
-    //         content: '';
-    //         width: 100%;
-    //         height: 100%;
-    //         position: absolute;
-    //         top: 0;
-    //         bottom: 0;
-    //         left: 0;
-    //         right: 0;
-    //         background: linear-gradient(to bottom,rgba(247, 233, 244, 0.7), rgba(234, 199, 226, 0.7));
-    //     }
-
-    //     @include atDesktop {
-    //         background-image: none;
-    //         position: static;
-    //         margin-left: -100px;
-    //         width: 100%;
-    //     }
-        
-    // }
-
     &__buttons {
         // typography
         text-align: center;
@@ -265,6 +244,23 @@
             padding: 50px;
         }
 
+        @include atDesktop {
+            // box model
+            display: none;
+        }
+
+        @include atDesktopLarge {
+            // positioning
+            bottom: 60%;
+            left: 90%;
+
+            // box model
+            width: 300px;
+            height: 300px;
+            padding: 60px;
+            display: block;
+        }
+
         &::after {
             content: "";
 
@@ -290,6 +286,13 @@
                 width: 230px;
                 height: 230px;
             }
+            @include atDesktop {
+                // box model
+                width: 280px;
+                height: 280px;
+            }
+
+            
         }
 
         img {

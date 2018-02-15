@@ -33,19 +33,53 @@
         // height: 700px;
        width: 88%;
        margin-bottom: 200px;
-       padding: 85px;
+       padding: 50px 85px;
 
         // visual
         box-shadow: 0px 34px 39px -1px rgba(203,165,187,0.59);
     }
 
+    @include atDesktopLarge {
+        // box model
+        padding: 85px;
+    }
+
 
     &::after {
-        // content: url("./img/hero_hr-lg.png");
+        content: url("./img/hero_hr.png");
+
         // positioning
         position: absolute;
-        bottom: -200px;
-        z-index: 10;
+        left: 50%;
+        bottom: -100px;
+        z-index: 1;
+        transform: translateX(-50%);
+
+        @include atTabletsLandscape {
+            content: url("./img/hero_hr-lg.png");
+
+            // positioning
+            right: -100px;
+            bottom: -300px;
+            transform: none;
+
+            // box model
+            display: none;
+
+        }
+        @include atDesktop {
+            // positioning
+            left: 43%;
+        }
+
+        @include atDesktopLarge {
+            // positioning
+            left: 70%;
+            bottom: -150px;
+            z-index: -2;
+            // box model
+            // display: none;
+        }
     }
     //     @include atTabletsPortrait {
     //         // positioning
@@ -139,27 +173,6 @@
             text-shadow: 0 0, -12px 7px 0 $text;
         }
     }
-    
-    // &__content {
-    //     // box model
-    //     display: flex;
-    //     flex-direction: column;
-    //     padding-left: 25px;
-    //     border: 1px solid red;
-        
-    //     @include atTabletsPortrait {
-    //         // box model
-    //         padding-left: 55px;
-    //     }
-
-    //     @include atDesktop {
-    //         // positioning
-    //         position: relative;
-
-    //         // box model
-    //         padding-left: 0;
-    //     }
-    // }
 
     &__copy {
         // box model
@@ -231,7 +244,7 @@
             left: 25%;
 
             // box model
-            min-width: 625px;
+            min-width: 600px;
         }
 
         @include atTabletsLandscapeIpad {
@@ -239,18 +252,18 @@
             width: 600px;
         }
 
-        // @include atDesktop {
-        //     // positioning
-        //     z-index: -1;
+        @include atDesktop {
+            // positioning
+            z-index: -1;
+            left: 35%;
 
-        //     // box model
-        //     width: 760px;
-        //     left: 35%;
-        // }
+            // box model
+            min-width: 720px;
+        }
 
         @include atDesktopLarge {
             // positioning
-            width: 790px;
+            width: 800px;
             left: 30%;
         }
 

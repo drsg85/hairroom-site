@@ -1,11 +1,16 @@
 .site-header {
 
     @include atTabletsPortrait {
+        // visual
         background-image: url("./img/pattern.jpg");
+        background-size: cover;
     }
 
     @include atDesktop {
-        background-image: url("./img/pattern-lg.jpg");
+        // positioning
         position: relative;
+
+        // visual
+        background-image: url("./img/pattern-lg.jpg");
     }
 }
