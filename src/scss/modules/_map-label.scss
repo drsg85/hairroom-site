@@ -37,22 +37,7 @@
 
     // visual
     background-color: rgba($accent, 0.8);
-    // background-image: url("./img/place.png");
     border-radius: 10px;
-
-    // @include atTabletsPortrait {
-    //     // box model
-    //     width: 55%;
-    // }
-
-    // @include atDesktop {
-    //     // positioning
-    //     top: 0;
-
-    //     // box model
-    //     width: 20%;
-    //     left: 25%;
-    // }
 
     &__logo {
         // box model

@@ -10558,7 +10558,6 @@ var ScrollSection = function () {
                 (0, _jquery2.default)("html, body").animate({
                     scrollTop: (0, _jquery2.default)(section).offset().top
                 }, 800);
-                this.mainMenu.toggleClass("main-menu--shown");
             });
         }
     }]);

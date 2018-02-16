@@ -1,3 +1,32 @@
+<?php
+/*
+
+  Template Name: Home Page
+
+*/
+
+// Info
+$address = get_field("address");
+$phone = get_field("phone");
+$phone_link = get_field("phone_link");
+
+// Slogan
+$social_network = get_field("social_network");
+
+// Hero
+$hero_title = get_field("hero_title");
+$hero_description = get_field("hero_description");
+
+// City
+$city = get_field("city");
+
+// Social
+$social_in = get_field("social_in");
+$social_fb = get_field("social_fb");
+$social_vk = get_field("social_vk");
+
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -5,23 +34,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo("stylesheet_directory"); ?>/img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo("stylesheet_directory"); ?>/img/favicon-16x16.png"/>
     <link rel="manifest" href="/site.webmanifest"/>
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="theme-color" content="#ee7aad"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"/>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>?v=2"/>
     <title>HairRoom</title>
+    <?php wp_head(); ?>
   </head>
   <body>
     <header class="site-header nav-link" id="about">
       <nav class="main-nav">
-        <div class="logo"><img src="./img/hr_logo_white.svg" alt="HairRoom Logo"/></div>
+        <div class="logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/hr_logo_white.svg" alt="HairRoom Logo"/></div>
         <div class="info">
-          <p class="info__address">Калининград<br>Иванникова,&nbsp;12</p><a class="info__phone" href="tel:523766">52<span>.</span>37<span>.</span>76</a>
+          <p class="info__address"><?php echo $address; ?></p><a class="info__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone; ?></a>
         </div>
         <div class="menu-icon">
           <div class="menu-icon__middle"></div>
@@ -29,43 +59,43 @@
         <div class="main-menu--blackout"></div>
         <nav class="main-menu">
           <ul>
-            <li><a href="#about">Салон</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#price">Прайс</a></li>
-            <li><a href="#gallery">Галлерея</a></li>
-            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="<?php echo esc_url(home_url("/")); ?>#about">Салон</a></li>
+            <li><a href="<?php echo esc_url(home_url("/")); ?>#services">Услуги</a></li>
+            <li><a href="<?php echo esc_url(home_url("/")); ?>#price">Прайс</a></li>
+            <li><a href="<?php echo esc_url(home_url("/")); ?>#gallery">Галлерея</a></li>
+            <li><a href="<?php echo esc_url(home_url("/")); ?>#contacts">Контакты</a></li>
             <div class="main-menu__franchise"><a href="#">Франшиза</a></div>
           </ul>
           <div class="be-friends"><a href="http://instagram.com">
               <p class="be-friends__text">Давайте дружить</p>
-              <p class="be-friends__social">instagram</p></a></div>
+              <p class="be-friends__social"><?php echo $social_network;?></p></a></div>
         </nav>
       </nav>
       <section class="hero">
         <header class="hero__header">
-          <h1 class="hero__title">Ваш<br> идеальный<br> салон<br> красоты</h1>
+          <h1 class="hero__title"><?php echo $hero_title; ?></h1>
         </header>
-        <p class="hero__copy">Быть свободной значит быть разной, меняйте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!</p>
+        <p class="hero__copy"><?php echo $hero_description; ?></p>
         <div class="hero__img">
           <picture>
-            <source media="(min-width: 700px)" srcset="./img/women-md.png"/>
-            <source media="(min-width: 1200px)" srcset="./img/women-lg.png"/><img src="./img/women.png" alt="Hair Room девушка"/>
+            <source media="(min-width: 700px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/women-md.png"/>
+            <source media="(min-width: 1200px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/women-lg.png"/><img src="<?php bloginfo("stylesheet_directory"); ?>/img/women.png" alt="Hair Room девушка"/>
           </picture>
         </div>
         <div class="hero__button"><a class="button button--online-record" href="#">online&nbsp;запись</a></div>
-        <p class="title__description title__description--right">Hair Room kaliningrad</p>
+        <p class="title__description title__description--right">Hair Room <?php echo $city; ?></p>
         <ul class="socials">
-          <li><a href="https://instagram.com/">instagram</a></li>
-          <li><a href="https://facebook.com/">facebook</a></li>
-          <li><a href="https://vk.com/">vkontakte</a></li>
+          <li><a href="<?php echo $social_in; ?>" target="_blank">instagram</a></li>
+          <li><a href="<?php echo $social_fb; ?>" target="_blank">facebook</a></li>
+          <li><a href="<?php echo $social_vk; ?>" target="_blank">vkontakte</a></li>
         </ul>
       </section>
     </header>
     <section class="about">
       <div class="about__img">
         <picture>
-          <source media="(min-width: 700px)" srcset="./img/about_img-md.jpg"/>
-          <source media="(min-width: 1200px)" srcset="./img/about_img-lg.jpg"/><img src="./img/about_img-sm.jpg" alt="HairRoom изображение"/>
+          <source media="(min-width: 700px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/about_img-md.jpg"/>
+          <source media="(min-width: 1200px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/about_img-lg.jpg"/><img src="<?php bloginfo("stylesheet_directory"); ?>/img/about_img-sm.jpg" alt="HairRoom изображение"/>
         </picture>
       </div>
       <div class="about__board">
@@ -96,7 +126,7 @@
           </div>
         </div>
         <div class="about__buttons"><a class="button button--pink" href="#">Online Запись</a><a class="button button--ghost" href="#price">Прайс-Лист</a></div>
-        <div class="about__logo"><img src="./img/hr_logo_black.svg" alt="Hairroom logo"/></div>
+        <div class="about__logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/hr_logo_black.svg" alt="Hairroom logo"/></div>
       </div>
     </section>
     <section class="services"><a class="nav-link" id="services"></a>
@@ -178,9 +208,26 @@
             <h3 class="price__group-title">Уход<br>за волосами</h3>
             <div class="price__container">
               <div class="price-inner__column">
+              <?php 
+                    $args = array(
+                      'category_name'=> 'services_price'
+                    );
+
+                    query_posts($args);
+
+                    
+                    if(have_posts()) {
+                      while(have_posts()) {
+                        the_post();
+                        
+                        // vars
+                        $price_name = get_field("price_name");
+                        $price_description = get_field("price_description");
+                  
+                  ?>
                 <table class="price__table">
-                  <caption class="price__caption">кератиновое выпрямление<br>/ восстановление</caption>
-                  <caption class="price__column-description">Система богата белками и аминокислотами кератина. Подходит для сильно поврежденных волос и  имеет накопительный эффект.</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
                     <td>короткие</td>
                     <td><b>2000 - 2500</b> <span>руб.</span></td>
@@ -198,6 +245,10 @@
                     <td><b>4000 - 4500</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php
+                      }
+                    }
+                ?>
               </div>
               <div class="price-inner__column">
                 <table class="price__table">
@@ -470,20 +521,37 @@
     </section>
     <section class="shares">
       <div class="shares__content">
-        <article class="shares__card shares__card--offers">
+      <?php 
+        $args = array(
+          'category_name'=> 'offers'
+        );
+
+        query_posts($args);
+
+        
+        if(have_posts()) {
+          while(have_posts()) {
+            the_post();
+            
+            // vars
+            $shares_title = get_field("shares_name");
+            $shares_image = get_field("shares_img");
+      
+      ?>
+        <article class="shares__card">
+          <div class="shares__img">
+            <img src="<?php echo $shares_image; ?>" alt="HairRoom скидки"/>
+          </div>
           <header class="shares__header">
             <p class="shares__offers">Акции</p>
-            <p class="shares__text">Новинки в разделе ухода за волосами  </p>
-            <div class="shares__button"><a class="button button--card button--offers" href="#">Дальше</a></div>
+            <p class="shares__text"><?php echo $shares_title; ?></p>
+            <div class="shares__button"><a class="button button--card button--offers" href="<?php the_permalink(); ?>">Дальше</a></div>
           </header>
         </article>
-        <article class="shares__card shares__card--loyality">
-          <header class="shares__header">
-            <p class="shares__offers shares__offers--white">Акции</p>
-            <p class="shares__text shares__text--white">Скидки для участников программы</p>
-            <div class="shares__button"><a class="button button--card button--offers">Дальше</a></div>
-          </header>
-        </article>
+      <?php
+          }
+        }
+      ?>
       </div>
     </section>
     <section class="gallery"><a class="nav-link" id="gallery"></a>
@@ -494,70 +562,12 @@
       <div class="gallery__subscribe">
         <p class="gallery__slogan">Давайте дружить</p>
         <div class="gallery__content">
-          <div class="gallery__logo"><img src="./img/insta_logo.png" alt="instagram logo"/></div>
+          <div class="gallery__logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/insta_logo.png" alt="instagram logo"/></div>
           <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe">Подписаться</a>
         </div>
       </div>
       <div class="instafeed" id="instafeed"></div>
     </section>
-    <section class="location"><a class="nav-link" id="contacts"></a>
-      <div class="map-label">
-        <div class="map-label__content">
-          <p class="title__description title__description--right title__description--map">Hairroom Kaliningrad</p>
-          <p class="map-label__info-title">E-mail</p>
-          <p class="map-label__info-text">hairroom@gmail.com</p>
-          <p class="map-label__info-title">Телефон</p>
-          <p class="map-label__info-text">+7 4012 52-37-76</p>
-          <p class="map-label__info-title">Адрес</p>
-          <p class="map-label__info-text">г. Калининград,<br> ул. Иванникова, д.12<br><sub>(ориентир напротив гостиницы Radisson)</sub></p>
-        </div>
-      </div>
-      <div class="location__map" id="map"></div>
-    </section>
-    <footer class="site-footer">
-      <div class="site-footer__container">
-        <header class="site-footer__header">
-          <div class="site-footer__logo"><img src="./img/hr_logo_hor_black.svg" alt="Hair Room логотип"/></div>
-          <p class="site-footer__title-location">HAIR ROOM. Калининград</p>
-          <p class="site-footer__description">Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа</p>
-        </header>
-        <ul class="site-footer__navigation">
-          <li><a class="site-footer__navigation-title" href="#">Главная</a></li>
-          <li><a href="#about">О Салоне</a></li>
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#services">Прайс-лист</a></li>
-          <li><a href="#services">Контакты</a></li>
-          <li><a href="#services">Франшиза</a></li>
-        </ul>
-        <div class="site-footer__contacts">
-          <p class="site-footer__contacts-title">Контакты</p>
-          <p class="site-footer__info-title">Адрес:</p>
-          <p class="site-footer__info-text">г. Калининград ул. Иванникова, д. 12</p>
-          <p class="site-footer__info-title">Телефон:</p><a class="site-footer__info-text" href="tel: 523776">+ 7 4012 52 37 76</a>
-          <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto: hairroom@gmail.com">hairroom@gmail.com</a>
-        </div>
-        <div class="site-footer__worktime">
-          <p class="site-footer__contacts-title">Время работы</p>
-          <p class="site-footer__info-title">Ежедневно:</p>
-          <p class="site-footer__info-text">С 10 <sup>00</sup> до 20<sup>00</sup></p>
-          <p class="site-footer__info-title">Воскресенье:</p>
-          <p class="site-footer__info-text site-footer__info-text--bold">- выходной</p>
-        </div>
-        <p class="site-footer__copyright">copyright &copy; 2018<br><b>hairroom</b></p>
-      </div>
-    </footer>
-    <nav class="scroll-spy">
-      <ul class="scroll-spy__list">
-        <li><a class="scroll-spy__link" id="about-link" data-label="Салон" href="#about">Салон</a></li>
-        <li><a class="scroll-spy__link" id="services-link" data-label="Услуги" href="#services">Услуги</a></li>
-        <li><a class="scroll-spy__link" id="price-link" data-label="Прайс" href="#price">Прайс</a></li>
-        <li><a class="scroll-spy__link" id="gallery-link" data-label="Галлерея" href="#gallery">Галлерея</a></li>
-        <li><a class="scroll-spy__link" id="contacts-link" data-label="Контакты" href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
-    <script src="map.js"></script>
-    <script src="scripts.js"></script>
-    <script src="instagram.js"></script>
-    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&amp;callback=initMap"></script>
+    <?php get_footer(); ?>
   </body>
 </html>

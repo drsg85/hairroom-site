@@ -14,7 +14,6 @@ class ScrollSection {
             $("html, body").animate({
                 scrollTop: $(section).offset().top
             }, 800);
-            this.mainMenu.toggleClass("main-menu--shown");
         });
     }
 }

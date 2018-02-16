@@ -114,6 +114,7 @@
     }
 
     &__franchise {
+        
         a {
             // box model
             display: inline-block;
@@ -140,6 +141,11 @@
                     background-color: $white;
                 }
             }
+        }
+
+        @include atDesktop {
+            // box model
+            display: none;
         }
 
         @include atDesktopLarge {

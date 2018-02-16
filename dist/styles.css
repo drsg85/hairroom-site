@@ -1,3 +1,8 @@
+/*
+    Theme Name: HairRoom
+    Description: Special theme for HairRoom.ru
+    Author: Daniil Vereschagin
+*/
 /* cyrillic-ext */
 @font-face {
   font-family: 'Open Sans';
@@ -170,7 +175,7 @@ ul {
     .hero {
       padding: 85px; } }
   .hero::after {
-    content: url("./img/hero_hr.png");
+    content: url("http://localhost/HairRoom/wp-content/themes/HairRoom/img/hero_hr.png");
     position: absolute;
     left: 50%;
     bottom: -100px;
@@ -179,7 +184,7 @@ ul {
             transform: translateX(-50%); }
     @media (min-width: 900px) {
       .hero::after {
-        content: url("./img/hero_hr-lg.png");
+        content: url("http://localhost/HairRoom/wp-content/themes/HairRoom/img/hero_hr-lg.png");
         right: -100px;
         bottom: -300px;
         -webkit-transform: none;
@@ -546,6 +551,9 @@ ul {
         font-weight: 700; }
         .main-menu__franchise a:hover {
           background-color: #ffffff; } }
+  @media (min-width: 1200px) {
+    .main-menu__franchise {
+      display: none; } }
   @media (min-width: 1600px) {
     .main-menu__franchise {
       position: absolute;
@@ -893,7 +901,6 @@ ul {
     margin-right: 30px;
     margin-bottom: 30px;
     background-color: #ffffff;
-    border-radius: 5px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
     .shares__card::last-child {
@@ -929,6 +936,8 @@ ul {
     .shares__offers--white {
       color: white; }
   .shares__header {
+    position: relative;
+    z-index: 1;
     padding: 30px; }
     @media (min-width: 900px) {
       .shares__header {
@@ -946,6 +955,17 @@ ul {
     line-height: 1.25; }
     .shares__text--white {
       color: #ffffff; }
+  .shares__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
+    .shares__img img {
+      width: 100%;
+      height: 100%; }
 
 .franchise {
   display: none; }
