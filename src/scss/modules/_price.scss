@@ -164,7 +164,7 @@
         @include atTabletsLandscape {
             // box model
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
             flex-wrap: wrap;
         }
     }
@@ -173,30 +173,14 @@
         @include atTabletsLandscape {
             // box model
             width: 345px;
+
+            margin-right: 10%
+
         }
-        
-        &--right {
+        &::nth-child(3) {
             // box model
-            // width: auto;
+            margin-right: 0;
         }
-
-        &--pd {
-            // @include atDesktop {
-            //     // box model
-            //     padding-left: 120px;
-            // }
-        }
-
-        // @include atTabletsPortrait {
-        //     // box model
-        //     width: 300px;
-        //     display: inline-block;
-        // }
-
-        // @include atDesktop {
-        //     // box model
-        //     width: 40%;
-        // }
     }
 
 

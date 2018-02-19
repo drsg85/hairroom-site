@@ -96,13 +96,13 @@
         // visual
         border-radius: 5px;
 
-        &:hover .services__card-img::after {
+        &:hover .card__img::after {
             // visual
             transition: 0.3s ease-in-out all;
             opacity: 0.7;
         }
 
-        &:hover .services__card-content {
+        &:hover .card__content {
             // box model
             display: block;
         }
@@ -111,15 +111,6 @@
 
             // visual
             transition: 0.3s ease-in-out all;
-            box-shadow: -39px 44px 0px -21px rgba(152,67,128,0.56);
-            
-            // @include atDesktop {
-            //     // positioning
-            //     transform: translate(30px);
-
-            //     // visual
-            //     transform: scale(1.1);
-            // }
         }
     }
 
