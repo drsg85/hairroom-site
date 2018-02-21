@@ -67,8 +67,8 @@ $work_time = get_field("work_time");
         <li><a class="scroll-spy__link" id="contacts-link" data-label="Контакты" href="<?php echo esc_url(home_url("/")); ?>#contacts">Контакты</a></li>
       </ul>
     </nav>
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/map.js?v=2"></script>
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts.js?v=2"></script>
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/instagram.js?v=2"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/map.js<?php echo '?v=' . rand(); ?>"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts.js<?php echo '?v=' . rand(); ?>"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/instagram.js<?php echo '?v=' . rand(); ?>"></script>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&amp;callback=initMap"></script>
     <?php wp_footer(); ?>

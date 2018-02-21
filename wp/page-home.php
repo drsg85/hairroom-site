@@ -105,9 +105,9 @@ $social_vk = get_field("social_vk");
         <div class="about__content">
           <div class="tabs">
             <ul class="tabs__list" id="tabs" role="tablist">
-              <li class="tabs__list-item tabs__list-item--current"><a class="tabs__link">Миссия</a></li>
-              <li class="tabs__list-item"><a class="tabs__link">Подход</a></li>
-              <li class="tabs__list-item"><a class="tabs__link">Мастера</a></li>
+              <li class="tabs__list-item tabs__content--current" data-tab="tab-1"><a class="tabs__link">Миссия</a></li>
+              <li class="tabs__list-item" data-tab="tab-2"><a class="tabs__link" >Подход</a></li>
+              <li class="tabs__list-item" data-tab="tab-3"><a class="tabs__link" >Мастера</a></li>
             </ul>
             <div class="tabs__content tabs__content--current">
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
@@ -150,11 +150,41 @@ $social_vk = get_field("social_vk");
               $card_title= get_field("card_title");
               $card_img = get_field("card_img");
               $card_description = get_field("card_description");
+              $card_ribbon = get_field("card_ribbon");
               
         ?>
         <article class="card">
           <header class="card__title"><?php echo $card_title; ?></header>
           <div class="services__wrapper">
+            <?php 
+              switch ($card_ribbon) {
+                case 'trend':
+            ?>
+                <div class="card__ribbons">
+                  <p class="card__ribbon">Trend</p>
+                </div>
+            <?php
+                break;
+            ?>
+              <?php 
+                case 'new':
+              ?>
+                <div class="card__ribbons">
+                <p class="card__ribbon">New</p>
+                </div>
+
+              <?php 
+                break;
+              ?>
+              <?php 
+                case 'no':
+              ?>
+
+              <?php 
+                break;
+                 }
+              ?>
+              
             <img class="card__img" src="<?php echo $card_img; ?>"/>
             <div class="card__content">
               <!-- changes class-->

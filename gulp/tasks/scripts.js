@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const webpack = require("webpack-stream");
+const webpack2 = require('webpack');
 const notify = require("gulp-notify");
 
 const config = {
@@ -20,7 +21,13 @@ const config = {
             test: /\.js$/,
             exclude: /node_modules/
         }]
-    }
+    },
+    plugins: [
+        new webpack2.DefinePlugin({
+          'process.env': { 'NODE_ENV': "'production'" }
+        }),
+        new webpack2.optimize.UglifyJsPlugin()
+      ]
 };
 
 gulp.task("scripts", function() {

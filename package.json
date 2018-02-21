@@ -25,6 +25,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-watch": "^5.0.0",
     "sass-module-importer": "^1.4.0",
+    "webpack": "^3.11.0",
     "webpack-stream": "^4.0.0"
   },
   "dependencies": {

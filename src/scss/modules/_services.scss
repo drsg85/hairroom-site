@@ -319,3 +319,12 @@
         transform: translateX(-50%);
     }
 }
+.services__wrapper:hover .card__ribbons {
+    // visual
+    background-color: $white;
+}
+
+.services__wrapper:hover .card__ribbon {
+        // typography
+        color: #c6168d;
+}

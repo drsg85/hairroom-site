@@ -1315,6 +1315,43 @@ ul {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1.25; }
+  .card__ribbons {
+    position: absolute;
+    right: 30px;
+    display: inline-block;
+    vertical-align: top;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 0;
+    background-color: #c6168d; }
+    .card__ribbons--no {
+      visibility: hidden; }
+  .card__ribbon {
+    position: relative;
+    margin: 0;
+    padding: 20px 10px;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: uppercase; }
+    .card__ribbon::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      right: 0px;
+      height: 50%;
+      width: 25px; }
+    .card__ribbon::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0px;
+      height: 50%;
+      width: 25px;
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
   .card__img {
     position: absolute;
     top: 0;
@@ -1541,6 +1578,12 @@ ul {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
+
+.services__wrapper:hover .card__ribbons {
+  background-color: #ffffff; }
+
+.services__wrapper:hover .card__ribbon {
+  color: #c6168d; }
 
 .gallery {
   padding-top: 30px; }

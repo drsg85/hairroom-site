@@ -1,21 +1,22 @@
 import $ from 'jquery';
+import smoothScroll from 'jquery-smooth-scroll';
 
-class ScrollSection {
+class SmoothScrolling {
     constructor() {
-        this.link = $(".main-menu a");
-        this.mainMenu = $(".main-menu");
-        this.events();
+        this.menuLinks = $('.main-menu a');
+        this.scrollSpyLinks = $('.scroll-spy__link');
+        this.addSmoothScrolling();
     }
 
-    events() {
-        this.link.click(function(e) {
-            e.preventDefault();
-            var section = $(this).attr("href");
-            $("html, body").animate({
-                scrollTop: $(section).offset().top
-            }, 800);
+    addSmoothScrolling() {
+        this.menuLinks.smoothScroll({
+            offset: -40
         });
+
+        // this.scrollSpyLinks.smoothScroll({
+        //     offset: -40
+        // });
     }
 }
 
-export default ScrollSection;
+export default SmoothScrolling;
