@@ -17,11 +17,11 @@ $work_time = get_field("work_time");
         <div class="map-label__content">
           <p class="title__description title__description--right title__description--map">Hairroom <?php echo $city; ?></p>
           <p class="map-label__info-title">E-mail</p>
-          <p class="map-label__info-text"><?php echo $mail; ?></p>
+          <p class="map-label__info-text"><?php the_field("mail", 5); ?></p>
           <p class="map-label__info-title">Телефон</p>
-          <p class="map-label__info-text"><?php echo $phone; ?></p>
+          <p class="map-label__info-text"><?php the_field("phone", 5); ?></p>
           <p class="map-label__info-title">Адрес</p>
-          <p class="map-label__info-text"><?php echo $address; ?><sub><?php echo $landmark;?></sub></p>
+          <p class="map-label__info-text"><?php the_field("address", 5); ?><sub><?php echo $landmark;?></sub></p>
         </div>
       </div>
       <div class="location__map" id="map"></div>
@@ -30,7 +30,7 @@ $work_time = get_field("work_time");
       <div class="site-footer__container">
         <header class="site-footer__header">
           <div class="site-footer__logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/hr_logo_hor_black.svg" alt="Hair Room логотип"/></div>
-          <p class="site-footer__title-location">HAIR ROOM. <?php echo $city; ?></p>
+          <p class="site-footer__title-location">HAIR ROOM. <?php the_field("city", 5); ?></p>
           <p class="site-footer__description">Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа</p>
         </header>
         <ul class="site-footer__navigation">
@@ -44,14 +44,14 @@ $work_time = get_field("work_time");
         <div class="site-footer__contacts">
           <p class="site-footer__contacts-title">Контакты</p>
           <p class="site-footer__info-title">Адрес:</p>
-          <p class="site-footer__info-text"><?php echo $address; ?></p>
-          <p class="site-footer__info-title">Телефон:</p><a class="site-footer__info-text" href="tel: <?php echo $phone_link; ?>"><?php echo $phone;?></a>
-          <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto: <?php echo $mail_link; ?>"><?php echo $mail; ?></a>
+          <p class="site-footer__info-text"><?php the_field("address", 5); ?></p>
+          <p class="site-footer__info-title">Телефон:</p><a class="site-footer__info-text" href="tel: <?php the_field("phone_link", 5); ?>"><?php the_field("phone",5) ;?></a>
+          <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto: <?php the_field("mail_link", 5); ?>"><?php the_field("mail",5) ;?></a>
         </div>
         <div class="site-footer__worktime">
           <p class="site-footer__contacts-title">Время работы</p>
           <p class="site-footer__info-title">Ежедневно:</p>
-          <p class="site-footer__info-text"><?php echo $work_time; ?></p>
+          <p class="site-footer__info-text"><?php the_field("work_time", 5); ?></p>
           <p class="site-footer__info-title">Воскресенье:</p>
           <p class="site-footer__info-text site-footer__info-text--bold">- выходной</p>
         </div>

@@ -112,29 +112,6 @@
         border-color: $secondaryColor;
         transition: 0.3s ease-in-out;
 
-        // @include atTabletsPortrait {
-        //     // positioning
-        //     position: static;
-
-        //     // box model
-        //     height: 39px;
-        //     width: 250px;
-        //     margin-bottom: 50px;
-        //     padding: 0 50px;
-        //     vertical-align: middle;
-
-        //     // typography
-        //     line-height: 35px;
-        //     font-size: 1rem;
-
-        //     // visual
-        //     transform: translate(0);
-        // }
-
-        // @include atDesktop {
-        //     // box model
-        //     width: 310px;
-        // }
 
         &:hover {
             // visual
@@ -144,6 +121,9 @@
     }
 
     &--pink {
+        // box model
+        margin-bottom: 15px;
+
         // typography
         color: $copyColor;
         border: 2px solid $accent;
@@ -154,8 +134,9 @@
 
         @include atTabletsPortrait {
             // box model
-            margin-bottom: 0px;
+            margin-bottom: 10px;
             margin-right: 40px;
+            padding: 8px 0;
         }
 
         &:hover {
@@ -170,21 +151,23 @@
 
     &--ghost {
         // box model
+        margin-bottom: 15px;
         border: 2px solid $secondaryColor;
         
         // typography
         color: $secondaryColor;
-
+        
         // visual
         background-color: rgba(#f4cfe4, 0.12);
         
-        // @include atTabletsPortrait {
-        //     // box model
-        //     padding: 8px 0;
-
-        //     // typography
-        //     color: #fff;
-        // }
+        @include atTabletsPortrait {
+            // box model
+            padding: 8px 0;
+            
+            // typography
+            color: #fff;
+        }
+d
 
 
         &:hover {
