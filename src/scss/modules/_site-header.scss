@@ -1,5 +1,13 @@
 .site-header {
 
+    &--franshize {
+
+        @include atDesktop {
+            // visual
+            background-image: url("./img/header-franshize.png") !important;
+        }
+    }
+
     @include atTabletsPortrait {
         // visual
         background-image: url("./img/pattern.jpg");

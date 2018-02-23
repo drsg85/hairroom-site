@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="styles.css")
+        title HairRoom Franshize
+    body
+        header.site-header
+            .hero.hero--franshize
+                nav.main-nav
+                    .logo.logo--franshize
+                        img(src="./img/hr_logo_white.svg" alt="HairRoom logo")
+                    .franshise__button
+                        a.button.button--franshize(href="index.html") На&nbsp;главную
+
+                .hero__img.hero__img--franshize
+                    picture
+                        source(media="(min-width: 700px)" srcset="./img/hero_franshize-img.jpg")
+                        source(media="(min-width: 1200px)" srcset="./img/hero_franshize-img.jpg")
+                        img(src="./img/hero_franshize-img.jpg" alt="HairRoom Image")
+
+                h4.form__img-title Мечтаешь<br> о собственном<br>салоне красоты?
+
+                p.title__description.title__description--right.title__description--franshize Франшиза Hair Room
+
+                header.form__header
+                    sup.form__suptitle франшиза
+                    h2.form__title откройте<br>собственный<br>салон hair room<br>у себя в городе
+                    p.form__call Заполните форму и наш<br>менеджер с вами свяжется
+
+                form.form__content
+                    .form__group
+                        input.form__group-input(type="text" name="name" placeholder="Имя")
+                        input.form__group-input(type="phone" name="phone" placeholder="Телефон")
+
+                    .form__group.form__group--full
+                        input.form__group-input(type="text" name="city" placeholder="Желаемый город")
+
+                    .form__group.form__group--full
+                        input.form__group-input(type="email" name="email" placeholder="E-mail")
+                        
+                    p.form__policy Заполняя контактную форму<br>вы соглашаетесь с <a>политикой&nbsp;конфиденциальности</a>
+                    .form__button
+                        a.button.button--form(href="#") Оставить заявку
+
+                ul.socials
+                    li: a(href="https://instagram.com/") instagram
+                    li: a(href="https://facebook.com/") facebook
+                    li: a(href="https://vk.com/") vkontakte
+
+                
+                        
+
+        footer.site-footer.site-footer--franshize
+                .site-footer__container
+                    header.site-footer__header
+                        .site-footer__logo: img(src="./img/hr_logo_hor_black.svg" alt="Hair Room логотип")
+                        p.site-footer__title-location HAIR ROOM. Калининград
+                        p.site-footer__description Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа
+
+                    ul.site-footer__navigation
+                        li: a.site-footer__navigation-title(href="#") Главная
+                        li: a(href="#about") О Салоне
+                        li: a(href="#services") Услуги
+                        li: a(href="#services") Прайс-лист
+                        li: a(href="#services") Контакты
+                        li: a(href="#services") Франшиза
+
+                    .site-footer__contacts
+                        p.site-footer__contacts-title Контакты
+
+                        p.site-footer__info-title Адрес:
+                        p.site-footer__info-text г. Калининград ул. Иванникова, д. 12
+
+                        p.site-footer__info-title Телефон:
+                        a.site-footer__info-text(href="tel: 523776") + 7 4012 52 37 76
+
+                        p.site-footer__info-title E-mail:
+                        a.site-footer__info-text(href="mailto: hairroom@gmail.com") hairroom@gmail.com
+
+                    .site-footer__worktime
+                        p.site-footer__contacts-title Время работы
+
+                        p.site-footer__info-title Ежедневно:
+                        p.site-footer__info-text С 10 <sup>00</sup> до 20<sup>00</sup>
+                        
+                        p.site-footer__info-title Воскресенье:
+                        p.site-footer__info-text.site-footer__info-text--bold - выходной
+                        
+                    p.site-footer__copyright copyright &copy; 2018<br><b>hairroom</b>

@@ -10,6 +10,22 @@
     background-color: $accent;
     background: linear-gradient(to right, rgba(198, 22, 141, 0.85), rgba(219, 102, 154, 0.9));
 
+    &--franshize {
+        // box model
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+
+
+        &::before {
+            content: url("./img/hero_hr-franshize.png");
+            // positioning
+            position: absolute;
+            bottom: -85px;
+            // width: 300px;
+        }
+    }
+
     @include atTabletsPortrait {
         // positioning
         z-index: 0;
@@ -197,6 +213,21 @@
 
         // typography
         font-size: 0;
+
+        &--franshize {
+            // box model
+            min-width: 350px;
+
+            img {
+                // box model
+                width: 100%;
+                min-height: 350px;
+                object-fit: cover;
+
+                // visual
+                border-radius: 5px;
+            }
+        }
 
         @include atTabletsPortrait {
             // positioning

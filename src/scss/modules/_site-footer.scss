@@ -1,10 +1,16 @@
 .site-footer {
     // box model
     padding-top: 100px;
-    padding-left: 50px;
+    padding-bottom: 40px;
+    padding-left: 30px;
 
     // visual
-    background: linear-gradient(to bottom, #e5a0cf, #f7dfef 50%);
+    background: linear-gradient(to bottom, #f7dfef 50%, #e5a0cf);
+
+    &--franshize {
+        // box model
+        padding-top: 50px;
+    }
 
     @include atDesktop {
         // box model

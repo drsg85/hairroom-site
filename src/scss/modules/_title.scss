@@ -52,6 +52,20 @@
         //     display: block;
         // }
         
+        &--franshize {
+            // positioning
+            top: 200px !important;
+            right: -70px !important;
+
+            // box model
+            display: block !important;
+
+            // typography
+            font-family: $textFont;
+            font-weight: 700;
+            font-size: 0.875rem !important;
+        }
+
         &--left {
             
             // positioning

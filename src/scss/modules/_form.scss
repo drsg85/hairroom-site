@@ -1,0 +1,118 @@
+.form {
+    &__img-title {
+        // positioning
+        position: relative;
+        z-index: 3;
+
+        //box model
+        margin-top: -50px;
+        margin-left: 30px;
+
+        // typography
+        color: $white;
+        font-family: $mainFont;
+        font-size: 1.33rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: -4px 3px 0 #3a0f21;
+    }
+
+    &__header {
+        // box model
+        padding: 0 30px;
+    }
+
+    &__suptitle {
+        // box model
+        display: block;
+        margin-bottom: 15px;
+
+        // typography
+        font-family: $textFont;
+        font-weight: 700;
+        color: #3b0f22;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    &__title {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+
+        // typography
+        color: $white;
+        font-family: $mainFont;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 900;
+    }
+
+    &__call {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+        
+        // typography
+        color: $black;
+        font-family: $textFont;
+        font-weight: 700;
+        line-height: 1.5;
+        font-size: 0.875rem;
+    }
+
+    &__content {
+        // box model
+        padding: 0 30px;
+    }
+
+    &__group {
+        // // box model
+        // margin-bottom: 15px;
+    }
+
+    &__group-input {
+        // box model
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 15px 25px;
+        background: none;
+        border: 6px solid $white;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+        outline: none;
+
+        ::-webkit-input-placeholder {
+            color: red;
+        }
+
+        &:focus, :active {
+            // visual
+            background-color: $white;
+            border-color: $accent;
+        }
+    }
+
+    &__policy {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+
+        // typography
+        text-align: right;
+        font-family: $textFont;
+        font-weight: 700;
+        line-height: 1.5;
+        font-size: 0.85rem;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+    
+    &__button {
+        // box model
+        padding-bottom: 120px;
+    }
+}

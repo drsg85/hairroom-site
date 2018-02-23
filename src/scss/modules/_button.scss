@@ -209,6 +209,48 @@ d
         }
     }
 
+    &--franshize {
+        // box model
+        border: 6px solid $white;
+        width: 180px;
+        padding: 8px 30px;
+        margin-bottom: 0;
+
+        // typography
+        font-size: 0.75rem;
+
+        &:hover {
+            
+            // visual
+            border-color: $accent;
+            background-color: $white;
+            color: $accent;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    &--form {
+        // box model
+        width: 100%;
+        padding: 15px 0;
+        
+        // typography
+        color: $secondaryColor;
+
+        // visual
+        background-color: $white;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            // visual
+            background-color: $accent;
+
+            // typography
+            color: $white;
+        }
+
+    }
+
     &--offers {
         // box model
         padding: 5px 30px;

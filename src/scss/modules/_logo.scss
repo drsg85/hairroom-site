@@ -11,6 +11,11 @@
     background-color: $black;
     box-shadow: 0px 25px 58px -11px rgba($black,0.24);
 
+    &--franshize {
+        // box model
+        margin-top: -30px;
+    }
+
     @include atTabletsPortrait {
         // box model
         height: 140px;
