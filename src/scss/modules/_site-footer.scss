@@ -2,17 +2,9 @@
     // box model
     padding-top: 100px;
     padding-left: 50px;
+
     // visual
     background: linear-gradient(to bottom, #e5a0cf, #f7dfef 50%);
-
-    // @include atTabletsPortrait {
-    //     // box model
-    //     display: flex;
-    //     padding-top: 0;
-
-    //     // visual
-    //     background: linear-gradient(to bottom, #f2d2e7, #faeaf5);
-    // }
 
     @include atDesktop {
         // box model
@@ -38,18 +30,7 @@
         @include atTabletsLandscape {
             flex-wrap: wrap;
         }
-
-        // @include atDesktop {
-        //     // box model
-        //     padding-bottom: 100px;
-        // }
-
     }
-    // @include atDesktop {
-    //     // box model
-    //     padding-left: 83px;
-    //     padding-right: 100px;
-    // }
 
     &__header {
         // box model
@@ -73,11 +54,6 @@
 
         // typography
         color: $black;
-
-        // @include atDesktop {
-        //     // box model
-        //     max-width: 486px;
-        // }
     }
 
     &__contacts {
@@ -135,11 +111,6 @@
         color: $text;
         text-transform: uppercase;
         letter-spacing: 2px;
-
-        // @include atTabletsPortrait {
-        //     // box model
-        //     margin-top: 0;
-        // }
     }
 
     &__info-title {
@@ -233,8 +204,6 @@
     &__copyright {
         // box model
         margin: 0;
-        // padding-top: 80px;
-        // padding-bottom: 40px;
 
         // typography
         text-transform: uppercase;

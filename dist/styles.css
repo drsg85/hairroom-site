@@ -1282,6 +1282,8 @@ ul {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     line-height: 1.75; }
+  .tabs__current {
+    display: inherit; }
 
 .card {
   width: 300px;
@@ -1297,6 +1299,7 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 50px 0;
     overflow-x: scroll;
     overflow-y: hidden; }
     @media (min-width: 1200px) {
@@ -1325,8 +1328,6 @@ ul {
     font-weight: 900;
     font-size: 0;
     background-color: #c6168d; }
-    .card__ribbons--no {
-      visibility: hidden; }
   .card__ribbon {
     position: relative;
     margin: 0;

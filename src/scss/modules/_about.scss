@@ -42,12 +42,6 @@
     &__img {
         // typography
         font-size: 0;
-
-        // visual
-        // box-shadow: 0px 14px 21px 0px rgba(0, 0, 0, 0.2);
-        
-        // positioning
-        // position: relative
         
 
         @include atTabletsPortrait {
@@ -106,9 +100,7 @@
             // visual
             background-image: url("./img/about_board-lg.jpg");
             background-size: cover;
-            // box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
             box-shadow: 0px 8px 25px -8px rgba(107,21,65,1);
-            // transform: translateY(-100px);
         }
 
         @include atDesktop {
@@ -168,15 +160,9 @@
             letter-spacing: 3px;
             font-weight: 900;
         }
-
-        // @include atDesktop {
-        //     font-size: 2.75rem;
-        //     width: auto;
-        // }
     }
 
     &__content {
-        // box model
         @include atTabletsPortrait {
             // box model
             width: 585px;
@@ -227,11 +213,6 @@
         background-color: $white;
         border-radius: 50%;
         box-shadow: 0 7px 28px 6px rgba($copyColor, 0.125);
-
-        @include atTabletsPortrait {
-            // box model
-            // display: none;
-        }
 
         @include atTabletsLandscape {
             // positioning
@@ -291,8 +272,6 @@
                 width: 280px;
                 height: 280px;
             }
-
-            
         }
 
         img {

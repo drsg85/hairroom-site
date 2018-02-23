@@ -1,14 +1,7 @@
 .tabs {
     // box model
     margin-bottom: 40px;
-    // @include atTabletsPortrait {
-    //     padding-left: 0;
-    // }
 
-    // @include atDesktop {
-    //     padding-left: 0;
-    // }
-    
     &__list {
         // positioning
         position: relative;
@@ -97,13 +90,9 @@
 
         // visual
         transition: 0.3s ease-out;
-
-        // @include atTabletsPortrait {
-        //     letter-spacing: 7px;
-        // }
         
         &:hover {
-            // visual
+            // typography
             color: $titleColor;
             cursor: pointer;
         }
@@ -112,10 +101,6 @@
     &__content {
         // box model
         display: none;
-
-        // @include atDesktop {
-        //     width: 460px;
-        // }
 
         &--current {
             // box model
@@ -137,5 +122,10 @@
         // @include atDesktop {
         //     max-width: 470px;
         // }
+    }
+
+    &__current {
+        // box model
+        display: inherit;
     }
 }

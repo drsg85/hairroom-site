@@ -11,6 +11,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 50px 0;
 
         // visual
         overflow-x: scroll;
@@ -61,11 +62,6 @@
 
         // visual
         background-color: #c6168d;
-
-        &--no {
-            // box model
-            visibility: hidden;
-        }
     }
 
     &__ribbon {

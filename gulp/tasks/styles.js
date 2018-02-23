@@ -9,7 +9,7 @@ gulp.task("styles", () => {
         .pipe(sass({importer: SassModuleImporter()}))
         .on("error", notify.onError(function(error) {
             return {
-                ttile: "Styles",
+                title: "Styles",
                 message: error.message
             };
         }))

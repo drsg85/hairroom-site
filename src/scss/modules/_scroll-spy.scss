@@ -31,6 +31,7 @@
     }
 
     a {
+        // box model
         display: none;
     }
 
@@ -49,31 +50,6 @@
         // visual
         border: 2px solid rgba($copyColor, 1);
 
-            // &::before {
-            //     content: attr(data-label);
-
-            //     // positioning
-            //     position: absolute;
-            //     // right: 35px;
-            //     top: -15px;
-            //     // transform: scale(0);
-            //     transform-origin: 100% 50%;
-
-            //     // box model
-            //     display: none;
-            //     height: 30px;
-            //     width: 100px;
-            //     padding-right: 40px;
-
-            //     // typography
-            //     color: $accent;
-            //     font-family: $mainFont;
-            //     font-size: 1.25rem;
-            //     font-weight: 700;
-            //     text-transform: uppercase;
-            //     transition: all 0.3s ease-out;
-            // }
-
         &:hover {
             // visual
             background-color: $accent;
@@ -82,7 +58,6 @@
             &::before {
                 // positioning
                 right: 25px;
-                // transform: scale(1);
 
                 // visual
                 opacity: 1;
@@ -91,7 +66,6 @@
             &::after {
                 // positioning
                 right: 15px;
-                // transform: scale(1);
 
                 // visual
                 opacity: 1;

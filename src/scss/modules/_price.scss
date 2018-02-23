@@ -24,39 +24,6 @@
         // box model
         padding-left: 250px;
     }
-    
-
-    // @include atTabletsPortrait {
-    //     // positioning
-    //     position: relative;
-    //     z-index: 1;
-    //     transform: translateY(-150px);
-
-    //     // box model
-    //     padding-left: 55px;
-
-    //     &::before {
-    //         content: url("./img/hero_hr_gallery.png");
-
-    //         // positioning
-    //         position: absolute;
-    //         bottom: -240px;
-    //         left: -100px;
-    //         z-index: 3;
-    //     }
-    // }
-
-    // @include atDesktop {
-    //     // positioning
-    //     transform: translateY(-250px);
-
-    //     // box model
-    //     margin-left: 246px;
-
-    //     // visual
-    //     background: none;
-    //     background-repeat: no-repeat;
-    // }
 
     &__board {
         // box model
@@ -117,16 +84,6 @@
         line-height: 1;
     }
 
-    &__content {
-        // box model
-
-        // @include atDesktop {
-        //     /// box model
-        //     display: flex;
-        //     flex-wrap: wrap;
-        // }
-    }
-
     &__group {
 
         @include atTabletsPortrait {
@@ -134,12 +91,6 @@
             margin-bottom: 70px;
         }
 
-        // &--big {
-        //     @include atDesktop {
-        //         // box model
-        //         width: 66.6%;
-        //     }
-        // }
     }
 
     &__group-title {
@@ -164,7 +115,6 @@
         @include atTabletsLandscape {
             // box model
             display: flex;
-            // justify-content: space-between;
             flex-wrap: wrap;
         }
     }
@@ -173,7 +123,6 @@
         @include atTabletsLandscape {
             // box model
             width: 345px;
-
             margin-right: 10%
 
         }
@@ -190,12 +139,8 @@
         width: 100%;
         margin-bottom: 30px;
 
-        // @include atTabletsPortrait {
-        //     // box model
-        //     padding-right: 15px;
-        // }
-
         &::last-child {
+            // box model
             margin-bottom: 0;
         }
     }
@@ -247,11 +192,13 @@
         }
 
         &:nth-child(2) {
+            // box model
             width: 300px;
         }
     }
 
     tr {
+        // box model
         margin-bottom: 15px;
     }
 }

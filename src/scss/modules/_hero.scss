@@ -3,7 +3,6 @@
     position: relative;
     
     // box model
-    // min-height: 100vh;
     padding: 35px 30px;
     padding-bottom: 0;
     
@@ -12,12 +11,11 @@
     background: linear-gradient(to right, rgba(198, 22, 141, 0.85), rgba(219, 102, 154, 0.9));
 
     @include atTabletsPortrait {
-        // box model
-        padding: 45px 55px;
-
         // positioning
         z-index: 0;
+
         // box model
+        padding: 45px 55px;
 
         // visual
         box-shadow: 0px 70px 30px -50px rgba(125,30,86,0.4);
@@ -30,7 +28,6 @@
     
     @include atDesktop {
         // box model
-        // height: 700px;
        width: 88%;
        margin-bottom: 200px;
        padding: 50px 85px;
@@ -43,7 +40,6 @@
         // box model
         padding: 85px;
     }
-
 
     &::after {
         content: url("http://localhost/HairRoom/wp-content/themes/HairRoom/img/hero_hr.png");
@@ -77,34 +73,8 @@
             left: 70%;
             bottom: -150px;
             z-index: -2;
-            // box model
-            // display: none;
         }
     }
-    //     @include atTabletsPortrait {
-    //         // positioning
-    //         bottom: -200px;
-    //         left: 50%;
-    //     }
-        
-    //     @include atTabletsLandscape {
-    //         // positioning
-    //         left: 60%;
-    //     }
-
-    //     @include atDesktop {
-    //         content: url("./img/hero_hr-lg.png");
-    //         // positioning
-    //         right: -10%;
-    //         left: 100%;
-    //         bottom: -150px;
-    //         z-index: -1;
-    //         transform: translate(0);
-
-    //         // box model
-    //         display: none;
-    //     }
-    // }
 
     &__header {
         // @include atTabletsPortrait {
@@ -131,7 +101,6 @@
         // box model
         margin: 0;
         padding: 0;
-        // max-width: 600px;
 
         // typography
         font-size: 1.75rem;
@@ -271,14 +240,6 @@
         img {
             // box model
             width: 100%;
-            // height: 100%;
-            // object-fit: contain;
-            
-            // @include atDesktop {
-            //     // box model
-            //     width: auto;
-            //     height: auto;
-            // }
         }
     }
 

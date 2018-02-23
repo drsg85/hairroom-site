@@ -6,31 +6,15 @@
     // visual
     background: linear-gradient(to right, #d16bb3, #8f6aa5);
     
-    // @include atTabletsPortrait {
-    //     // visual
-    //     background: none;
-    // }
     @include atTabletsLandscape {
         // box model
         padding-left: 50px;
         background: none;
     }
-
-    // @include atDesktop {
-    //     // positioning
-    //     transform: translateY(-300px);
-
-    //     // visual
-    //     background-color: $white;
-    // }
     
     &__content {
-        // // positioning
+        //  positioning
         transform: translateY(30px);
-
-        @include atTabletsPortrait {
-            // positioning
-        }
         
         @include atTabletsLandscape {
             // positioning
@@ -41,16 +25,6 @@
             justify-content: flex-end;
             padding-right: 50px;
         }
-
-        // @include atDesktop {
-        //     // positioning
-        //     position: absolute;
-        //     top: 0;
-        
-        
-        //     // box model
-        //     display: flex;
-        // }
     }
 
     &__card {
@@ -82,12 +56,6 @@
             display: inline-block;
         }
 
-        // @include atDesktop {
-        //     // box model
-        //     width: 350px;
-        //     height: 250px;
-        // }
-
         &--offers {
             // visual
             background-image: url("./img/offers.jpg");
@@ -109,7 +77,7 @@
     }
 
     &__offers {
-        // box mocadel
+        // box model
         margin: 0;
         margin-bottom: 30px;
         
@@ -162,11 +130,6 @@
         }
     }
 
-    &__button {
-        // // positioning
-        // position: absolute;
-        // bottom: 5px;
-    }
 
     &__img {
         // postioning

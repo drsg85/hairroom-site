@@ -138,36 +138,6 @@
 
             // box model
             display: none;
-
-            // @include atTabletsPortrait {
-            //     // positioining
-            //     position: absolute;
-
-            //     // box model
-            //     display: block;
-            //     margin-top: 110px;
-            //     margin-left: 14%;
-
-            //     // visual
-            //     background-repeat: no-repeat;
-            // }
-
-            // @include atDesktop {
-            //     content: url("./img/pattern-lg-cards.png");
-            //     // box model
-            //     margin-top: 150px;
-            // }
-        }
-
-        &::after {
-            // @include atDesktop {
-            //     content: url("./img/hr_cards-lg.png");
-
-            //     // positioning
-            //     position: absolute;
-            //     bottom: -100px;
-            //     z-index: -1;
-            // }
         }
     }
 
@@ -175,11 +145,6 @@
             // box model
             margin-right: 25px;
             transition: 0.3s ease-in-out;
-
-            // @include atDesktop {
-            //     // box model
-            //     margin-bottom: 30px;
-            // }
 
             &-description {
                 // box model
@@ -215,6 +180,7 @@
                 // positioning
                 position: relative;
                 display: inline-block;
+                z-index: 0;
 
                 // box model
                 width: 300px;
@@ -224,36 +190,6 @@
                 background-size: cover;
                 box-shadow: 0px 23px 51px -9px rgba(165,68,122,0.96);
                 border-radius: 5px;
-                z-index: 0;
-
-                // @include atDesktop {
-                //     // box model
-                //     width: 325px;
-                // }
-                
-                &--bg2 {
-                    // visual
-                    background-image: url("./img/card1.png");
-                    background-position: 40% 0;
-                    background-repeat: no-repeat;
-                }
-
-                &--bg3 {
-                    // visual
-                    background-image: url("./img/hair_bg2.png");
-                }
-
-                &--bg4 {
-                    // visual
-                    background-image: url("./img/hair_bg3.png");
-                    background-position: 0 20%;
-                }
-
-                &--bg5 {
-                    // visual
-                    background-image: url("./img/hair_bg4.png");
-                    background-position: 0 20%;
-                }
                 
                 &::after {
                     content: "";
@@ -325,6 +261,6 @@
 }
 
 .services__wrapper:hover .card__ribbon {
-        // typography
-        color: #c6168d;
+    // typography
+    color: #c6168d;
 }
