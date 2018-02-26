@@ -64,7 +64,7 @@ $social_vk = get_field("social_vk");
             <li><a href="<?php echo esc_url(home_url("/")); ?>#price">Прайс</a></li>
             <li><a href="<?php echo esc_url(home_url("/")); ?>#gallery">Галлерея</a></li>
             <li><a href="<?php echo esc_url(home_url("/")); ?>#contacts">Контакты</a></li>
-            <div class="main-menu__franchise"><a href="#">Франшиза</a></div>
+            <div class="main-menu__franchise"><a href="<?php echo esc_url(home_url("/franshize")); ?>">Франшиза</a></div>
           </ul>
           <div class="be-friends"><a href="http://instagram.com">
               <p class="be-friends__text">Давайте дружить</p>
@@ -79,7 +79,8 @@ $social_vk = get_field("social_vk");
         <div class="hero__img">
           <picture>
             <source media="(min-width: 700px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/women-md.png"/>
-            <source media="(min-width: 1200px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/women-lg.png"/><img src="<?php bloginfo("stylesheet_directory"); ?>/img/women.png" alt="Hair Room девушка"/>
+            <source media="(min-width: 1200px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/women-lg.png"/>
+            <img src="<?php bloginfo("stylesheet_directory"); ?>/img/women.png" alt="Hair Room девушка"/>
           </picture>
         </div>
         <div class="hero__button"><a class="button button--online-record" href="#">online&nbsp;запись</a></div>
