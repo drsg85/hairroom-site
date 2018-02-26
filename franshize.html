@@ -1,46 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="theme-color" content="#ee7aad"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <title>HairRoom Franshize</title>
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header site-header--franshize">
       <div class="hero hero--franshize">
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--franshize">
           <div class="logo logo--franshize"><img src="./img/hr_logo_white.svg" alt="HairRoom logo"/></div>
           <div class="franshise__button"><a class="button button--franshize" href="index.html">На&nbsp;главную</a></div>
+          <div class="menu-icon menu-icon--franshize">
+            <div class="menu-icon__middle"></div>
+          </div>
+          <div class="main-menu--blackout"></div>
+          <nav class="main-menu main-menu--franshize">
+            <ul>
+              <li><a href="#about">Салон</a></li>
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#price">Прайс</a></li>
+              <li><a href="#gallery">Галлерея</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+              <div class="main-menu__franchise"></div><a href="franshize.html">Франшиза</a>
+            </ul>
+          </nav>
         </nav>
-        <div class="hero__img hero__img--franshize">
-          <picture>
-            <source media="(min-width: 700px)" srcset="./img/hero_franshize-img.jpg"/>
-            <source media="(min-width: 1200px)" srcset="./img/hero_franshize-img.jpg"/><img src="./img/hero_franshize-img.jpg" alt="HairRoom Image"/>
-          </picture>
+        <div class="hero--franshize__content">
+          <div class="hero__img hero__img--franshize">
+            <picture>
+              <source media="(min-width: 700px)" srcset="./img/hero_franshize-img.jpg"/>
+              <source media="(min-width: 1200px)" srcset="./img/hero_franshize-img.jpg"/><img src="./img/hero_franshize-img.jpg" alt="HairRoom Image"/>
+            </picture>
+          </div>
+          <h4 class="form__img-title">Мечтаешь<br> о собственном<br>салоне красоты?</h4>
+          <p class="title__description title__description--right title__description--franshize">Франшиза Hair Room</p>
+          <div class="hero__form">
+            <header class="form__header"><sup class="form__suptitle">франшиза</sup>
+              <h2 class="form__title">откройте собственный<br>салон hair room<br> у себя в городе</h2>
+              <p class="form__call">Заполните форму и наш<br>менеджер с вами свяжется</p>
+            </header>
+            <form class="form__content">
+              <div class="form__group">
+                <input class="form__group-input" type="text" name="name" placeholder="Имя"/>
+                <input class="form__group-input" type="phone" name="phone" placeholder="Телефон"/>
+              </div>
+              <div class="form__group form__group--full">
+                <input class="form__group-input" type="text" name="city" placeholder="Желаемый город"/>
+              </div>
+              <div class="form__group form__group--full">
+                <input class="form__group-input" type="email" name="email" placeholder="E-mail"/>
+              </div>
+              <p class="form__policy">Заполняя контактную форму<br>вы соглашаетесь с <a>политикой&nbsp;конфиденциальности</a></p>
+              <div class="form__button"><a class="button button--form" href="#">Оставить заявку</a></div>
+            </form>
+          </div>
         </div>
-        <h4 class="form__img-title">Мечтаешь<br> о собственном<br>салоне красоты?</h4>
-        <p class="title__description title__description--right title__description--franshize">Франшиза Hair Room</p>
-        <header class="form__header"><sup class="form__suptitle">франшиза</sup>
-          <h2 class="form__title">откройте<br>собственный<br>салон hair room<br>у себя в городе</h2>
-          <p class="form__call">Заполните форму и наш<br>менеджер с вами свяжется</p>
-        </header>
-        <form class="form__content">
-          <div class="form__group">
-            <input class="form__group-input" type="text" name="name" placeholder="Имя"/>
-            <input class="form__group-input" type="phone" name="phone" placeholder="Телефон"/>
-          </div>
-          <div class="form__group form__group--full">
-            <input class="form__group-input" type="text" name="city" placeholder="Желаемый город"/>
-          </div>
-          <div class="form__group form__group--full">
-            <input class="form__group-input" type="email" name="email" placeholder="E-mail"/>
-          </div>
-          <p class="form__policy">Заполняя контактную форму<br>вы соглашаетесь с <a>политикой&nbsp;конфиденциальности</a></p>
-          <div class="form__button"><a class="button button--form" href="#">Оставить заявку</a></div>
-        </form>
-        <ul class="socials">
+        <ul class="socials socials--franshize">
           <li><a href="https://instagram.com/">instagram</a></li>
           <li><a href="https://facebook.com/">facebook</a></li>
           <li><a href="https://vk.com/">vkontakte</a></li>
@@ -80,4 +107,5 @@
       </div>
     </footer>
   </body>
+  <script src="scripts.js"></script>
 </html>
