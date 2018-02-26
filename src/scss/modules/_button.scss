@@ -218,6 +218,17 @@ d
 
         // typography
         font-size: 0.75rem;
+        
+        @include atTabletsPortrait {
+            // box model
+            width: auto;
+
+
+            // typography
+            font-weight: 800;
+            font-family: $textFont;
+            font-size: 1rem;
+        }
 
         &:hover {
             
@@ -232,7 +243,7 @@ d
     &--form {
         // box model
         width: 100%;
-        padding: 15px 0;
+        padding: 10px 0;
         
         // typography
         color: $secondaryColor;
@@ -240,6 +251,12 @@ d
         // visual
         background-color: $white;
         transition: 0.3s ease-in-out;
+
+        @include atTabletsPortrait {
+            // box model
+            width: auto;
+            padding: 10px 60px;
+        }
 
         &:hover {
             // visual

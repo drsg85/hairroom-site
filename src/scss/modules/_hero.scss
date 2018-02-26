@@ -14,15 +14,38 @@
         // box model
         padding: 0;
         margin: 0;
-        margin-top: 30px;
+
+        // &::before {
+        //     content: url("./img/hero_hr-franshize.png");
+        //     // positioning
+        //     position: absolute;
+        //     bottom: -85px;
+        //     // width: 300px;
+        // }
 
 
-        &::before {
-            content: url("./img/hero_hr-franshize.png");
-            // positioning
-            position: absolute;
-            bottom: -85px;
-            // width: 300px;
+        @include atTabletsPortrait {
+            // box model
+            padding: 45px 50px !important;
+            padding-top: 0 !important;
+        }
+
+        @include atDesktop {
+            // box model
+            padding: 0 85px !important;
+            padding-bottom: 85px !important;
+            margin-bottom: 0 !important;
+        }
+
+        &__content {
+
+            @include atDesktop {
+                // positioning
+                position: relative;
+
+                // box model
+                display: flex;
+            }
         }
     }
 
@@ -89,6 +112,18 @@
             left: 70%;
             bottom: -150px;
             z-index: -2;
+        }
+    }
+
+    &__form {
+        // box model
+        display: flex;
+        flex-direction: column;
+        
+        @include atDesktop {
+            // box model
+            margin-top: -80px;
+            min-width: 700px;
         }
     }
 
@@ -218,6 +253,24 @@
             // box model
             min-width: 350px;
 
+
+            @include atTabletsPortrait {
+                // positioning
+                position: static !important;
+                min-width: auto !important;
+
+                // box model
+                margin-left: -50px;
+                min-width: 65% !important;
+            }
+
+            @include atDesktop {
+                // box model
+                margin-left: -85px !important;
+                display: flex;
+                min-width: auto !important;
+            }
+
             img {
                 // box model
                 width: 100%;
@@ -226,7 +279,20 @@
 
                 // visual
                 border-radius: 5px;
+
+                @include atTabletsPortrait {
+                    // box model
+                    min-height: 470px;
+                }
+                
+                @include atDesktop {
+                    // box model
+                    height: 650px;
+                }
+
             }
+
+          
         }
 
         @include atTabletsPortrait {

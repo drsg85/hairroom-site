@@ -6,6 +6,20 @@
     
     // visual
     list-style: none;
+
+    &--franshize {
+
+        @include atTabletsPortrait {
+            // positioning
+            top: 51%;
+        }
+
+        @include atDesktop {
+            // positioning
+            bottom: 40px !important;
+            top: auto;
+        }
+    }
     
     @include atTabletsPortrait {
         // box model

@@ -17,6 +17,15 @@
     background-color: $accent;
     visibility: hidden;
     transition: 0.3s ease-out all;
+
+    &--franshize {
+        // box model
+
+        @include atDesktop {
+            // box model
+            display: none;
+        }
+    }
     
     @include atTabletsPortrait {
         // box model

@@ -15,6 +15,16 @@
     box-shadow: 0px 10px 24px 0 rgba($black, 0.125);
     border-radius: 50%;
 
+    &--franshize {
+        // box model
+        display: none;
+
+        @include atTabletsPortrait {
+            // box model
+            display: block;
+        }
+    }
+
     @include atDesktop {
         // box model
         display: none;

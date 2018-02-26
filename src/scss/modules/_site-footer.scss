@@ -10,6 +10,16 @@
     &--franshize {
         // box model
         padding-top: 50px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding-left: 50px;
+        }
+        
+        @include atDesktop {
+            // box model
+            padding-top: 0 !important;
+        }
     }
 
     @include atDesktop {

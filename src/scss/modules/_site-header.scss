@@ -1,8 +1,18 @@
 .site-header {
 
     &--franshize {
+        // box model
+        padding-top: 30px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding-top: 50px;
+        }
 
         @include atDesktop {
+            // box model
+                padding-bottom: 100px;
+            
             // visual
             background-image: url("./img/header-franshize.png") !important;
         }

@@ -14,6 +14,11 @@
     &--franshize {
         // box model
         margin-top: -30px;
+
+        @include atTabletsPortrait {
+            // box model
+            margin-top: -50px;
+        }
     }
 
     @include atTabletsPortrait {

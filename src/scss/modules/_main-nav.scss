@@ -4,6 +4,16 @@
     padding-bottom: 40px;
     padding-left: 25px;
 
+
+    &--franshize {  
+        
+        @include atTabletsPortrait {
+            // box model
+            padding: 0 !important;
+            padding-bottom: 50px !important;
+        }
+    }
+
     @include atTabletsPortrait {
         // box model
         padding-left: 50px;

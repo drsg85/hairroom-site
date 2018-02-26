@@ -6,5 +6,11 @@
         margin-top: 10px;
         margin-left: 20px;
         margin-bottom: 0;
+
+        @include atTabletsPortrait {
+            // box model
+            margin-top: 20px;
+            margin-left: 50px;
+        }
     }
 }
