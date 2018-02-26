@@ -2,11 +2,11 @@ const InstaFeed= require("instafeed");
 
     let feed = new InstaFeed({
     get: "user",
-    userId: "344919110",
-    clientID: "87b69683000a43009903ef1751723ec6",
-    accessToken: "344919110.87b6968.1690446024e2403ea56bc212c5b18b68",
+    userId: "6312841675",
+    clientID: "c4dc1832e4ea4f4a9f2fe01b7a88dcbe",
+    accessToken: "6312841675.1677ed0.4fe2a42c6bf7405bbc04c953f7ecd7dd",
     resolution: "standard_resolution",
     limit: 10,
-    template: "<a href=\"{{link}}\" class=\"instafeed__image\"><img src=\"{{image}}\" class=\"insta\"></a>",
+    template: '<a href="{{link}}"><img src="{{image}}" /></a>'
 });
 feed.run();
