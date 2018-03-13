@@ -16,8 +16,13 @@
 
         @include atDesktop {
             // positioning
-            bottom: 40px !important;
+            bottom: 0px !important;
             top: auto;
+        }
+
+        @include atDesktopLarge {
+            // positinning
+            bottom: 40px !important;
         }
     }
     

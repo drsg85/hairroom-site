@@ -78,12 +78,12 @@ $social_vk = get_field("social_vk");
         <p class="hero__copy"><?php echo $hero_description; ?></p>
         <div class="hero__img">
           <picture>
-            <source media="(min-width: 700px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/women-md.png"/>
+            <source media="(min-width: 700px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/women-lg.png"/>
             <source media="(min-width: 1200px)" srcset="<?php bloginfo("stylesheet_directory"); ?>/img/women-lg.png"/>
             <img src="<?php bloginfo("stylesheet_directory"); ?>/img/women.png" alt="Hair Room девушка"/>
           </picture>
         </div>
-        <div class="hero__button"><a class="button button--online-record" href="#">online&nbsp;запись</a></div>
+        <div class="hero__button"><a class="button button--online-record ms_booking" href="#">online&nbsp;запись</a></div>
         <p class="title__description title__description--right">Hair Room <?php echo $city; ?></p>
         <ul class="socials">
           <li><a href="<?php echo $social_in; ?>" target="_blank">instagram</a></li>
@@ -106,27 +106,27 @@ $social_vk = get_field("social_vk");
         <div class="about__content">
           <div class="tabs">
             <ul class="tabs__list" id="tabs" role="tablist">
-              <li class="tabs__list-item tabs__content--current" data-tab="tab-1"><a class="tabs__link">Миссия</a></li>
+              <li class="tabs__list-item tabs__list-item--current" data-tab="tab-1"><a class="tabs__link">Миссия</a></li>
               <li class="tabs__list-item" data-tab="tab-2"><a class="tabs__link" >Подход</a></li>
               <li class="tabs__list-item" data-tab="tab-3"><a class="tabs__link" >Мастера</a></li>
             </ul>
-            <div class="tabs__content tabs__content--current">
+            <div class="tabs__content tabs__content--current" id="tab-1">
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
               <p class="tabs__copy">Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.</p>
             </div>
-            <div class="tabs__content">
+            <div class="tabs__content" id="tab-2">
               <p class="tabs__copy">Текст вкладки "подход"</p>
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
-              <p class="tabs__copy">Позвольте себе у</p>
+              <p class="tabs__copy">Позвольте себе успех</p>
             </div>
-            <div class="tabs__content">
+            <div class="tabs__content" id="tab-3">
               <p class="tabs__copy">Текст вкладки "мастера"</p>
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
-              <p class="tabs__copy">Позвольте себе у</p>
+              <p class="tabs__copy">Позвольте себе успех</p>
             </div>
           </div>
         </div>
-        <div class="about__buttons"><a class="button button--pink" href="#">Online Запись</a><a class="button button--ghost" href="#price">Прайс-Лист</a></div>
+        <div class="about__buttons"><a class="button button--pink ms_booking" href="#">Online Запись</a><a class="button button--ghost" href="#price">Прайс-Лист</a></div>
         <div class="about__logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/hr_logo_black.svg" alt="Hairroom logo"/></div>
       </div>
     </section>
@@ -191,7 +191,7 @@ $social_vk = get_field("social_vk");
               <!-- changes class-->
               <p class="title__description title__description--left">Hair Room Услуги</p>
               <p class="card__description"><?php echo $card_description; ?></p>
-              <div class="card__buttons"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-лист</a></div>
+              <div class="card__buttons"><a class="button button--pink button--card ms_booking" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-лист</a></div>
             </div>
           </div>
         </article>
@@ -882,7 +882,6 @@ $social_vk = get_field("social_vk");
           <header class="shares__header">
             <p class="shares__offers">Акции</p>
             <p class="shares__text"><?php echo $shares_title; ?></p>
-            <div class="shares__button"><a class="button button--card button--offers" href="<?php the_permalink(); ?>">Дальше</a></div>
           </header>
         </article>
       <?php
@@ -900,7 +899,7 @@ $social_vk = get_field("social_vk");
         <p class="gallery__slogan">Давайте дружить</p>
         <div class="gallery__content">
           <div class="gallery__logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/insta_logo.png" alt="instagram logo"/></div>
-          <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe">Подписаться</a>
+          <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe" href="https://www.instagram.com/hairroomkaliningrad/">Подписаться</a>
         </div>
       </div>
       <div class="instafeed" id="instafeed"></div>

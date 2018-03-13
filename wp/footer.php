@@ -39,7 +39,7 @@ $work_time = get_field("work_time");
           <li><a href="<?php echo esc_url(home_url("/")); ?>#services">Услуги</a></li>
           <li><a href="<?php echo esc_url(home_url("/")); ?>#price">Прайс-лист</a></li>
           <li><a href="<?php echo esc_url(home_url("/")); ?>#contacts">Контакты</a></li>
-          <li><a href="<?php echo esc_url(home_url("/")); ?>#franschiza">Франшиза</a></li>
+          <li><a href="<?php echo esc_url(home_url("/")); ?>franshize">Франшиза</a></li>
         </ul>
         <div class="site-footer__contacts">
           <p class="site-footer__contacts-title">Контакты</p>
@@ -70,5 +70,6 @@ $work_time = get_field("work_time");
     <script src="<?php bloginfo('stylesheet_directory'); ?>/map.js<?php echo '?v=' . rand(); ?>"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts.js<?php echo '?v=' . rand(); ?>"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/instagram.js<?php echo '?v=' . rand(); ?>"></script>
+    <script src="https://w96839.yclients.com/widgetJS"></script>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&amp;callback=initMap"></script>
     <?php wp_footer(); ?>

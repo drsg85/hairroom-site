@@ -76,7 +76,7 @@
 
             @include atDesktop {
                 // box model
-                top: 50px !important;
+                top: 45px !important;
                 right: -210px !important;
             }
         }
@@ -144,7 +144,7 @@
         &--map {
             // positioning
             top: 135px;
-            right: -75px;
+            right: 0;
 
             // typography
             font-size: 0.875rem;

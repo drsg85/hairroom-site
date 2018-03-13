@@ -9,13 +9,14 @@
     padding-right: 0;
 
     // visual
-    background-color: #e3d8e8;
-    background: linear-gradient(205deg, #e3d6e5 20%, #c978b5);
+    // background-color: #e3d8e8;
+    background: linear-gradient(205deg, #f7e9f4 20%, #c978b5);
     background-size: cover;
     
     @include atTabletsPortrait {
         // box model
         padding: 50px;
+        padding-right: 0;
         padding-bottom: 250px;
     }
 
@@ -25,7 +26,7 @@
         padding-bottom: 400px;
 
         // visual
-        background: linear-gradient(20deg,rgba(221, 129, 192, 1), rgba(211, 195, 221, 0.8)) 90%;
+        background: linear-gradient(20deg,rgba(232, 197, 224, 1), rgba(211, 195, 221, 0.8)) 90%;
         box-shadow: 0px 48px 116px -29px rgba(125,30,86,0.77);
     }
 
@@ -55,6 +56,16 @@
             top: 50%;
             right: 10px;
             transform: translateY(-50%);
+
+            @include atSmall {
+                // positioning
+                top: 20%;
+            }
+
+            @include atTabletsPortrait {
+                // positioning
+                right: 75px;
+            }
 
             @include atDesktop {
                 // box model
@@ -96,18 +107,25 @@
 
         // visual
         border-radius: 5px;
-        transition: 0.3s ease-in;
-
+        overflow: hidden;
 
         &:hover .card__content {
             // box model
             display: block;
         }
 
-        &:hover {
-            // visual
-            background: linear-gradient(180deg,rgba(198, 22, 141, 0.8), rgba(219, 102, 154, 0.8));
-            transition: 0.3s ease-in;
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 150px;
+            left: 0;
+            width: 100%;
+            // height: 150px;
+            height: calc(100% + 300px);
+            transition: all 0.3s ease-in-out;
+            background-position: 50px 150px;
+            background: linear-gradient(to bottom, rgba(219, 102, 154, 0) 0px, rgba(219, 102, 154 , 0.8) 150px, rgba(198, 22, 141, 0.8) 100%);
         }
     }
 
@@ -144,7 +162,9 @@
         &__card {
             // box model
             margin-right: 25px;
-            transition: 0.3s ease-in-out;
+
+            // visual
+            overflow: hidden;
 
             &-description {
                 // box model
@@ -219,38 +239,12 @@
                     height: 100%;
                 }
             }
-
-
-            &-content {
-                // positioning
-                position: absolute;
-                z-index: 1;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-
-                // box model
-                height: 100%;
-                width: 100%;
-                display: none;
-                
-                // visual
-                transition: 0.3s ease-in-out;
-
-
-                &--centerY {
-                    // positioning
-                    position: relative;
-                }
-            }
-
         }
 
     &__buttons {
         // positioning
         position: absolute;
-        bottom: 25px;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -263,4 +257,16 @@
 .services__wrapper:hover .card__ribbon {
     // typography
     color: #c6168d;
+}
+
+
+.services__wrapper:hover::after {
+    // positioning
+    top: -300px;
+
+    // box model
+    display: block;
+
+    // visual
+    background-position: 100px;
 }

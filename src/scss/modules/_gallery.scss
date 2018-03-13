@@ -2,16 +2,6 @@
     // box model
     padding-top: 30px;
     
-    // @include atTabletsPortrait {
-    //     // positioning
-    //     transform: translateY(-200px);
-    // }
-
-    // @include atDesktop {
-    //     // positioning
-    //     transform: translateY(-350px);
-    // }
-
     &__header {
         // positioning
         position: relative;
@@ -121,11 +111,12 @@
         @include atTabletsPortrait {
             // positioning
             position: absolute;
+            z-index: 1;
             left: 33.33%;
 
             // box model
             width: 33.33%;
-            height: 29%;
+            height: 320px;
             padding: 30px;
             
             // display: none;
@@ -137,9 +128,15 @@
         }
 
         @include atDesktop {
+            // positioning
+            left: 40%;
+
             // box model
-            display: none;
+            width: 20%;
+            height: 380px;
         }
+
+        
     }
 
     &__slogan {
@@ -160,6 +157,13 @@
         }
     }
 
+    &__content {
+        
+        @include atTabletsPortrait {
+            // box model
+             padding: 0 15px;
+        }
+    }
 
     &__logo {
         // box model
@@ -168,6 +172,17 @@
         @include atTabletsPortrait {
             // box model
             margin-bottom: 15px;
+            padding: 0 15px;
+        }
+
+        @include atDesktop {
+            // box model
+            padding: 0 15px;
+        }
+
+        img {
+            // box model
+            width: 100% !important;
         }
     }
     &__text {
@@ -183,10 +198,15 @@
 
         @include atTabletsPortrait {
             // box model
-            margin-bottom: 15px;
+            margin-bottom: 30px;
 
             // typography
             font-size: 0.875rem;
+        }
+
+        @include atDesktop {
+            // box model
+            padding: 0 15px;
         }
 
     }
@@ -235,7 +255,11 @@
     }
 
         img {
+            // positioning
+            position: relative;
+
             // box model
+            display: block;
             width: 100%;
             max-height: 487px;
             object-fit: cover;
@@ -243,11 +267,49 @@
             @include atTabletsPortrait {
                 // box model
                 width: 33.33%;
-            }
+                max-height: 320px;
 
+                &::after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        top: 300px;
+                        left: 0;
+                        width: 100%;
+                        // height: 150px;
+                        height: calc(100% - 150px);
+                        transition: all 0.3s ease-in-out;
+                        background-position: 50px 150px;
+                        background: linear-gradient(to bottom, rgba(219, 102, 154, 0) 0px, rgba(219, 102, 154 , 0.8) 150px, rgba(198, 22, 141, 0.8) 100%);
+                }
+            }
+            
             @include atDesktop {
                 // box model
                 width: 20%;
+                max-height: 380px;
             }
         }
 }
+.gallery img:hover::after {
+        // positioning
+        top: -300px;
+
+        // box model
+        display: block;
+    
+        // visual
+        background-position: 100px;
+}
+.instafeed img:last-child {
+    @include atTabletsPortrait {
+        // box model
+        display: none;
+    }
+
+    @include atDesktop {
+        // box model
+        display: block;
+    }
+}
+

@@ -17,8 +17,8 @@ html(lang="ru")
         meta(name="theme-color" content="#ee7aad")
 
         //- fix font import to @font-face
-        link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet")
-        link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
+        //- link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet")
+        //- link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
         link(rel="stylesheet", href="styles.css")
         title HairRoom
 
@@ -70,7 +70,7 @@ html(lang="ru")
                         img(src="./img/women.png" alt="Hair Room девушка")
                 
                 .hero__button
-                    a.button.button--online-record(href="#") online&nbsp;запись
+                    a.button.button--online-record.ms_booking(href="") online&nbsp;запись
 
                 //- change class
                 p.title__description.title__description--right Hair Room kaliningrad
@@ -95,20 +95,20 @@ html(lang="ru")
                 .about__content
                     .tabs
                         ul.tabs__list(id="tabs" role="tablist")
-                            li.tabs__list-item.tabs__list-item--current: a.tabs__link Миссия
-                            li.tabs__list-item: a.tabs__link Подход
-                            li.tabs__list-item: a.tabs__link Мастера
+                            li.tabs__list-item.tabs__list-item--current(data-tab="tab-1"): a.tabs__link Миссия
+                            li.tabs__list-item(data-tab="tab-2"): a.tabs__link Подход
+                            li.tabs__list-item(data-tab="tab-3"): a.tabs__link Мастера
 
-                        .tabs__content.tabs__content--current
+                        .tabs__content.tabs__content--current#tab-1
                             p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
                             p.tabs__copy Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.
 
-                        .tabs__content
+                        .tabs__content#tab-2
                             p.tabs__copy Текст вкладки "подход"
                             p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
                             p.tabs__copy Позвольте себе у
 
-                        .tabs__content
+                        .tabs__content#tab-3
                             p.tabs__copy Текст вкладки "мастера"
                             p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
                             p.tabs__copy Позвольте себе у
@@ -127,30 +127,28 @@ html(lang="ru")
                 p.services__suptitle Мы предлагаем
                 h2.services__title-section Услуги
             
-            .services__cards.card__container
-                article.services__card.card
-                    header.services__card-title.card__title Наращивание<br>волос
-                    .services__wrapper
-                        .services__card-img.card__img
-                        .services__card-content.card__content
+            .card__container
+                article.card
+                    header.card__title Наращивание<br>волос
+                    .card__wrapper
+                        .card__img
+                        .card__content
                             // changes class
                             p.title__description.title__description--left Hair Room Услуги
-                            p.services__card-description.card__description бесцветный розовый с нейтрализацией желтизны
-                            .services__buttons.card__buttons
+                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            .card__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
-                                a.button.button--ghost.button--card(href="#") Прайс-&nbsp;лист
 
-                article.services__card
-                    header.services__card-title Маникюрные<br> услуги
+                article.card
+                    header.card-title Маникюрные<br> услуги
                     .services__wrapper
-                        .services__card-img.services__card-img--bg2
-                        .services__card-content
+                        .card__img
+                        .card__content
                             // change class
                             p.title__description.title__description--left Hair Room Услуги
                             p.services__card-description бесцветный розовый с нейтрализацией желтизны
                             .services__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
-                                a.button.button--ghost.button--card(href="#") Прайс-&nbsp;лист
 
                 article.services__card
                     header.services__card-title Уход<br>за волосами
@@ -162,7 +160,6 @@ html(lang="ru")
                             p.services__card-description бесцветный розовый с нейтрализацией желтизны
                             .services__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
-                                a.button.button--ghost.button--card(href="#") Прайс-&nbsp;лист
 
                 article.services__card
                     header.services__card-title Дополнительные услуги
@@ -174,7 +171,6 @@ html(lang="ru")
                             p.services__card-description бесцветный розовый с нейтрализацией желтизны
                             .services__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
-                                a.button.button--ghost.button--card(href="#") Прайс-&nbsp;лист
                 
                 article.services__card
                     header.services__card-title Наращивание ресниц
@@ -186,7 +182,6 @@ html(lang="ru")
                             p.services__card-description бесцветный розовый с нейтрализацией желтизны
                             .services__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
-                                a.button.button--ghost.button--card(href="#") Прайс-&nbsp;лист
 
         section.price
             a#price.nav-link
@@ -425,15 +420,11 @@ html(lang="ru")
                     header.shares__header
                         p.shares__offers Акции
                         p.shares__text Новинки в разделе ухода за волосами  
-                        .shares__button
-                            a.button.button--card.button--offers(href="#") Дальше
 
                 article.shares__card.shares__card--loyality
                     header.shares__header
                         p.shares__offers.shares__offers--white Акции
                         p.shares__text.shares__text--white Скидки для участников программы
-                        .shares__button
-                            a.button.button--card.button--offers Дальше
         
         section.gallery
             a#gallery.nav-link
@@ -446,38 +437,9 @@ html(lang="ru")
                 .gallery__content
                     .gallery__logo: img(src="./img/insta_logo.png" alt="instagram logo")
                     p.gallery__text Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.
-                    a.button.button--subscribe Подписаться
+                    a.button.button--subscribe(href="https://www.instagram.com/hairroomkaliningrad/") Подписаться
 
             .instafeed#instafeed
-                //- .gallery__img
-                //-     img(src="./img/card1-sm.jpg" alt="HairRoom студия красоты")
-
-                //- .gallery__img.gallery__img--subscribe
-                //-     img(src="./img/card__subscribe.jpg" alt="подписаться")
-
-                //- .gallery__img
-                //-     img(src="./img/card2-sm.jpg" alt="HairRoom декорации")
-
-                //- .gallery__img
-                //-     img(src="./img/card3-sm.jpg" alt="HairRoom наращивание ресниц")
-
-                //- .gallery__img
-                //-     img(src="./img/card4-sm.jpg" alt="HairRoom окрас волос")
-
-                //- .gallery__img
-                //-     img(src="./img/card5-sm.jpg" alt="HairRoom")
-
-                //- .gallery__img
-                //-     img(src="./img/card6-sm.jpg" alt="HairRoom увеличение губ")
-                    
-                //- .gallery__img
-                //-     img(src="./img/card7-sm.jpg" alt="HairRoom миллирование")
-
-                //- .gallery__img
-                //-     img(src="./img/card5-sm.jpg" alt="HairRoom педикюр")
-
-                //- .gallery__img
-                //-     img(src="./img/card5-sm.jpg" alt="HairRoom педикюр")
 
         section.location
             a#contacts.nav-link
@@ -545,4 +507,5 @@ html(lang="ru")
         script(src="map.js")
         script(src="scripts.js")
         script(src="instagram.js")
+        script(src="//w71169.yclients.com/widgetJS")
         script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&callback=initMap")

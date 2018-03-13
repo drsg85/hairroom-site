@@ -6,29 +6,90 @@
     &__container {
         // positioning
         position: relative;
-
+        z-index: -1;
+        
         // box model
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 50px 0;
-
+        margin-left: -25px;
+        padding-left: 25px;
+        
         // visual
         overflow-x: scroll;
         overflow-y: hidden;
 
+        @include atTabletsPortrait {
+            // box model
+            margin-left: -75px;
+            padding-left: 75px;
+        }
+        
+        
         @include atDesktop {
+            // box model
+            padding: 50px;
+            padding-left: 100px;
+
             // visual
-            // overflow: hidden
             overflow-x: visible;
             overflow-y: visible;
+            background-image: url("./img/services_pattern-lg.png");
+            // background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50px 0;
+
+            
+            &::after {
+                content: url("./img/hero_hr-lg.png");
+                position: absolute;
+                bottom: -100px;
+                left: 100px;
+                z-index: -2;
+
+            }
+        }
+    }
+
+    &__wrapper {
+        // positioning
+        position: relative;
+        
+        // box model
+        width: 300px;
+        height: 450px;
+
+        // visual
+        border-radius: 5px;
+
+        &:hover .card__content {
+            // box model
+            display: block;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 300px;
+            left: 0;
+            width: 100%;
+            // height: 150px;
+            height: calc(100% - 150px);
+            transition: all 0.3s ease-in-out;
+            background-position: 50px 150px;
+            background: linear-gradient(to bottom, rgba(219, 102, 154, 0) 0px, rgba(219, 102, 154 , 0.8) 150px, rgba(198, 22, 141, 0.8) 100%);
         }
     }
 
     &__card {
+        // positioning
+        position: relative;
+        z-index: 2;
+
         // box model
         margin-right: 25px;
-        transition: 0.3s ease-in-out;
+
     }
     
     &__title {
@@ -49,11 +110,11 @@
         position: absolute;
         right: 30px;
 
+
         // box model
         display: inline-block;
         vertical-align: top;
-
-
+         
         // typography
         color: $white;
         font-family: $mainFont;
@@ -68,6 +129,8 @@
         // posittioning
         position: relative;
         margin: 0;
+
+        // box model
         padding: 20px 10px;
         color: $white;
         font-size: 0.7rem;
@@ -121,7 +184,7 @@
         box-shadow: 0px 23px 51px -9px rgba(165,68,122,0.96);
         border-radius: 5px;
         object-fit: cover;
-        background: linear-gradient(180deg, #c6168d, #db669a);
+        // background: linear-gradient(180deg, #c6168d, #db669a);
    
 
         img {
@@ -147,16 +210,16 @@
         // box model
         height: 100%;
         width: 100%;
-        display: none;
+        display: block;
         
         // visual
-        transition: 0.3s ease-in-out;
+        // transition: 0.3s ease-in-out;
     }
 
     &__description {
         // positioning
         position: absolute;
-        top: 195px;
+        top: 262px;
         right: 30px;
 
         // box model
@@ -168,14 +231,14 @@
         font-weight: 700;
         line-height: 1.5;
         text-align: right;
-        color: $text;
+        color: $white;
         text-transform: uppercase;
     }
 
     &__buttons {
          // positioning
          position: absolute;
-         bottom: 25px;
+         bottom: 10px;
          left: 50%;
          transform: translateX(-50%);
 

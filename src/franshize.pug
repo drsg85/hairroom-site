@@ -39,7 +39,13 @@ html(lang="ru")
                             li: a(href="#contacts") Контакты
 
                             .main-menu__franchise
-                            a(href="franshize.html") Франшиза
+                                a(href="franshize.html") Франшиза
+
+                    .be-friends.be-friends--franshize
+                        a(href="http://instagram.com")
+                            p.be-friends__text Давайте дружить
+                            p.be-friends__social instagram
+
                 .hero--franshize__content
                     .hero__img.hero__img--franshize
                         picture
@@ -67,9 +73,9 @@ html(lang="ru")
                             .form__group.form__group--full
                                 input.form__group-input(type="email" name="email" placeholder="E-mail")
                                 
-                            p.form__policy Заполняя контактную форму<br>вы соглашаетесь с <a>политикой&nbsp;конфиденциальности</a>
+                            p.form__policy Заполняя контактную форму<br>вы соглашаетесь с <a href="policy.html">политикой&nbsp;конфиденциальности</a>
                             .form__button
-                                a.button.button--form(href="#") Оставить заявку
+                                input.button.button--form(href="#" type="submit" id="franshize-submit" value="Оставить заявку")
 
                 ul.socials.socials--franshize
                     li: a(href="https://instagram.com/") instagram
@@ -82,7 +88,7 @@ html(lang="ru")
         footer.site-footer.site-footer--franshize
                 .site-footer__container
                     header.site-footer__header
-                        .site-footer__logo: img(src="./img/hr_logo_hor_black.svg" alt="Hair Room логотип")
+                        .site-footer__logo: img(src="/img/hr_logo_hor_black.svg" alt="Hair Room логотип")
                         p.site-footer__title-location HAIR ROOM. Калининград
                         p.site-footer__description Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа
 

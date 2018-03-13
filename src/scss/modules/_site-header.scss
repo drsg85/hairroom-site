@@ -1,26 +1,37 @@
 .site-header {
-
+    // visual
+    
     &--franshize {
         // box model
         padding-top: 30px;
-
+        
         @include atTabletsPortrait {
             // box model
             padding-top: 50px;
-        }
 
+            background-color: #f7dfef !important
+        }
+        
         @include atDesktop {
             // box model
-                padding-bottom: 100px;
+            padding-bottom: 100px;
             
             // visual
             background-image: url("./img/header-franshize.png") !important;
         }
     }
 
+    &--page {
+        // visual
+        background: linear-gradient(to bottom, #f7dfef 50%, #e5a0cf);
+        background-image: none !important;
+
+    }
+
     @include atTabletsPortrait {
         // visual
         background-image: url("./img/pattern.jpg");
+        background-color: $white;
         background-size: cover;
     }
 
@@ -30,5 +41,16 @@
 
         // visual
         background-image: url("./img/pattern-lg.jpg");
+        background-color: $white;
+        z-index: 0;
+
+
+        &::after {
+            content: url("./img/hero_hr-lg.png");
+            position: absolute;
+            bottom: -160px;
+            right: 0;
+            z-index: -1;
+        }
     }
 }

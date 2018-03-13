@@ -20,15 +20,18 @@ class MobileMenu {
         this.menuLinks.on("tap",
             this.toggleTheMenu.bind(this)
         );
-        // this.body.click(
-        //     this.mainMenu.removeClass("main-menu--shown")
-        // );
+        this.blackout.click(
+            this.toggleTheMenu.bind(this)
+        );
     }
     toggleTheMenu() {
         this.mainMenu.toggleClass("main-menu--shown");
         this.menuIcon.toggleClass("menu-icon--close-x");
         this.blackout.toggleClass("main-menu--blackout-on");
     }
+    // toggleMenu() {
+    //     this.mainMenu.removeClass("main-menu--shown");
+    // }
 }
 
 export default MobileMenu;

@@ -5,7 +5,7 @@
     
     // box model
     margin-bottom: -30px;
-    padding-left: 25px;
+    // padding-left: 25px;
 
     // visual
     background: linear-gradient(to bottom, #e2d8e9, #cc6ab0 20%);
@@ -14,7 +14,7 @@
     
     @include atTabletsPortrait {
         // box model
-        padding-left: 50px;
+        // padding-left: 50px;
 
         // visual
         background: none;

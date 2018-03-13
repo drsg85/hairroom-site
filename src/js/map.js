@@ -16,9 +16,12 @@ window.initMap = function() {
         position: LatLng,
         map: map,
         draggable: false,
+        zoomControl: false,
+        scaleControl: false,
+        scrollwheel: false,
         animation: google.maps.Animation.BOUNCE,
         title: "HairRoom"
-    })
+    });
     var content = `
         <div class="map-label__infowindow">
             <div class="map-label__logo"><img src="http://localhost/HairRoom/wp-content/themes/HairRoom/img/hr_logo_black.svg" alt="logo map"/></div>
@@ -39,6 +42,6 @@ window.initMap = function() {
     })
 
     infowindow.open(map, marker);
-    var icon = "./img/marker.svg";
+    var icon = "http://localhost/HairRoom/wp-content/themes/HairRoom/img/map-marker.svg";
     marker.setIcon(icon);
 }

@@ -7,6 +7,6 @@ const InstaFeed= require("instafeed");
     accessToken: "6312841675.1677ed0.4fe2a42c6bf7405bbc04c953f7ecd7dd",
     resolution: "standard_resolution",
     limit: 10,
-    template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+    template: '<img src="{{image}}"/>'
 });
 feed.run();

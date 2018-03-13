@@ -34,7 +34,7 @@
     <title>HairRoom Franshize</title>
   </head>
   <body>
-    <header class="site-header site-header--franshize" id="franshzie">
+    <header class="site-header site-header--franshize" id="franshize">
       <div class="hero hero--franshize">
         <nav class="main-nav main-nav--franshize">
           <div class="logo logo--franshize"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/hr_logo_white.svg" alt="HairRoom logo"/></div>
@@ -50,9 +50,15 @@
               <li><a href="#price">Прайс</a></li>
               <li><a href="#gallery">Галлерея</a></li>
               <li><a href="#contacts">Контакты</a></li>
-              <div class="main-menu__franchise"></div><a href="franshize.html">Франшиза</a>
+              <div class="main-menu__franchise">
+                <a href="franshize.html">Франшиза</a>
+              </div>
             </ul>
           </nav>
+          <div class="be-friends be-friends--franshize"><a href="http://instagram.com">
+              <p class="be-friends__text">Давайте дружить</p>
+              <p class="be-friends__social">instagram</p></a>
+          </div>
         </nav>
         <div class="hero--franshize__content">
           <div class="hero__img hero__img--franshize">
@@ -80,7 +86,7 @@
               <div class="form__group form__group--full">
                 <input class="form__group-input" type="email" name="email" placeholder="E-mail"/>
               </div>
-              <p class="form__policy">Заполняя контактную форму<br>вы соглашаетесь с <a>политикой&nbsp;конфиденциальности</a></p>
+              <p class="form__policy">Заполняя контактную форму<br>вы соглашаетесь с <a href="<?php echo esc_url(home_url("/"));?>/policy">политикой&nbsp;конфиденциальности</a></p>
               <div class="form__button"><a class="button button--form" href="#">Оставить заявку</a></div>
             </form>
           </div>
@@ -95,7 +101,7 @@
     <footer class="site-footer site-footer--franshize">
       <div class="site-footer__container">
         <header class="site-footer__header">
-          <div class="site-footer__logo"><img src="./img/hr_logo_hor_black.svg" alt="Hair Room логотип"/></div>
+          <div class="site-footer__logo"><img src="<?php bloginfo('stylesheet_directory') ;?>/img/hr_logo_hor_black.svg" alt="Hair Room логотип"/></div>
           <p class="site-footer__title-location">HAIR ROOM. Калининград</p>
           <p class="site-footer__description">Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа</p>
         </header>
@@ -124,6 +130,6 @@
         <p class="site-footer__copyright">copyright &copy; 2018<br><b>hairroom</b></p>
       </div>
     </footer>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts.js"></script>
   </body>
-  <script src="scripts.js"></script>
 </html>

@@ -20,10 +20,11 @@
 
     &--franshize {
         // box model
-
+        margin-top: -50px;
+        
         @include atDesktop {
             // box model
-            display: none;
+            display: none !important;
         }
     }
     
@@ -120,7 +121,7 @@
     }
 
     &__franchise {
-        
+
         a {
             // box model
             display: inline-block;
@@ -144,7 +145,7 @@
 
                 &:hover {
                     // visual
-                    background-color: $white;
+                    background-color: rgba($accent, 0.5);
                 }
             }
         }

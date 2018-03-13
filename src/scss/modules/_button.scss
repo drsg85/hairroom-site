@@ -106,7 +106,6 @@
         margin-bottom: 0;
 
         // visual
-        background-color: rgba(237, 99, 182, 0.24);
         background-color: rgba($accent, 0.5);
         border-width: 2px;
         border-color: $secondaryColor;
@@ -218,6 +217,8 @@ d
 
         // typography
         font-size: 0.75rem;
+
+        // visual
         
         @include atTabletsPortrait {
             // box model
@@ -243,7 +244,9 @@ d
     &--form {
         // box model
         width: 100%;
+        margin: 0;
         padding: 10px 0;
+        border: none;
         
         // typography
         color: $secondaryColor;
@@ -251,6 +254,8 @@ d
         // visual
         background-color: $white;
         transition: 0.3s ease-in-out;
+        outline: none;
+        
 
         @include atTabletsPortrait {
             // box model
@@ -277,10 +282,11 @@ d
         // visual
         background-color: $text;
         border: none;
-
+        
         // typography
         font-size: 1rem;
         text-transform: none;
+
     }
 
     &--subscribe {
@@ -293,8 +299,13 @@ d
         @include atTabletsPortrait {
             // box model
             width: auto;
+            padding: 8px 30px;
         }
 
+        @include atTabletsLandscape {
+            // box model
+            padding: 8px 40px;
+        }
         
         &:hover {
             // typography

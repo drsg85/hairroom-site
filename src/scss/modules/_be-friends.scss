@@ -11,18 +11,42 @@
     text-align: center;
     text-transform: uppercase;
 
+    &--franshize {
+        // positioning
+        top: 12px !important;
+        right: -235px !important;
+
+        // box model
+        display: none;
+
+        @include atDesktop {
+            // box model
+            display: block;
+        }
+        
+    }
+
+    a {
+        // visual
+        text-decoration: none;
+    }
+
     @include atDesktop {
         // positioning
-        top: 45px;
+        top: 100px;
         right: 0;
         
         // box model
-        display: none;
+        // display: none;
     }
 
     @include atDesktopLarge {
+        // positioning
+        top: 45px;
+        
         // box model
         display: block;
+
     }
 
     &__text {
@@ -78,26 +102,5 @@
         display: block;
         padding-top: 5px;
         letter-spacing: 6px;
-
-        // @include atTabletsPortrait {
-        //     letter-spacing: 1px;
-        // }
-        
     }
-
-    // @include atTabletsPortrait {
-    //     display: block;
-    //     position: absolute;
-    //     right: 0;
-    //     top: 80px;
-    //     font-size: 0.6875rem;
-    // }
-
-    // @include atDesktop {
-    //     top: 60px;
-    // }
-
-    // @include atDesktopLarge {
-    //     top: 70px;
-    // }
 }

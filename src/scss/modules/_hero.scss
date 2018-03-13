@@ -16,7 +16,7 @@
         margin: 0;
 
         // &::before {
-        //     content: url("./img/hero_hr-franshize.png");
+        //     content: url("./img/hero_hr-lg.png");
         //     // positioning
         //     position: absolute;
         //     bottom: -85px;
@@ -35,9 +35,14 @@
             padding: 0 85px !important;
             padding-bottom: 85px !important;
             margin-bottom: 0 !important;
+
+            // visual
+            box-shadow: 0px 15px 61px -3px rgba(125,30,86,0.7) !important;
         }
 
         &__content {
+            // box model
+
 
             @include atDesktop {
                 // positioning
@@ -46,6 +51,65 @@
                 // box model
                 display: flex;
             }
+        }
+    }
+
+    &__content {
+        // box model
+        padding: 35px 30px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding: 0;
+        }
+
+        h3 {
+            // box model
+            margin: 60px 0;
+
+            // typography
+            color: white;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: -4px 3px 0 #3a0f21;
+            font-size: 1.15rem;
+            font-weight: 900;
+
+            @include atSmall {
+                // typography
+                font-size: 1rem;
+            }
+
+            @include atTabletsPortrait {
+                // typography
+                font-size: 2.25rem;
+            }
+        }
+        h4 {
+            // box model
+            margin: 30px 0;
+            margin-top: 0;
+
+            // typography
+            color: white;
+            letter-spacing: 3px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        p {
+            // box model
+            margin: 0;
+            margin-bottom: 30px;
+
+            // typography
+            color: #000;
+        }
+        
+        a {
+            // typography
+            color: white;
         }
     }
 
@@ -123,29 +187,17 @@
         @include atDesktop {
             // box model
             margin-top: -80px;
+            margin-left: 50px;
+
+        }
+        @include atDesktopLarge {
+            // box model
             min-width: 700px;
         }
     }
 
     &__header {
-        // @include atTabletsPortrait {
-        //     // positioning
-        //     z-index: 2;
 
-        //     // box model
-        //     padding-left: 55px;
-        // }
-        
-        // @include atDesktop {
-        //     // positioning
-        //     position: relative;
-        //     z-index: 1;
-        
-        //     // box model
-        //     display: block;
-        //     padding-top: 55px;
-        //     padding-left: 0;
-        // }
     }
 
     &__title {
@@ -198,7 +250,7 @@
     &__copy {
         // box model
         display: inline-block;
-        width: 300px;
+        max-width: 300px;
 
         // typography
         color: $copyColor;

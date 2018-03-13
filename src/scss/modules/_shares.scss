@@ -46,7 +46,7 @@
         }
         @include atTabletsPortrait {
             // box model
-            width: 375px;
+            width: 425px;
         }
         
         @include atTabletsLandscape {
@@ -101,6 +101,7 @@
         z-index: 1;
 
         // box model
+        height: 230px;
         padding: 30px;
 
         @include atTabletsLandscape {
