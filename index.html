@@ -11,8 +11,6 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="theme-color" content="#ee7aad"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <title>HairRoom</title>
   </head>
@@ -52,7 +50,7 @@
             <source media="(min-width: 1200px)" srcset="./img/women-lg.png"/><img src="./img/women.png" alt="Hair Room девушка"/>
           </picture>
         </div>
-        <div class="hero__button"><a class="button button--online-record" href="#">online&nbsp;запись</a></div>
+        <div class="hero__button"><a class="button button--online-record ms_booking" href="">online&nbsp;запись</a></div>
         <p class="title__description title__description--right">Hair Room kaliningrad</p>
         <ul class="socials">
           <li><a href="https://instagram.com/">instagram</a></li>
@@ -75,20 +73,20 @@
         <div class="about__content">
           <div class="tabs">
             <ul class="tabs__list" id="tabs" role="tablist">
-              <li class="tabs__list-item tabs__list-item--current"><a class="tabs__link">Миссия</a></li>
-              <li class="tabs__list-item"><a class="tabs__link">Подход</a></li>
-              <li class="tabs__list-item"><a class="tabs__link">Мастера</a></li>
+              <li class="tabs__list-item tabs__list-item--current" data-tab="tab-1"><a class="tabs__link">Миссия</a></li>
+              <li class="tabs__list-item" data-tab="tab-2"><a class="tabs__link">Подход</a></li>
+              <li class="tabs__list-item" data-tab="tab-3"><a class="tabs__link">Мастера</a></li>
             </ul>
-            <div class="tabs__content tabs__content--current">
+            <div class="tabs__content tabs__content--current" id="tab-1">
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
               <p class="tabs__copy">Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.</p>
             </div>
-            <div class="tabs__content">
+            <div class="tabs__content" id="tab-2">
               <p class="tabs__copy">Текст вкладки "подход"</p>
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
               <p class="tabs__copy">Позвольте себе у</p>
             </div>
-            <div class="tabs__content">
+            <div class="tabs__content" id="tab-3">
               <p class="tabs__copy">Текст вкладки "мастера"</p>
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
               <p class="tabs__copy">Позвольте себе у</p>
@@ -104,28 +102,28 @@
         <p class="services__suptitle">Мы предлагаем</p>
         <h2 class="services__title-section">Услуги</h2>
       </header>
-      <div class="services__cards card__container">
-        <article class="services__card card">
-          <header class="services__card-title card__title">Наращивание<br>волос</header>
-          <div class="services__wrapper">
-            <div class="services__card-img card__img"></div>
-            <div class="services__card-content card__content">
+      <div class="card__container">
+        <article class="card">
+          <header class="card__title">Наращивание<br>волос</header>
+          <div class="card__wrapper">
+            <div class="card__img"></div>
+            <div class="card__content">
               <!-- changes class-->
               <p class="title__description title__description--left">Hair Room Услуги</p>
-              <p class="services__card-description card__description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="services__buttons card__buttons"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-&nbsp;лист</a></div>
+              <p class="card__description">бесцветный розовый с нейтрализацией желтизны</p>
+              <div class="card__buttons"><a class="button button--pink button--card" href="#">Записаться</a></div>
             </div>
           </div>
         </article>
-        <article class="services__card">
-          <header class="services__card-title">Маникюрные<br> услуги</header>
+        <article class="card">
+          <header class="card-title">Маникюрные<br> услуги</header>
           <div class="services__wrapper">
-            <div class="services__card-img services__card-img--bg2"></div>
-            <div class="services__card-content">
+            <div class="card__img"></div>
+            <div class="card__content">
               <!-- change class-->
               <p class="title__description title__description--left">Hair Room Услуги</p>
               <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="services__buttons"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-&nbsp;лист</a></div>
+              <div class="services__buttons"><a class="button button--pink button--card" href="#">Записаться</a></div>
             </div>
           </div>
         </article>
@@ -137,7 +135,7 @@
               <!-- change class-->
               <p class="title__description title__description--left">Hair Room Услуги</p>
               <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="services__buttons"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-&nbsp;лист</a></div>
+              <div class="services__buttons"><a class="button button--pink button--card" href="#">Записаться</a></div>
             </div>
           </div>
         </article>
@@ -149,7 +147,7 @@
               <!-- change class-->
               <p class="title__description title__description--left">Hair Room Услуги</p>
               <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="services__buttons"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-&nbsp;лист</a></div>
+              <div class="services__buttons"><a class="button button--pink button--card" href="#">Записаться</a></div>
             </div>
           </div>
         </article>
@@ -161,7 +159,7 @@
               <!-- change class-->
               <p class="title__description title__description--left">Hair Room Услуги</p>
               <p class="services__card-description">бесцветный розовый с нейтрализацией желтизны</p>
-              <div class="services__buttons"><a class="button button--pink button--card" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-&nbsp;лист</a></div>
+              <div class="services__buttons"><a class="button button--pink button--card" href="#">Записаться</a></div>
             </div>
           </div>
         </article>
@@ -474,14 +472,12 @@
           <header class="shares__header">
             <p class="shares__offers">Акции</p>
             <p class="shares__text">Новинки в разделе ухода за волосами  </p>
-            <div class="shares__button"><a class="button button--card button--offers" href="#">Дальше</a></div>
           </header>
         </article>
         <article class="shares__card shares__card--loyality">
           <header class="shares__header">
             <p class="shares__offers shares__offers--white">Акции</p>
             <p class="shares__text shares__text--white">Скидки для участников программы</p>
-            <div class="shares__button"><a class="button button--card button--offers">Дальше</a></div>
           </header>
         </article>
       </div>
@@ -495,7 +491,7 @@
         <p class="gallery__slogan">Давайте дружить</p>
         <div class="gallery__content">
           <div class="gallery__logo"><img src="./img/insta_logo.png" alt="instagram logo"/></div>
-          <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe">Подписаться</a>
+          <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe" href="https://www.instagram.com/hairroomkaliningrad/">Подписаться</a>
         </div>
       </div>
       <div class="instafeed" id="instafeed"></div>
@@ -558,6 +554,7 @@
     <script src="map.js"></script>
     <script src="scripts.js"></script>
     <script src="instagram.js"></script>
+    <script src="//w71169.yclients.com/widgetJS"></script>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&amp;callback=initMap"></script>
   </body>
 </html>
