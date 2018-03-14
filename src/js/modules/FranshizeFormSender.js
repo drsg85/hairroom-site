@@ -5,8 +5,33 @@ class FranshizeFormSender {
     constructor() {
         this.franshizeSubmit = $("#franshize-submit");
         this.franshizeForm = $("#franshize-form");
+        this.okButton = $("#order-popup .order-popup__button");
 
+        this.setupPopup();
         this.setupValidator();
+    }
+
+    setupPopup() {
+        let self = this;
+        this.okButton.on("click", function(e) {
+            self.hidePopup();
+            e.preventDefault();
+        });
+    }
+
+    showPopup() {
+        // let $orderPopupContent = ;
+        $("#order-popup").addClass("order-popup--shown");
+        $("#order-popup .order-popup__content").addClass("order-popup__content--shown");
+        $("#order-popup .order-popup__title").text("Отправка заявки");
+        $("#order-popup .order-popup__text").html("");
+    }
+
+    hidePopup() {
+        let $orderPopup = $("#order-popup");
+        let $orderPopupContent = $("#order-popup .order-popup__content");
+        $orderPopup.removeClass("order-popup--shown");
+        $orderPopupContent.removeClass("order-popup__content--shown");
     }
 
     setupValidator() {
@@ -29,15 +54,19 @@ class FranshizeFormSender {
                 fullname: "Пожайлуйста введите свое имя",
                 phone: "Пожалуйста введите номер телефона",
                 email: "Пожалуйста введите адрес электронной почты",
-                address: "Пожалуйста введите название города",
+                city: "Пожалуйста введите название города",
             },
-            submitHandler: function(form) {
+            submitHandler: function(form, event) {
                 self.parseForm();
+                event.preventDefault();
+                // return false;
             }
         });
     }
     parseForm() {
         let self = this;
+        
+        this.showPopup();
 
         let FranshizePartner = {
             name: this.franshizeForm.find("input[name=\"fullname\"]").val(),
@@ -45,6 +74,7 @@ class FranshizeFormSender {
             email: this.franshizeForm.find("input[name=\"email\"]").val(),
             city: this.franshizeForm.find("input[name\"city\"]").val()
         };
+        alert(FranshizePartner.name);
         
         let phoneClean = FranshizePartner.phone.replace(/[^0-9 +]+/g, "");
 
@@ -86,10 +116,10 @@ class FranshizeFormSender {
             "subject": "Заявка по франшизе",
             "content": $fullOrder.html()
         };
-
+        console.log(FranshizePartner.name);
         $.ajax({
             type: "POST",
-            url: "httP://localhost/HairRoom/mail.php",
+            url: "http://localhost/HairRoom/mail.php",
             data: dataToSend,
             success: onSuccess,
             error: onError,

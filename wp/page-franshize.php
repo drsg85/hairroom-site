@@ -75,7 +75,7 @@
               <h2 class="form__title">откройте собственный<br>салон hair room<br> у себя в городе</h2>
               <p class="form__call">Заполните форму и наш<br>менеджер с вами свяжется</p>
             </header>
-            <form class="form__content">
+            <form class="form__content" id="franshize-form" method="POST">
               <div class="form__group">
                 <input class="form__group-input" type="text" name="name" placeholder="Имя"/>
                 <input class="form__group-input" type="phone" name="phone" placeholder="Телефон"/>
@@ -87,7 +87,7 @@
                 <input class="form__group-input" type="email" name="email" placeholder="E-mail"/>
               </div>
               <p class="form__policy">Заполняя контактную форму<br>вы соглашаетесь с <a href="<?php echo esc_url(home_url("/"));?>/policy">политикой&nbsp;конфиденциальности</a></p>
-              <div class="form__button"><a class="button button--form" href="#">Оставить заявку</a></div>
+              <div class="form__button"><input type="submit" id="franshize-submit" value="Оставить заявку" class="button button--form" /></div>
             </form>
           </div>
         </div>
@@ -96,6 +96,11 @@
           <li><a href="<?php echo $social_fb; ?>" target="blanck">facebook</a></li>
           <li><a href="<?php echo $social_vk; ?>" target="_blank">vkontakte</a></li>
         </ul>
+        <div class="order-popup" id="order-popup">
+          <div class="order-popup__content">
+            <h2 class="order-popup">Отправка заявки</h2><a class="button order-popup__button" href="#" hidden="hidden">ОК</a>
+          </div>
+        </div>
       </div>
     </header>
     <footer class="site-footer site-footer--franshize">

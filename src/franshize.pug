@@ -62,9 +62,9 @@ html(lang="ru")
                             h2.form__title откройте собственный<br>салон hair room<br> у себя в городе
                             p.form__call Заполните форму и наш<br>менеджер с вами свяжется
 
-                        form.form__content
+                        form.form__content#franshize-form(method="POST")
                             .form__group
-                                input.form__group-input(type="text" name="name" placeholder="Имя")
+                                input.form__group-input(type="text" name="fullname" placeholder="Имя")
                                 input.form__group-input(type="phone" name="phone" placeholder="Телефон")
 
                             .form__group.form__group--full
@@ -83,7 +83,10 @@ html(lang="ru")
                     li: a(href="https://vk.com/") vkontakte
 
                 
-                        
+                #order-popup.order-popup
+                    .order-popup__content
+                        h2.order-popup Отправка заявки
+                        a(href="#" hidden).button.order-popup__button ОК
 
         footer.site-footer.site-footer--franshize
                 .site-footer__container
