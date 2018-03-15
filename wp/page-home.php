@@ -49,7 +49,7 @@ $social_vk = get_field("social_vk");
   <body>
     <header class="site-header nav-link" id="about">
       <nav class="main-nav">
-        <div class="logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/hr_logo_white.svg" alt="HairRoom Logo"/></div>
+        <div class="logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/hr_logo_white_bg.jpg" alt="HairRoom Logo"/></div>
         <div class="info">
           <p class="info__address"><?php echo $address; ?></p><a class="info__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone; ?></a>
         </div>
