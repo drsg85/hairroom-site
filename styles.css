@@ -1269,7 +1269,7 @@ ul {
       top: auto; } }
   @media (min-width: 1600px) {
     .socials--franshize {
-      bottom: 40px !important; } }
+      bottom: 0px !important; } }
   @media (min-width: 700px) {
     .socials {
       display: block;
