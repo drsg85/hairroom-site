@@ -75,7 +75,7 @@
               <h2 class="form__title">откройте собственный<br>салон hair room<br> у себя в городе</h2>
               <p class="form__call">Заполните форму и наш<br>менеджер с вами свяжется</p>
             </header>
-            <form class="form__content" id="franshize-form" method="POST">
+            <form class="form__content" id="franshize-form" method="POST" action="http://localhost/HairRoom/mail.php">
               <div class="form__group">
                 <input class="form__group-input" type="text" name="name" placeholder="Имя"/>
                 <input class="form__group-input" type="phone" name="phone" placeholder="Телефон"/>

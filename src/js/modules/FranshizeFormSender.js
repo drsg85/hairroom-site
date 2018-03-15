@@ -10,7 +10,6 @@ class FranshizeFormSender {
         this.setupPopup();
         this.setupValidator();
     }
-
     setupPopup() {
         let self = this;
         this.okButton.on("click", function(e) {
@@ -59,7 +58,6 @@ class FranshizeFormSender {
             submitHandler: function(form, event) {
                 self.parseForm();
                 event.preventDefault();
-                // return false;
             }
         });
     }

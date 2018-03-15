@@ -191,7 +191,7 @@ $social_vk = get_field("social_vk");
               <!-- changes class-->
               <p class="title__description title__description--left">Hair Room Услуги</p>
               <p class="card__description"><?php echo $card_description; ?></p>
-              <div class="card__buttons"><a class="button button--pink button--card ms_booking" href="#">Записаться</a><a class="button button--ghost button--card" href="#">Прайс-лист</a></div>
+              <div class="card__buttons"><a class="button button--pink button--card ms_booking" href="#">Записаться</a></div>
             </div>
           </div>
         </article>
