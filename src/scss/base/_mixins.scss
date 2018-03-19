@@ -36,6 +36,12 @@
     }
 }
 
+@mixin BeFriends {
+    @media(min-width: 1800px) {
+        @content;
+    }
+}
+
 // Positioning
 
 @mixin centerer {

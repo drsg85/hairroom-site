@@ -72,7 +72,6 @@ class FranshizeFormSender {
             email: this.franshizeForm.find("input[name=\"email\"]").val(),
             city: this.franshizeForm.find("input[name\"city\"]").val()
         };
-        alert(FranshizePartner.name);
         
         let phoneClean = FranshizePartner.phone.replace(/[^0-9 +]+/g, "");
 

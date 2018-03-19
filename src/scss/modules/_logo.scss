@@ -3,21 +3,28 @@
     align-self: flex-start;
     height: 85px;
     width: 86px;
-    padding: 15px;
+    padding: 8px;
+    padding-left: 0;
+    padding-right: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
-    // visual
-    background-color: $black;
-    box-shadow: 0px 25px 58px -11px rgba($black,0.24);
 
     &--franshize {
         // box model
         margin-top: -30px;
 
+        // visual
+        background-color: $white;
+
         @include atTabletsPortrait {
             // box model
             margin-top: -50px;
+        }
+
+        @include atDesktop {
+            // box model
+            height: 140px !important;
+            width: 140px !important;
         }
     }
 
@@ -25,7 +32,8 @@
         // box model
         height: 140px;
         width: 140px;
-        padding: 20px;
+        padding: 10px;
+        padding-left: 0;
     }
 
     @include atTabletsLandscape {
@@ -33,6 +41,7 @@
         height: 188px;
         width: 188px;
         padding: 30px;
+        padding-left: 0;
     }
 
     @include atTabletsLandscapeIpad {
@@ -40,6 +49,13 @@
         height: 140px;
         width: 140px;
         padding: 20px;
+        padding-left: 0;
+    }
+
+    @include atDesktop {
+        // box model
+        height: 180px;
+        width: 180px;
     }
 
     img {

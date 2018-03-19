@@ -115,7 +115,19 @@
         @include atTabletsLandscape {
             // box model
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
+        }
+
+        @include atDesktop {
+            // display: block;
+            justify-content: space-between;
+            // justify-content: flex-start;
+        }
+
+        @include atDesktopLarge {
+            // box model
+            display: flex;
         }
     }
 
@@ -123,8 +135,18 @@
         @include atTabletsLandscape {
             // box model
             width: 345px;
-            margin-right: 10%
+            // margin-right: 10%
+        }
+        @include atDesktop {
+            margin-right: 10%;
+            // display: inline-block;
+            // vertical-align: top;
+        }
+        // @include atDesktopLarge {
+        // }
 
+        &::nth-child(2) {
+            margin-right: 0;
         }
         &::nth-child(3) {
             // box model

@@ -290,6 +290,8 @@
     &__img {
         // positioning
         position: relative;
+        left: 0;
+        bottom: 0;
         z-index: 3;
 
         // box model
@@ -306,56 +308,56 @@
             min-width: 350px;
 
 
+        @include atTabletsPortrait {
+            // positioning
+            position: static !important;
+            min-width: auto !important;
+
+            // box model
+            margin-left: -50px;
+            min-width: 65% !important;
+        }
+
+        @include atDesktop {
+            // box model
+            margin-left: -85px !important;
+            display: flex;
+            min-width: auto !important;
+        }
+
+        img {
+            // box model
+            width: 100%;
+            min-height: 350px;
+            object-fit: cover;
+
+            // visual
+            border-radius: 5px;
+
             @include atTabletsPortrait {
-                // positioning
-                position: static !important;
-                min-width: auto !important;
-
                 // box model
-                margin-left: -50px;
-                min-width: 65% !important;
+                min-height: 470px;
             }
-
+            
             @include atDesktop {
                 // box model
-                margin-left: -85px !important;
-                display: flex;
-                min-width: auto !important;
+                height: 650px;
             }
 
-            img {
-                // box model
-                width: 100%;
-                min-height: 350px;
-                object-fit: cover;
-
-                // visual
-                border-radius: 5px;
-
-                @include atTabletsPortrait {
-                    // box model
-                    min-height: 470px;
-                }
-                
-                @include atDesktop {
-                    // box model
-                    height: 650px;
-                }
-
-            }
-
-          
         }
+
+        
+    }
 
         @include atTabletsPortrait {
             // positioning
             position: absolute;
+            left: 80px;
             bottom: 0;
-            right: 18px;
             z-index: -1;
 
             // box model
-            min-width: 685px;
+            min-width: 600px;
         }
 
         @include atTabletsLandscape {

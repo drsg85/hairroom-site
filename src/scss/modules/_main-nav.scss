@@ -1,9 +1,8 @@
 .main-nav {
     // box model
     display: flex;
-    padding-bottom: 40px;
+    padding: 10px 0;
     padding-left: 25px;
-    // background-color: #000;
 
     &--franshize {  
         
@@ -19,14 +18,10 @@
         padding-left: 50px;
     }
 
-    @include atTabletsLandscapeIpad {
-        // box model
-        padding-bottom: 40px;
-    }
 
     @include atDesktop {
         // box model
-        padding-bottom: 40px;
+        padding-bottom: 0;
         padding-left: 85px;
     }
 }

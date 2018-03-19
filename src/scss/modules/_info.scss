@@ -1,7 +1,10 @@
 .info {
+    // positioning
+    position: relative;
+    z-index: 2;
+    
     // box model
-    margin: 0;
-    padding-top: 15px;
+    margin: auto 0;
     padding-left: 20px;
 
     // typography
@@ -9,29 +12,31 @@
 
     @include atTabletsPortrait {
         // box model
-        padding-top: 20px;
         padding-left: 40px;
     }
 
     @include atTabletsLandscape {
         // box model
-        padding-top: 33px;
+    }
+    @include atDesktop {
+        // box model
+        padding-left: 0;
     }
 
-    @include atTabletsLandscapeIpad {
-        // box model
-        padding-top: 15px;
-    }
+    // @include atTabletsLandscapeIpad {
+    //     // box model
+    //     padding-top: 40px;
+    // }
 
     &__address {
         // box model
         margin: 0;
+        padding: 0.25em 0;
 
         // typography
         font-family: $textFont;
         font-size: 0.7rem;
         font-weight: 700;
-        // color: $white;
         letter-spacing: 1px;
         text-align: center;
         text-transform: uppercase;

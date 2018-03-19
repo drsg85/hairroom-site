@@ -37,16 +37,20 @@
         right: 0;
         
         // box model
-        // display: none;
+        display: none;
     }
 
     @include atDesktopLarge {
         // positioning
-        top: 45px;
+        top: 30px;
         
         // box model
-        display: block;
+        display: none;
+    }
 
+    @include BeFriends {
+        // box model
+        display: block;
     }
 
     &__text {

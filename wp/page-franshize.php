@@ -37,7 +37,7 @@
     <header class="site-header site-header--franshize" id="franshize">
       <div class="hero hero--franshize">
         <nav class="main-nav main-nav--franshize">
-          <div class="logo logo--franshize"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/hr_logo_white.svg" alt="HairRoom logo"/></div>
+          <div class="logo logo--franshize"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/hr_logo_vr_white-bg.svg" alt="HairRoom logo"/></div>
           <div class="franshise__button"><a class="button button--franshize" href="<?php echo esc_url(home_url("/")); ?>">На&nbsp;главную</a></div>
           <div class="menu-icon menu-icon--franshize">
             <div class="menu-icon__middle"></div>

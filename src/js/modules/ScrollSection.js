@@ -13,9 +13,9 @@ class SmoothScrolling {
             offset: -40
         });
 
-        // this.scrollSpyLinks.smoothScroll({
-        //     offset: -40
-        // });
+        this.scrollSpyLinks.smoothScroll({
+            offset: -40
+        });
     }
 }
 

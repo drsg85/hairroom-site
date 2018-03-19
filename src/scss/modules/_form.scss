@@ -138,7 +138,21 @@
 
     &__group {
         // // box model
+        .error {
+            // box model
+            display: inline-block;
+            padding-top: 5px;
 
+            // typography
+            color: red;
+            font-family: $mainFont;
+            font-size: 1rem;
+            text-align: left;
+
+            // visual
+            background-color:$white;
+            transition: all 0.3s ease-in-out;
+        }
         @include atTabletsPortrait {
             // box model
             display: flex;
@@ -170,6 +184,7 @@
 
     &__group-input {
         // box model
+        display: block;
         height: 60px;
         width: 100%;
         padding: 0 10px;
