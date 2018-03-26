@@ -497,6 +497,7 @@ ul {
   border-bottom-right-radius: 5px; }
   .logo--franshize {
     margin-top: -30px;
+    padding-right: 0 !important;
     background-color: #ffffff; }
     @media (min-width: 700px) {
       .logo--franshize {
@@ -2496,13 +2497,12 @@ ul {
       padding: 0; } }
 
 .form__group .error {
-  display: inline-block;
-  padding-top: 5px;
-  color: red;
+  display: block;
+  padding-top: 10px;
+  color: #ffffff;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   text-align: left;
-  background-color: #ffffff;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
