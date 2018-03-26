@@ -140,21 +140,22 @@
         // // box model
         .error {
             // box model
-            display: inline-block;
-            padding-top: 5px;
+            display: block;
+            padding-top: 10px;
 
             // typography
-            color: red;
+            color: $white;
             font-family: $mainFont;
-            font-size: 1rem;
+            font-size: 0.875rem;
             text-align: left;
 
             // visual
-            background-color:$white;
+            // background-color:$white;
             transition: all 0.3s ease-in-out;
         }
         @include atTabletsPortrait {
             // box model
+                // display: inline-block;
             display: flex;
             justify-content: space-between;
         }
