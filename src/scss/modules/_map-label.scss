@@ -1,0 +1,151 @@
+.map-label {
+    // positioning
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+
+    // need change
+    @include centerer-x;
+
+    // box model
+    display: block;
+    padding: 30px;
+    width: calc(100% - 30px);
+
+    @include atTabletsPortrait {
+        // positioning
+        top: 50px;
+
+        // box model
+        width: calc(100% - 300px);
+    }
+
+    @include atTabletsLandscape {
+        // box model
+        width: calc(100% - 400px);
+    }
+
+    @include atDesktop {
+        // positioning
+        top: 200px;
+        left: 500px;
+
+        // box model
+        width: 500px;
+    }
+
+    // visual
+    background-color: rgba($accent, 0.8);
+    border-radius: 10px;
+
+    &__logo {
+        // box model
+        width: 86px;
+        height: 86px;
+
+        img {
+            // box model
+            width: 100%;
+        }
+    }
+
+    &__info-title {
+        // box model
+        margin: 0;
+        margin-bottom: 15px;
+
+        // typography
+        color:$white;
+        font-family: $textFont;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__info-text {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+
+        // typography
+        color: $white;
+        font-family: $textFont;
+        font-weight: 400;
+        font-size: 1.25rem;
+
+        // sub {
+        //     // typography
+        //     color: $notationColor;
+        //     font-size: 0.75rem;
+        // }
+
+        span {
+            // positioning
+            transform: translateY(-0.5rem);
+
+            // box model
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 2px;
+        }
+    }
+
+    &__infowindow {
+        // box model
+        display: flex;
+        padding: 10px 20px;
+    }
+
+    &__infowindow-content {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+    }
+
+    &__infowindow-title {
+        // box model
+        margin: 0;
+        margin-bottom: 5px;
+        
+        // typography
+        text-align: center;
+        font-size: 0.875rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $text;
+
+    }
+
+    &__infowindow-description {
+        
+        // box model
+        margin: 0;
+        margin-bottom: 5px;
+        text-align: center;
+
+        // typography
+        font-family: $textFont;
+        color: $notationColor;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+    }
+    &__infowindow-address {
+        // box model
+        margin: 0;
+        
+        // typography
+        font-family: $textFont;
+        color: $notationColor;
+        font-size: 0.9em;
+    }
+
+
+}
+.gm-style-iw + div {
+    // box model
+    display: none;
+}

@@ -1,0 +1,283 @@
+.about {
+    // positioning
+    position: relative;
+
+    @include atTabletsPortrait {
+        // box model
+        padding-bottom: 100px;
+
+        // visual
+        // background-image: url("./img/pink.png");
+        background-color: #e3d8e8;
+        background: linear-gradient(to bottom, #fbf9fa 10%, #f7e9f4);
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(#fefdfe, 1.5) 20%,rgba(232, 197, 224, 1));
+        }
+    }
+
+    @include atDesktop {
+        // positioning
+        position: relative;
+
+        // box model
+        display: flex;
+        padding-bottom: 100px;
+        padding-left: 85px;
+
+        // visual
+        background-image: url("./img/pattern-lg2.png");
+        background-size: cover;
+    }
+
+    &__img {
+        // typography
+        font-size: 0;
+        
+
+        @include atTabletsPortrait {
+            // box model
+            width: 88%;
+            height: 390px;
+        }
+
+        @include atTabletsLandscape {
+            // box model
+            height: auto;
+        }
+
+        @include atDesktop {
+            // positioning
+            position: relative;
+            z-index: 2;
+
+            // box model
+           width: 860px;
+        }
+
+        img {
+            // box model
+            width: 100%;
+            object-fit: cover;
+
+            @include atDesktop {
+                // box model
+                height: 100%;
+                margin-top: -50px;
+            }
+
+            @include atDesktopLarge {
+                // box model
+                width: 860px;
+            }
+        }
+    }
+    
+    &__board {
+        // box model
+        padding: 35px 30px;
+        padding-bottom: 70px;
+        
+        // visual
+        background-color: $white;
+        overflow: hidden;
+        
+        @include atTabletsPortrait {
+            // box model
+            margin-top: -150px;
+            margin-left: 55px;
+            padding: 50px;
+
+            // visual
+            background-image: url("./img/about_board-lg.jpg");
+            background-size: cover;
+            box-shadow: 0px 8px 25px -8px rgba(107,21,65,1);
+        }
+
+        @include atDesktop {
+            // box model
+            margin-top: 0;
+            margin-left: -100px;
+            width: 100%;
+        }
+    }
+
+    &__header {
+        // box model
+        margin-bottom: 25px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding-top: 120px;
+        }
+
+        @include atTabletsLandscape {
+            // box model
+            padding-top: 200px;
+        }
+        
+        @include atDesktop {
+            // box model
+            padding-top: 0;
+            padding-left: 130px;
+        }
+    }
+
+    &__suptitle {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // typography
+        color: $titleColor;
+        font-family: $textFont;
+        font-size: 1.125rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // typography
+        font-size: 1.45rem;
+        line-height: 1.25;
+
+        @include atTabletsPortrait {
+            font-size: 2.66rem;
+            min-width: 436px;
+            letter-spacing: 3px;
+            font-weight: 900;
+        }
+    }
+
+    &__content {
+        @include atTabletsPortrait {
+            // box model
+            width: 585px;
+        }
+
+        @include atDesktop {
+            // box model
+            padding-left: 130px;
+        }
+    }
+
+    &__buttons {
+        // typography
+        text-align: center;
+
+        @include atTabletsPortrait {
+            // box model
+            padding-bottom: 15px;
+
+            // typography
+            text-align: left;
+        }
+
+        @include atDesktop {
+            // positioning
+            position: relative;
+            z-index: 2;
+
+            // box model
+            margin-top: 75px;
+        }
+    }
+
+    &__logo {
+        // positioning
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        z-index: 2;
+
+        // box model
+        height: 155px;
+        width: 155px;
+        padding: 32px;
+
+        // visual
+        background-color: $white;
+        border-radius: 50%;
+        box-shadow: 0 7px 28px 6px rgba($copyColor, 0.125);
+
+        @include atTabletsLandscape {
+            // positioning
+            bottom: 35%;
+            left: 85%;
+
+            // box model
+            width: 250px;
+            height: 250px;
+            padding: 50px;
+        }
+
+        @include atDesktop {
+            // box model
+            display: none;
+        }
+
+        @include atDesktopLarge {
+            // positioning
+            bottom: 60%;
+            left: 90%;
+
+            // box model
+            width: 300px;
+            height: 300px;
+            padding: 60px;
+            display: block;
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 6px;
+            top: 6px;
+
+            // box model
+            height: 142px;
+            width: 142px;
+            border: 1px solid #cccccc;
+            
+            // visual
+            border-radius: 50%;
+
+            @include atTabletsLandscape {
+                // positioining
+                top: 9px;
+                left: 9px;
+
+                // box model
+                width: 230px;
+                height: 230px;
+            }
+            @include atDesktop {
+                // box model
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        img {
+            // box model
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+}

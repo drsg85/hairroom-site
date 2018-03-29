@@ -1,0 +1,152 @@
+.tabs {
+    // box model
+    margin-bottom: 40px;
+    height: 450px;
+
+    @include atSmall {
+        // box model
+        height: 500px;
+    }
+
+    @include atDesktop {
+        // box model
+        height: 300px;
+    }
+
+    &__list {
+        // positioning
+        position: relative;
+
+        // box model
+        display: flex;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+        margin-left: -10px;
+        
+        // visual
+        list-style: none;
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+
+            // box model
+            height: 1px;
+            width: 150%;
+
+            // visual
+            background-color: rgba($notationColor, 0.25);
+
+            @include atTabletsPortrait {
+                // box model
+                width: 100%;
+            }
+        }
+    }
+
+    &__list-item {
+        // box model
+
+        @include atTabletsPortrait {
+            // box model
+            padding-right: 80px;
+        }
+
+        &--current {
+
+            // box model
+            display: block;
+
+            .tabs__link {
+                // positioning
+                position: relative;
+
+                // typography
+                color: $titleColor;
+
+                &::after {
+                    content: "";
+
+                    // positioning
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transform: translateX(10px);
+
+                    // box model
+                    height: 1px;
+                    width: 100%;
+                    width: calc(100% - 20px);
+        
+                    // visual
+                    background-color: $accent;
+                }
+            }
+        }
+    }
+
+    &__link {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+
+        // typography
+        color: #999999;
+        font-size: 1rem;
+        font-family: $textFont;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+
+        // visual
+        transition: 0.3s ease-out;
+
+        @include atSmall {
+            // typography
+            font-size: 0.875rem;
+        }
+        
+        &:hover {
+            // typography
+            color: $titleColor;
+            cursor: pointer;
+        }
+    }
+
+    &__content {
+        // box model
+        display: none;
+
+        &--current {
+            // box model
+            display: block;
+        }
+    }
+
+    &__copy {
+        // typography
+        color: $copyColor;
+        font-family: $textFont;
+        font-weight: 400;
+        line-height: 1.75;
+
+        // @include atTabletsPortrait {
+        //     max-width: 410px;
+        // }
+
+        // @include atDesktop {
+        //     max-width: 470px;
+        // }
+    }
+
+    &__current {
+        // box model
+        display: inherit;
+    }
+}

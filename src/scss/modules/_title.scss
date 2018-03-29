@@ -1,0 +1,172 @@
+.title {
+    // box model
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    &__sup {
+
+        // @include atTabletsPortrait {
+        //     // typography
+        //     font-weight: normal;
+        //     letter-spacing: 5px;
+        // }
+
+        &--mrtop {
+            // box model
+            padding-top: 100px;
+            margin: 0;
+
+            // typography
+            color: $titleColor;
+
+            // @include atTabletsPortrait {
+            //     // box model
+            //     padding-top: 25px;
+            // }
+            
+            // @include atDesktop {
+            //     // box model
+            //     padding-top: 0;
+            // }
+        }
+
+        &--gallery {
+            // typography
+            font-size: 1.2rem;
+        }
+
+        &--price {
+            // typography
+            color: $text;
+        }
+    }
+
+    &__description {
+        // box model
+        display: none;
+        margin: 0;
+        padding: 0;
+
+        // @include atDesktop {
+        //     // box model
+        //     display: block;
+        // }
+        
+        &--franshize {
+            // positioning
+            top: 200px !important;
+            right: -70px !important;
+
+            // box model
+            display: block !important;
+
+            // typography
+            font-family: $textFont;
+            font-weight: 700;
+            font-size: 0.875rem !important;
+
+            @include atTabletsPortrait {
+                // positioning
+                top: 340px !important;
+                right: -120px !important;
+
+                // typography
+                font-size: 1.5rem !important;
+            }
+
+            @include atDesktop {
+                // box model
+                top: 45px !important;
+                right: -210px !important;
+            }
+        }
+
+        &--left {
+            
+            // positioning
+            position: absolute;
+            top: 100px;
+            left: -50px;
+            
+            // box model
+            display: inline-block;
+            margin: 0;
+            transform: rotate(-90deg);
+
+            // typography
+            color: $white;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        &--right {
+            // positioning
+            position: absolute;
+            right: -136px;
+            top: 100px;
+            z-index: 2;
+
+            // box model
+            display: none;
+           
+            transform: rotate(-90deg);
+
+            // typography
+            font-size: 1.33rem;
+            color: $white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            // typography
+
+            @include atTabletsPortrait {
+                // positioning
+                top: 205px;
+
+                // box model
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            @include atDesktop {
+                // positioning
+                top: 220px;
+                right: -155px;
+
+                // typography
+                font-family: $textFont;
+                font-size: 1.875rem;
+            }
+
+        }
+
+        &--map {
+            // positioning
+            top: 135px;
+            right: 0;
+
+            // typography
+            font-size: 0.875rem;
+        }
+    }
+
+    &__section {
+        // box model
+        margin: 0;
+        padding-bottom: 30px;
+        
+        // typography
+        color: $sectionColor;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 3.33rem;
+        font-weight: 700;
+
+
+        // @include atTabletsPortrait {
+        //     // typography
+        //     font-size: 4rem;
+        // }
+    }
+}

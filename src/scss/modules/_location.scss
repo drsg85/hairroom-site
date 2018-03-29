@@ -1,0 +1,35 @@
+.location {
+    // positioning
+    position: relative;
+    
+    @include atTabletsPortrait {
+        // background-image: url("./img/pattern.jpg");
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom,#f7dfef, #e5a0cf);
+        }
+    }
+
+    @include atDesktop {
+        // visual
+        background-image: url("./img/pattern-lg.jpg");
+        background-size: contain;
+    }
+
+    &__map {
+        // box model
+        height: 100vh;
+
+        @include atDesktop {
+            height: 80vh;
+        }
+    }
+}

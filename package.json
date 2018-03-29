@@ -1,0 +1,37 @@
+{
+  "name": "hairroom-site",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VerDan777/hairroom-site.git"
+  },
+  "author": "Daniil Vereschagin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VerDan777/hairroom-site/issues"
+  },
+  "homepage": "https://github.com/VerDan777/hairroom-site#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug2": "0.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^5.0.0",
+    "sass-module-importer": "^1.4.0",
+    "webpack": "^3.11.0",
+    "webpack-stream": "^4.0.0"
+  },
+  "dependencies": {
+    "instafeed": "^2.0.0",
+    "jquery": "^3.3.1",
+    "owl.carousel": "^2.2.0",
+    "waypoints": "^4.0.1"
+  }
+}

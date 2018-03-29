@@ -1,0 +1,151 @@
+.shares {
+    // positioning
+    position: relative;
+    z-index: 1;
+
+    // visual
+    background: linear-gradient(to right, #d16bb3, #8f6aa5);
+    
+    @include atTabletsLandscape {
+        // box model
+        padding-left: 50px;
+        background: none;
+    }
+    
+    &__content {
+        //  positioning
+        transform: translateY(30px);
+        
+        @include atTabletsLandscape {
+            // positioning
+            transform: translateY(-30px);
+
+            // box model
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+        }
+    }
+
+    &__card {
+        // positioning
+        position: relative;
+        
+        // box model
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+        // visual
+        background-color: $white;
+        // border-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &::last-child {
+            margin-right: 0;
+        }
+        @include atTabletsPortrait {
+            // box model
+            width: 425px;
+        }
+        
+        @include atTabletsLandscape {
+            // box model
+            margin-top: 0;
+            min-width: 375px;
+            display: inline-block;
+        }
+
+        &--offers {
+            // visual
+            background-image: url("./img/offers.jpg");
+            background-size: cover;
+            background-color: $white;
+        }
+        
+        &--loyality {
+            // visual
+            background-image: url("./img/loyality.jpg");
+            background-size: cover;
+            background-color: $sectionColor;
+
+            @include atTabletsLandscape {
+                // box model
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__offers {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+        
+        // typography
+        color: $text;
+        text-transform: uppercase;
+        font-family: $textFont;
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 4px;
+
+        &--white {
+            // typography
+            color: white;
+        }
+    }
+
+    &__header {
+        // postitioning
+        position: relative;
+        z-index: 1;
+
+        // box model
+        height: 230px;
+        padding: 30px;
+
+        @include atTabletsLandscape {
+            // box model
+            padding: 25px;
+        }
+    }
+
+    &__text {
+        // box model
+        width: 150px;
+        margin: 0;
+        margin-bottom: 30px;
+        display: inline-block;
+        vertical-align: top;
+
+        // typography
+        color: #1c1e23;
+        text-align: left;
+        font-family: $mainFont;
+        font-weight: 900;
+        line-height: 1.25;
+
+        &--white {
+            // typography
+            color: $white;
+        }
+    }
+
+
+    &__img {
+        // postioning
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            // box model
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

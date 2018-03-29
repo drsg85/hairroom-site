@@ -1,0 +1,143 @@
+.scroll-spy {
+    // positioning
+    position: fixed;
+    right: 30px;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 9;
+
+    // box model
+    display: none;
+    
+    @include atDesktopLarge {
+        // box model
+        display: block;
+    }
+
+    ul {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // list
+        list-style: none;
+    }
+
+    li {
+        // box model
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: $copyColor;
+        // height: 2px;
+    }
+
+    a {
+        // box model
+        display: none;
+    }
+
+    &__link {
+        // positioning
+        position: relative;
+
+        // box model
+        display: block !important;
+        // height: 2px;
+        // width: 25px;
+        padding: 3px 0;
+
+        // typography
+        font-size: 0;
+
+        // visual
+        // border: 2px solid rgba($copyColor, 1);
+
+        &::before {
+            content: attr(data-label);
+            position: absolute;
+            right: 65px;
+            top: -12px;
+            transform-origin: 100% 50%;
+            // display: none!important;
+            visibility: hidden;
+            // height: 30px;
+            width: 100px;
+            padding: 7px 15px;
+            color: $white;
+            font-family: $mainFont;
+            font-size: 0.875rem;
+            font-weight: 700;
+            opacity: 0;
+            text-transform: uppercase;
+            background-color: $accent;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -12px;
+            right: 45px;
+            // height: 30px;
+            width: 10px;
+            border-left: 10px solid $accent;
+            border-top: 16px solid transparent;
+            border-bottom: 16px solid transparent;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &:hover {
+            // visual
+            background-color: $accent;
+            // border: 2px solid transparent;
+
+            &::before {
+                // positioning
+                // right: 25px;
+
+                // visual
+                visibility: visible;
+                opacity: 1;
+            }
+
+            &::after {
+                // positioning
+                // right: 15px;
+
+                // visual
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        &--current {
+            // visual
+            background-color: $accent;
+            // border: 2px solid transparent;
+            width: 50px;
+            
+
+             &::before {
+                // positioning
+                right: 65px;
+                transform: scale(1);
+                display: block;
+
+                // visual
+                opacity: 1;
+            }
+
+            &::after {
+                // positioning
+                // right: 150px;
+                transform: scale(1);
+
+                // visual
+                opacity: 1;
+            }
+        }
+    }
+}

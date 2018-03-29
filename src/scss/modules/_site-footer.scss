@@ -1,0 +1,259 @@
+.site-footer {
+    // box model
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+
+    // visual
+    background: linear-gradient(to bottom, #f7dfef 50%, #e5a0cf);
+
+    &--franshize {
+        // box model
+        padding-top: 50px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding-left: 50px;
+        }
+        
+        @include atDesktop {
+            // box model
+            padding-top: 0 !important;
+        }
+    }
+
+    @include atDesktop {
+        // box model
+        padding: 85px;
+    }
+
+    &__container {
+        // box model
+        
+        @include atTabletsPortrait {
+            // box model
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            padding-right: 25px;
+
+            // visual
+            border-top: 2px solid $text;
+        }
+
+        @include atTabletsLandscape {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__header {
+        // box model
+        margin-top: 50px;
+        padding-right: 30px;
+
+        // visual
+        border-top-color: $text;
+        border-top-style: solid;
+        border-top-width: 2px;
+        
+        
+        @include atTabletsPortrait {
+            // box model
+            max-width: 388px;
+            margin-top: 0;
+
+            // visual
+            border: none;
+        }
+
+        // typography
+        color: $black;
+    }
+
+    &__contacts {
+        // box model
+        width: 170px;
+
+        @include atDesktop {
+            // box model
+            width: auto;
+        }
+    }
+
+
+    &__content {
+        // box model
+        width: 325px;
+    }
+
+    &__title {
+        // typography
+        color: #2b2a29;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+    }
+
+    &__title-location {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+
+        // typography
+        color: $text;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__description {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+
+        // typography
+        color: $text;
+        font-size: 0.9rem;
+        line-height: 23px;
+        font-family: $textFont;
+    }
+
+    &__contacts-title {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+
+        // typography
+        color: $text;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &__info-title {
+        // box model
+        margin: 0;
+        margin-bottom: 15px;
+
+        // typography
+        color: $accent;
+        font-family: $textFont;
+        font-weight: bold;
+    }
+
+    &__info-text {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+        display: inline-block;
+
+        // typography
+        color: $copyColor;
+        font-family: $textFont;
+        font-weight: 400;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    &__logo {
+        // box model
+        width: 248px;
+        height: 31px;
+        margin: 30px 0;
+
+        @include atTabletsPortrait {
+            // box model
+            margin-top: 0;
+            padding: 0;
+        }
+
+        img {
+            // box model
+            width: 100%;
+        }
+    }
+
+    &__navigation {
+        // box model
+        display: none;
+        margin-bottom: 40px;
+        padding-left: 0;
+
+        // visual
+        list-style: none;
+
+        @include atDesktop {
+            // box model
+            display: block;
+        }
+
+        li {
+            // box model
+            padding-bottom: 20px;
+
+            // typography
+            
+            &:first-child, &:last-child {
+                // box model
+                padding-bottom: 0px;
+            }
+        }
+        
+        a {
+            // typography
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $copyColor;
+        }
+
+        &-title {
+            // box model
+            display: block;
+            margin-bottom: 35px;
+
+            // typography
+            color: $text !important;
+            letter-spacing: 4px;
+        }
+
+    }
+
+    &__copyright {
+        // box model
+        margin: 0;
+
+        // typography
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $textFont;
+        color: $notationColor;
+        
+        @include atTabletsPortrait {
+            // box model
+            display: none;
+        }
+        
+        @include atTabletsLandscape {
+            // box model
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0;
+
+            // typography
+            text-align: center;
+        }
+
+        @include atDesktop {
+            // box model
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        b {
+            // typography
+            color: $accent;
+            font-family: $textFont;
+            font-weight: 600;
+        }
+    }
+}

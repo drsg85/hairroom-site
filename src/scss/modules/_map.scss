@@ -1,0 +1,39 @@
+.map {
+    // positioning
+    position: relative;
+
+    // box model
+    height: 100vh;
+
+    &__board {
+        // positioning
+        transform: translateY(-180%);
+
+        // box model
+        margin: 0 15px;
+        padding: 50px 30px;
+        display: block;
+
+        // visual
+        border-radius: 5px;
+        box-shadow: 18px 12px 28px -4px rgba(53,7,34,0.74);
+        background-color: rgba($titleColor, 0.8);
+
+    }
+
+    &__info {
+        // typography
+        color: $white;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+    }
+
+    &__contact {
+        // typography
+        color: $white;
+        font-weight: bold;
+        font-family: $textFont;
+    }
+}
+
+.sqs-block-map {pointer-events: none;}

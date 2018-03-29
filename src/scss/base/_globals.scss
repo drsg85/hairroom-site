@@ -1,0 +1,32 @@
+html {
+    // box model
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    // box model
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    //typography
+    font-family: $mainFont;
+    font-size: 18px;
+
+    // visual
+    overflow-x: hidden;
+
+}
+
+ul {
+    // box model
+    margin: 0;
+}
+*{
+    //box model
+    box-sizing: inherit;
+
+    // typography
+    font-family: inherit;
+}

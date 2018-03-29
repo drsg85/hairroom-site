@@ -1,0 +1,272 @@
+.services {
+    // positioning
+    position: relative;
+    z-index: 0;
+
+    // box model
+    padding: 25px;
+    padding-bottom: 100px;
+    padding-right: 0;
+
+    // visual
+    // background-color: #e3d8e8;
+    background: linear-gradient(205deg, #f7e9f4 20%, #c978b5);
+    background-size: cover;
+    
+    @include atTabletsPortrait {
+        // box model
+        padding: 50px;
+        padding-right: 0;
+        padding-bottom: 250px;
+    }
+
+    @include atDesktop {
+        // box model
+        padding-left: 85px;
+        padding-bottom: 400px;
+
+        // visual
+        background: linear-gradient(20deg,rgba(232, 197, 224, 1), rgba(211, 195, 221, 0.8)) 90%;
+        box-shadow: 0px 48px 116px -29px rgba(125,30,86,0.77);
+    }
+
+    &::before {
+        content: url("./img/hero_hr.png");
+
+        // positioning
+        position: absolute;
+        bottom: -7px;
+        right: 25px;
+        z-index: 0;
+    }
+
+    &__header {
+        // positioning
+        position: relative;
+
+        // box model
+        margin-top: 70px;
+        margin-bottom: 25px;
+
+        &::after {
+            content: url("./img/finger.png");
+
+            // positioning
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+
+            @include atSmall {
+                // positioning
+                top: 20%;
+            }
+
+            @include atTabletsPortrait {
+                // positioning
+                left: 300px;
+            }
+
+            @include atDesktop {
+                // box model
+                display: none;
+            }
+        }
+    }
+
+    &__suptitle {
+        // typography
+        color: $titleColor;
+        text-transform: uppercase;
+        font-family: $textFont;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 4px;
+    }
+
+    &__title-section {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // typography
+        color: $sectionColor;
+        text-transform: uppercase;
+        font-size: 3.33rem;
+        font-weight: 900;
+        letter-spacing: 4px;
+    }
+
+    &__wrapper {
+        // positioning
+        position: relative;
+        
+        // box model
+        width: 300px;
+        height: 450px;
+
+        // visual
+        border-radius: 5px;
+        overflow: hidden;
+
+        &:hover .card__content {
+            // box model
+            display: block;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 150px;
+            left: 0;
+            width: 100%;
+            // height: 150px;
+            height: calc(100% + 300px);
+            transition: all 0.3s ease-in-out;
+            background-position: 50px 150px;
+            background: linear-gradient(to bottom, rgba(219, 102, 154, 0) 0px, rgba(219, 102, 154 , 0.8) 150px, rgba(198, 22, 141, 0.8) 100%);
+        }
+    }
+
+
+    &__cards {
+        // positioning
+        position: relative;
+
+        // box model
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // visual
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        @include atDesktop {
+            // box model
+            flex-wrap: wrap;
+
+            // visual
+            overflow: hidden;
+        }
+
+        &::before {
+            content: url("./img/pattern-lg-cards.png");
+
+            // box model
+            display: none;
+        }
+    }
+
+        &__card {
+            // box model
+            margin-right: 25px;
+
+            // visual
+            overflow: hidden;
+
+            &-description {
+                // box model
+                width: 155px;
+                
+                // positioning
+                position: absolute;
+                top: 195px;
+                right: 30px;
+                
+                // typography
+                font-size: 0.875rem;
+                line-height: 20px;
+                text-align: right;
+                color: $text;
+                text-transform: uppercase;
+        }
+
+            &-title {
+                // box model
+                margin: 30px 0;
+                margin-top: 0;
+                padding-left: 15px;
+
+                // typography
+                color: $text;
+                text-transform: uppercase;
+                font-weight: 600;
+                line-height: 1.25;
+            }
+            
+            &-img {
+                // positioning
+                position: relative;
+                display: inline-block;
+                z-index: 0;
+
+                // box model
+                width: 300px;
+                height: 450px;
+
+                // visual
+                background-size: cover;
+                box-shadow: 0px 23px 51px -9px rgba(165,68,122,0.96);
+                border-radius: 5px;
+                
+                &::after {
+                    content: "";
+                    // positioning
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    // box model
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    // visual
+                    background: linear-gradient(180deg, #c6168d, #db669a);
+                    opacity: 0;
+                    border-radius: 5px;
+                }
+                
+                img {
+                    // positioning
+                    position: absolute;
+                    z-index: 1;
+
+                    // box model
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+    &__buttons {
+        // positioning
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.services__wrapper:hover .card__ribbons {
+    // visual
+    background-color: $white;
+}
+
+.services__wrapper:hover .card__ribbon {
+    // typography
+    color: #c6168d;
+}
+
+
+.services__wrapper:hover::after {
+    // positioning
+    top: -300px;
+
+    // box model
+    display: block;
+
+    // visual
+    background-position: 100px;
+}

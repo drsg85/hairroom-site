@@ -1,0 +1,27 @@
+.main-nav {
+    // box model
+    display: flex;
+    padding: 10px 0;
+    padding-left: 25px;
+
+    &--franshize {  
+        
+        @include atTabletsPortrait {
+            // box model
+            padding: 0 !important;
+            padding-bottom: 50px !important;
+        }
+    }
+
+    @include atTabletsPortrait {
+        // box model
+        padding-left: 50px;
+    }
+
+
+    @include atDesktop {
+        // box model
+        padding-bottom: 0;
+        padding-left: 85px;
+    }
+}

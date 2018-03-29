@@ -1,0 +1,268 @@
+.form {
+
+    &__img-title {
+        // positioning
+        position: relative;
+        z-index: 3;
+
+        //box model
+        margin-top: -50px;
+        margin-left: 30px;
+
+        // typography
+        color: $white;
+        font-family: $mainFont;
+        font-size: 1.33rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: -4px 3px 0 #3a0f21;
+        
+
+        @include atTabletsPortrait {
+            // box model
+            margin-top: -150px;
+            margin-left: 250px;
+
+            // typography
+            font-size: 2rem;
+        }
+
+        @include atTabletsLandscape {
+            // box model
+            margin-left: 40%;
+
+            // typography
+            font-size: 2.25rem;
+        }
+        @include atDesktop {
+            // box model
+            margin: 0;
+
+            // positioning
+            position: absolute;
+            left: 50px;
+            bottom: 30px;
+        }
+
+        @include atDesktopLarge {
+            // box model
+            margin: 0;
+
+            // positioning
+            position: absolute;
+            left: 250px;
+            bottom: 30px;
+        }
+    }
+
+    &__header {
+        // box model
+        
+        padding: 30px 30px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding: 30px 0;
+        }
+
+        @include atDesktop {
+            // box model
+            padding: 0;
+        }
+    }
+
+    &__suptitle {
+        // box model
+        display: block;
+        margin-bottom: 15px;
+
+        // typography
+        font-family: $textFont;
+        font-weight: 700;
+        color: #3b0f22;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    &__title {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+
+        // typography
+        color: $white;
+        font-family: $mainFont;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 900;
+
+        @include atTabletsPortrait {
+            // typography
+            font-size: 2.25rem;
+        }
+    }
+
+    &__call {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+        
+        // typography
+        color: $black;
+        font-family: $textFont;
+        font-weight: 700;
+        line-height: 1.5;
+        font-size: 0.875rem;
+
+        @include atTabletsPortrait {
+            // typography
+            font-size: 1rem;
+        }
+    }
+
+    &__content {
+        // box model
+        padding: 0 30px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding: 30px 0;
+        }
+
+        @include atDesktop {
+            // box model
+            padding: 0;
+        }
+    }
+
+    &__group {
+        // box model
+        .error {
+            // box model
+            display: block;
+            padding-top: 10px;
+
+            // typography
+            color: $white;
+            font-family: $mainFont;
+            font-size: 0.875rem;
+            text-align: left;
+
+            // visual
+            // background-color:$white;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        @include atTabletsPortrait {
+            // box model
+                // display: inline-block;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include atDesktop {
+            // box model
+            // flex-direction: column;
+        }
+
+        @include atDesktopLarge {
+            // box model
+            flex-direction: row;
+        }
+        
+        &--full {
+            // box model
+
+            @include atTabletsPortrait {
+
+                input {
+                    // box model
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__group-input {
+        // box model
+        display: block;
+        height: 60px;
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 30px;
+
+        // visual
+        background: none;
+        border: 6px solid $white;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+        outline: none;
+
+        // typography
+
+        &::placeholder {
+
+            // visual
+            opacity: 0.5;
+
+            // typography
+            font-size: 1rem;
+            font-family: $textFont;
+            font-weight: 700;
+            color: #3b0f22;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            // line-height: 60px;
+        }
+
+        
+        @include atTabletsPortrait {
+            // box model
+            margin-right: 45px;
+
+            &:nth-child(2n) {
+                // box model
+                margin-right: 0;
+            }
+        }
+
+
+        &:focus, :active {
+            // visual
+            background-color: $white;
+            border-color: $accent;
+        }
+    }
+
+    &__policy {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+
+        // typography
+        text-align: right;
+        font-family: $textFont;
+        font-weight: 700;
+        line-height: 1.5;
+        font-size: 0.85rem;
+
+        a {
+            // typography
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+    
+    &__button {
+        // box model
+        padding-bottom: 120px;
+
+        @include atTabletsPortrait {
+            // box model
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 0;
+        }
+    }
+}

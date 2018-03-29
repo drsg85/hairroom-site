@@ -1,0 +1,111 @@
+.be-friends {
+    
+    // positioning
+    position: absolute;
+    bottom: 25px;
+
+    // box model
+    padding: 5px;
+
+    // typography
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--franshize {
+        // positioning
+        top: 12px !important;
+        right: -235px !important;
+
+        // box model
+        display: none;
+
+        @include atDesktop {
+            // box model
+            display: block;
+        }
+        
+    }
+
+    a {
+        // visual
+        text-decoration: none;
+    }
+
+    @include atDesktop {
+        // positioning
+        top: 100px;
+        right: 0;
+        
+        // box model
+        display: none;
+    }
+
+    @include atDesktopLarge {
+        // positioning
+        top: 30px;
+        
+        // box model
+        display: none;
+    }
+
+    @include BeFriends {
+        // box model
+        display: block;
+    }
+
+    &__text {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-bottom: 7px;
+
+        // visual
+        border-bottom: 1px solid white;
+
+        // typography
+        font-size: 0.7rem;
+
+        @include atDesktop {
+            
+            // box model
+            padding-right: 25px;
+            
+            // visual
+            border-bottom: 1px solid $secondaryColor;
+
+            // typography
+            color: $secondaryColor;
+            font-family: $textFont;
+            font-weight: 600;
+        }
+
+    }
+
+    &__social {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-top: 4px;
+
+        // typography
+        letter-spacing: 3px;
+
+        @include atDesktop {
+            // box model
+            padding-right: 25px;
+
+            // typography
+            color: $secondaryColor;
+            font-family: $textFont;
+            font-weight: 600;
+        }
+    }
+
+    span {
+        font-size: 1.125rem;
+        display: block;
+        padding-top: 5px;
+        letter-spacing: 6px;
+    }
+}

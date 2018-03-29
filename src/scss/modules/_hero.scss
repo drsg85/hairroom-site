@@ -1,0 +1,421 @@
+.hero {
+    // positioning
+    position: relative;
+    
+    // box model
+    padding: 35px 30px;
+    padding-bottom: 0;
+    
+    // visual
+    background-color: $accent;
+    background: linear-gradient(to right, rgba(198, 22, 141, 0.85), rgba(219, 102, 154, 0.9));
+
+    &--franshize {
+        // box model
+        padding: 0;
+        margin: 0;
+
+        // &::before {
+        //     content: url("./img/hero_hr-lg.png");
+        //     // positioning
+        //     position: absolute;
+        //     bottom: -85px;
+        //     // width: 300px;
+        // }
+
+
+        @include atTabletsPortrait {
+            // box model
+            padding: 45px 50px !important;
+            padding-top: 0 !important;
+        }
+
+        @include atDesktop {
+            // box model
+            padding: 0 85px !important;
+            padding-bottom: 85px !important;
+            margin-bottom: 0 !important;
+
+            // visual
+            box-shadow: 0px 15px 61px -3px rgba(125,30,86,0.7) !important;
+        }
+
+        &__content {
+            // box model
+
+
+            @include atDesktop {
+                // positioning
+                position: relative;
+
+                // box model
+                display: flex;
+            }
+        }
+    }
+
+    &__content {
+        // box model
+        padding: 35px 30px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding: 0;
+        }
+
+        h3 {
+            // box model
+            margin: 60px 0;
+
+            // typography
+            color: white;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: -4px 3px 0 #3a0f21;
+            font-size: 1.15rem;
+            font-weight: 900;
+
+            @include atSmall {
+                // typography
+                font-size: 1rem;
+            }
+
+            @include atTabletsPortrait {
+                // typography
+                font-size: 2.25rem;
+            }
+        }
+        h4 {
+            // box model
+            margin: 30px 0;
+            margin-top: 0;
+
+            // typography
+            color: white;
+            letter-spacing: 3px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        p {
+            // box model
+            margin: 0;
+            margin-bottom: 30px;
+
+            // typography
+            color: #000;
+        }
+        
+        a {
+            // typography
+            color: white;
+        }
+    }
+
+    @include atTabletsPortrait {
+        // positioning
+        z-index: 0;
+
+        // box model
+        padding: 45px 55px;
+
+        // visual
+        box-shadow: 0px 70px 30px -50px rgba(125,30,86,0.4);
+    }
+
+    @include atTabletsLandscapeIpad {
+        // box model
+        padding: 20px 55px;
+    }
+    
+    @include atDesktop {
+        // box model
+       width: 88%;
+       margin-bottom: 200px;
+       padding: 50px 85px;
+
+        // visual
+        box-shadow: 0px 34px 39px -1px rgba(203,165,187,0.59);
+    }
+
+    @include atDesktopLarge {
+        // box model
+        padding: 85px;
+    }
+
+    &::after {
+        content: url("http://localhost/HairRoom/wp-content/themes/HairRoom/img/hero_hr.png");
+
+        // positioning
+        position: absolute;
+        left: 50%;
+        bottom: -100px;
+        z-index: 1;
+        transform: translateX(-50%);
+
+        @include atTabletsLandscape {
+            content: url("http://localhost/HairRoom/wp-content/themes/HairRoom/img/hero_hr-lg.png");
+
+            // positioning
+            right: -100px;
+            bottom: -300px;
+            transform: none;
+
+            // box model
+            display: none;
+
+        }
+        @include atDesktop {
+            // positioning
+            left: 43%;
+        }
+
+        @include atDesktopLarge {
+            // positioning
+            left: 70%;
+            bottom: -150px;
+            z-index: -2;
+        }
+    }
+
+    &__form {
+        // box model
+        display: flex;
+        flex-direction: column;
+        
+        @include atDesktop {
+            // box model
+            margin-top: -80px;
+            margin-left: 50px;
+
+        }
+        @include atDesktopLarge {
+            // box model
+            min-width: 700px;
+        }
+    }
+
+    &__header {
+
+    }
+
+    &__title {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // typography
+        font-size: 1.75rem;
+        text-transform: uppercase;
+
+        // visual
+        text-shadow: -6px 5px 0 $text;
+
+        // typography
+        color: $white;
+        letter-spacing: 1px;
+        font-family: $mainFont;
+        font-weight: 700;
+
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            margin-bottom: 60px;
+            padding-left: 0;
+
+            // typography
+            font-size: 2.75rem;
+        }
+
+        @include atTabletsLandscapeIpad {
+            // box model
+            margin-bottom: 30px;
+        }
+
+        @include atDesktop {
+            // box model
+            margin-bottom: 40px;
+            padding-left: 0;
+
+            // typography
+            letter-spacing: 14px;
+            font-size: 4rem;
+
+            // visual
+            text-shadow: 0 0, -12px 7px 0 $text;
+        }
+    }
+
+    &__copy {
+        // box model
+        display: inline-block;
+        max-width: 300px;
+
+        // typography
+        color: $copyColor;
+        font-family: $textFont;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2;
+
+        @include atTabletsPortrait {
+            // box model
+            margin-top: 0;
+            margin-bottom: 60px;
+            padding: 0;
+
+
+            // typography
+            color: #ffffff;
+            text-shadow: -2px 0px 3px $text;
+        }
+        
+        @include atTabletsLandscapeIpad {
+            // box model
+            margin-bottom: 30px;
+        }
+
+        @include atDesktop {
+            // box model
+            margin-bottom: 70px;
+            padding-left: 0;
+            width: 425px;
+
+            // typography
+            font-size: 1rem;
+        }
+    }
+
+    &__img {
+        // positioning
+        position: relative;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+
+        // box model
+        margin: 0;
+        padding: 0;
+        width: 305px;
+        margin-left: -41px;
+
+        // typography
+        font-size: 0;
+
+        &--franshize {
+            // box model
+            min-width: 350px;
+
+
+        @include atTabletsPortrait {
+            // positioning
+            position: static !important;
+            min-width: auto !important;
+
+            // box model
+            margin-left: -50px;
+            min-width: 65% !important;
+        }
+
+        @include atDesktop {
+            // box model
+            margin-left: -85px !important;
+            display: flex;
+            min-width: auto !important;
+        }
+
+        img {
+            // box model
+            width: 100%;
+            min-height: 350px;
+            object-fit: cover;
+
+            // visual
+            border-radius: 5px;
+
+            @include atTabletsPortrait {
+                // box model
+                min-height: 470px;
+            }
+            
+            @include atDesktop {
+                // box model
+                height: 650px;
+            }
+
+        }
+
+        
+    }
+
+        @include atTabletsPortrait {
+            // positioning
+            position: absolute;
+            left: 80px;
+            bottom: 0;
+            z-index: -1;
+
+            // box model
+            min-width: 600px;
+        }
+
+        @include atTabletsLandscape {
+            // positioning
+            left: 25%;
+
+            // box model
+            min-width: 600px;
+        }
+
+        @include atTabletsLandscapeIpad {
+            // box model
+            width: 600px;
+        }
+
+        @include atDesktop {
+            // positioning
+            z-index: -1;
+            left: 35%;
+
+            // box model
+            min-width: 720px;
+        }
+
+        @include atDesktopLarge {
+            // positioning
+            width: 800px;
+            left: 30%;
+        }
+
+        img {
+            // box model
+            width: 100%;
+        }
+    }
+
+    &__button {
+        // positioning
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        z-index: 4;
+
+        // typography
+        text-align: center;
+
+        // box model
+        width: 100%;
+
+        @include atTabletsPortrait {
+            // positioning
+            position: static;
+
+            // box model
+            width: auto;
+            
+            // typography
+            text-align: left;
+        }
+    }
+}

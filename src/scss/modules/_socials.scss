@@ -1,0 +1,78 @@
+.socials {
+    // box model
+    display: none;
+    padding: 0;
+    border-top: 2px solid $secondaryColor;
+    
+    // visual
+    list-style: none;
+
+    &--franshize {
+
+        @include atTabletsPortrait {
+            // positioning
+            top: 51%;
+        }
+
+        @include atDesktop {
+            // positioning
+            bottom: 0px !important;
+            top: auto;
+        }
+
+        @include atDesktopLarge {
+            // positinning
+            bottom: 0px !important;
+        }
+    }
+    
+    @include atTabletsPortrait {
+        // box model
+        display: block;
+        position: absolute;
+        padding-right: 20px;
+        padding-top: 20px;
+        right: 0;
+        bottom: 40px;
+        z-index: 1;
+    }
+
+    @include atTabletsLandscapeIpad {
+        // positioning
+        bottom: 15px;
+    }
+
+    @include atDesktop {
+        // positioning
+        position: absolute;
+        right: 0;
+        bottom: 60px;
+
+        // box model
+        display: block;
+        padding: 20px;
+        padding-right: 2.5%;
+        padding-left: 80px;
+
+    }
+
+    li {
+        // box model
+        padding-bottom: 5px;
+    }
+
+    a {
+        // typography
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s ease-in-out all;
+        font-family: $textFont;
+        
+        &:hover {
+            // typography
+            color: $secondaryColor;
+        }
+    }
+}

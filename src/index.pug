@@ -1,10 +1,517 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
     head
-        meta(charset="UTF-8")
+        meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        //- favicon
+        link(rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png")
+        link(rel="manifest" href="/site.webmanifest")
+        link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="msapplication-TileColor" content="#da532c")
+
+        //- address bar
+        meta(name="theme-color" content="#ee7aad")
+
+        //- fix font import to @font-face
+        //- link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet")
+        //- link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
         link(rel="stylesheet", href="styles.css")
         title HairRoom
+
+        //- add dummy OG markup
+
     body
-    h1.title HairRoom
+        
+        header.site-header.nav-link#about
+            nav.main-nav
+                .logo
+                    img(src="./img/hr_logo_think.svg" alt="HairRoom Logo")
+
+                .info
+                    p.info__address Калининград<br>Иванникова,&nbsp;12
+                    a(href="tel:523766").info__phone 52<span>.</span>37<span>.</span>76
+                
+                .menu-icon: .menu-icon__middle
+                .main-menu--blackout
+                //- .menu-icon.menu-icon--close-x: .menu-icon__middle
+
+                //- nav.main-menu.main-menu--shown
+                nav.main-menu
+                    ul
+                        li: a(href="#about") Салон
+                        li: a(href="#services") Услуги
+                        li: a(href="#price") Прайс
+                        li: a(href="#gallery") Галлерея
+                        li: a(href="#contacts") Контакты
+
+                        .main-menu__franchise
+                           a(href="franshize.html") Франшиза
+                    
+                    //- change class (put into main-menu block)
+                    .be-friends
+                        a(href="http://instagram.com")
+                            p.be-friends__text Давайте дружить
+                            p.be-friends__social instagram
+
+            section.hero
+                header.hero__header
+                    h1.hero__title Ваш<br> идеальный<br> салон<br> красоты
+
+                p.hero__copy Быть свободной значит быть разной, меняйте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!
+
+                .hero__img
+                    picture
+                        source(media="(min-width: 700px)" srcset="./img/women-md.png")
+                        source(media="(min-width: 1200px)" srcset="./img/women-lg.png")
+                        img(src="./img/women.png" alt="Hair Room девушка")
+                
+                .hero__button
+                    a.button.button--online-record.ms_booking(href="") online&nbsp;запись
+
+                //- change class
+                p.title__description.title__description--right Hair Room kaliningrad
+
+                ul.socials
+                    li: a(href="https://instagram.com/") instagram
+                    li: a(href="https://facebook.com/") facebook
+                    li: a(href="https://vk.com/") vkontakte
+        
+        section.about
+            .about__img
+                picture
+                    source(media="(min-width: 700px)" srcset="./img/about_img-md.jpg")
+                    source(media="(min-width: 1200px)" srcset="./img/about_img-lg.jpg")
+                    img(src="./img/about_img-sm.jpg" alt="HairRoom изображение")
+
+            .about__board
+                header.about__header
+                    sup.about__suptitle О салоне
+                    h2.about__title HAIR ROOM — салон<br> с&nbsp;вашим характером
+
+                .about__content
+                    .tabs
+                        ul.tabs__list(id="tabs" role="tablist")
+                            li.tabs__list-item.tabs__list-item--current(data-tab="tab-1"): a.tabs__link Миссия
+                            li.tabs__list-item(data-tab="tab-2"): a.tabs__link Подход
+                            li.tabs__list-item(data-tab="tab-3"): a.tabs__link Мастера
+
+                        .tabs__content.tabs__content--current#tab-1
+                            p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
+                            p.tabs__copy Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.
+
+                        .tabs__content#tab-2
+                            p.tabs__copy Текст вкладки "подход"
+                            p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
+
+                        .tabs__content#tab-3
+                            p.tabs__copy Текст вкладки "мастера"
+                            p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
+
+                .about__buttons
+                    a.button.button--pink(href="#") Online Запись
+                    a.button.button--ghost(href="#price") Прайс-Лист
+
+                .about__logo
+                    img(src="./img/hr_logo_black.svg" alt="Hairroom logo")
+
+
+        section.services
+            a#services.nav-link
+            header.services__header
+                p.services__suptitle Мы предлагаем
+                h2.services__title-section Услуги
+            
+            .card__container
+                article.card
+                    header.card__title Наращивание<br>ресниц
+                    .services__wrapper
+                        .card__ribbons
+                            p.card__ribbon New
+                        img.card__img(src="./img/card-women5.jpg")
+                        .card__content
+                            // changes class
+                            p.title__description.title__description--left Hair Room Услуги
+                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            .card__buttons
+                                a.button.button--pink.button--card.ms_booking(href="#") Записаться
+
+                article.card
+                    header.card__title Дополнительные<br>услуги
+                    .services__wrapper
+                        .card__ribbons
+                            p.card__ribbon New
+                        img.card__img(src="./img/card-women4.jpg")
+                        .card__content
+                            // changes class
+                            p.title__description.title__description--left Hair Room Услуги
+                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            .card__buttons
+                                a.button.button--pink.button--card.ms_booking(href="#") Записаться
+
+                article.card
+                    header.card__title Уход за волосами<br>волос
+                    .services__wrapper
+                        .card__ribbons
+                            p.card__ribbon New
+                        img.card__img(src="./img/card-women3.jpg")
+                        .card__content
+                            // changes class
+                            p.title__description.title__description--left Hair Room Услуги
+                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            .card__buttons
+                                a.button.button--pink.button--card.ms_booking(href="#") Записаться
+
+
+                article.card
+                    header.card__title Наращивание<br>волос
+                    .services__wrapper
+                        img.card__img(src="./img/card-women2.jpg")
+                        .card__content
+                            // changes class
+                            p.title__description.title__description--left Hair Room Услуги
+                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            .card__buttons
+                                a.button.button--pink.button--card.ms_booking(href="#") Записаться
+                
+                article.card
+                    header.card__title Наращивание<br>волос
+                    .services__wrapper
+                        .card__ribbons
+                            p.card__ribbon Trend
+                        img.card__img(src="./img/card-women1.jpg")
+                        .card__content
+                            // changes class
+                            p.title__description.title__description--left Hair Room Услуги
+                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            .card__buttons
+                                a.button.button--pink.button--card.ms_booking(href="#") Записаться
+        section.price
+            a#price.nav-link
+            .price__board
+                header.price__header
+                    p.price__suptitle Цены на услуги
+                    h2.price__section-title Прайс -&nbsp;лист
+
+                .price__content
+                    .price__group.price__group--big
+                        h3.price__group-title Уход<br>за волосами
+                        .price__container
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption кератиновое выпрямление<br>/ восстановление
+                                    caption.price__column-description Система богата белками и аминокислотами кератина. Подходит для сильно поврежденных волос и  имеет накопительный эффект.
+                                    tr
+                                        td короткие
+                                        td <b>2000 - 2500</b> <span>руб.</span>
+                                    tr
+                                        td до плеч
+                                        td <b>2500 - 3000</b> <span>руб.</span>
+                                    tr
+                                        td до лопаток
+                                        td <b>3000 - 3500</b> <span>руб.</span>
+                                    tr
+                                        td середина спины
+                                        td <b>4000 - 4500</b> <span>руб.</span>
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption Тонировка с уходом
+                                    caption.price__column-description Большой выбор красок европейских производителей, профессиональные мастера.
+                                    tr
+                                        td короткие
+                                        td <b>1500</b> <span>руб.</span>
+                                    tr
+                                        td Средние
+                                        td <b>2000</b> <span>руб.</span>
+                                    tr
+                                        td Длинные
+                                        td <b>3000</b> <span>руб.</span>
+                            
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption Ботокс<br>/ Биксипластия
+                                    caption.price__column-description Предназначен для сухих, поврежденных волос! Глубоко воздействует на структуру волос, восстанавливает поврежденные участки на клеточном уровне!    
+                                    tr
+                                        td Короткие
+                                        td <b>2000</b> <span>руб.</span>
+                                    tr
+                                        td До плеч
+                                        td <b>2500 - 3000</b> <span>руб.</span>
+                                    tr
+                                        td До лопаток
+                                        td <b>3000 - 3500</b> <span>руб.</span>
+                                    tr
+                                        td Середина спины
+                                        td <b>4000 - 4500</b> <span>руб.</span>
+                                        
+
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption Экспресс Уход
+                                    caption.price__column-description Держится на волосах около 2 недель. Не разглаживает! Без утюжка! Питает волосы, придает блеск, убирает пушистость! Гладкие и послушные волосы обеспечены!
+                                    tr
+                                        td Короткие
+                                        td <b>2000</b> <span>руб.</span>
+                                    tr
+                                        td Средние
+                                        td <b>2000</b> <span>руб.</span>
+                                    tr
+                                        td Длинные
+                                        td <b>3000</b> <span>руб.</span>
+
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption Укладка
+                                    caption.price__column-description Учитываем все ваши пожелания.
+                                    tr
+                                        td Любой длины
+                                        td <b>800 - 2000</b> <span>руб.</span>
+
+                    .price__group
+                        h3.price__group-title наращивание волос
+                        .price__container
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption наращивание волос
+                                    caption.price__column-description В стоимость работы входит: мытье головы + экспресс уход, наращивание(микро+стандарт), Стрижка, укладка. В стоимость не входят волосы!
+                                    tr
+                                        td до 150 капсул
+                                        td <b>4000</b> <span>руб.</span>
+                                    tr
+                                        td до 200 капсул
+                                        td <b>4500</b> <span>руб.</span>
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Коррекция
+                                    caption.price__column-description В данную услугу входит: снятие + перекапсулирование волос, мытье головы, наращивание, стрижка, укладка.
+                                    tr
+                                        td до 150 капсул
+                                        td <b>4000 - 5000</b> <span>руб.</span>
+                                    tr
+                                        td до 200 капсул
+                                        td <b>5000 - 5500</b> <span>руб.</span>
+                            
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Снятие волос
+                                    caption.price__column-description В данную услугу входит: Снятие, мытье головы, стрижка, укладка.
+                                    tr
+                                        td до 150 капсул
+                                        td <b>2000 - 3000</b> <span>руб.</span>
+                                    tr
+                                        td до 200 капсул
+                                        td <b>3000</b> <span>руб.</span>
+
+                    .price__group.price__group--big
+                        h3.price__group-title Услуги маникюра
+                        .price__container
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption Маникюр<br>коминированный
+                                    tr
+                                        td Без последующего покрытия
+                                        td <b>400</b>&nbsp;<span>руб.</span>
+
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption Покрытие гель-лаком<br>+ коминированный<br>маникюр
+                                    tr
+                                        td Однотонное покрытие
+                                        td <b>1000</b> <span>руб.</span>
+
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption Экспресс маникюр + покрытие
+                                    caption.price__column-description Экспресс маникюр + покрытие за 1 час без выравнивания ногтевой пластины гелем + маникюр
+                                    tr
+                                        td Однотонное покрытие
+                                        td <b>800</b> <span>руб.</span>
+
+                            .price-inner__column.price-inner__column--pd
+                                table.price__table
+                                    caption.price__caption Дизайн ногтей
+                                    caption.price__column-description Лунный маникюр + 50р (ноготь), + 300р(все ногти); Френч + 300р (все руки); градиент + 100р (ноготь), + 1000 (все руки); слайдер + 50р (ноготь); стразы; дизайн от руки от 100р
+                                    tr
+                                        td Cтоимость работ
+                                        td <b>50 - 1000</b> <span>руб.</span>
+
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Дополнительные услуги
+                                    tr
+                                        td Снятие покрытия
+                                        td <b>100</b> <span>руб.</span>
+                                    tr
+                                        td Ремонт ногтя
+                                        td <b>100</b> <span>руб.</span>
+                                    tr
+                                        td Укрепление акрилом
+                                        td <b>100</b> <span>руб.</span>
+
+                    .price__group.price__group--big
+                        h3.price__group-title наращивание ресниц
+                        .price__container
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption наращивание ресниц
+                                    tr
+                                        td Неполные обьем
+                                        td <b>1000</b> <span>руб.</span>
+
+                                    tr
+                                        td Классический обьем
+                                        td <b>1200</b> <span>руб.</span>
+                                    tr
+                                        td Полуторный обьем
+                                        td <b>1400</b> <span>руб.</span>
+
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption 2D - 3D обьем
+                                    tr
+                                        td 2D обьем
+                                        td <b>1000</b> <span>руб.</span>
+                                    tr
+                                        td 3D обьем
+                                        td <b>1500</b> <span>руб.</span>
+                                    tr
+                                        td 5D обьем
+                                        td <b>1800</b> <span>руб.</span>
+                    .price__group
+                        h3.price__group-title Дополнительные услуги
+                        .price__container
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Окрашивание<br>+ коррекция бровей
+                                    tr
+                                        td Обычное
+                                        td <b>500</b> <span>руб.</span>
+
+                                    tr
+                                        td Хной
+                                        td <b>700</b> <span>руб.</span>
+
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Makeup
+                                    tr
+                                        td Дневной
+                                        td <b>800 - 1000 </b> <span>руб.</span>
+
+                                    tr
+                                        td Вечерний
+                                        td <b>1500 - 2000</b> <span>руб.</span>
+
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Удаление волос воском
+                                    caption.price__column-description Любая из перечисленных зон: верхняя губа, бакенбарды
+                                    tr
+                                        td Одна зона
+                                        td <b>150 - 200</b> <span>руб.</span>
+
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Стрижка
+                                    tr
+                                        td Женская
+                                        td <b>300 - 1200</b> <span>руб.</span>
+
+        section.shares
+            .shares__content
+                article.shares__card.shares__card--offers
+                    header.shares__header
+                        p.shares__offers Акции
+                        p.shares__text Новинки в разделе ухода за волосами  
+
+                article.shares__card.shares__card--loyality
+                    header.shares__header
+                        p.shares__offers.shares__offers--white Акции
+                        p.shares__text.shares__text--white Скидки для участников программы
+        
+        section.gallery
+            a#gallery.nav-link
+            header.gallery__header
+                h3.gallery__suptitle Социальные сети
+                h4.gallery__title Следите за HAIR ROOM<br>в социальных сетях
+
+            .gallery__subscribe
+                p.gallery__slogan Давайте дружить
+                .gallery__content
+                    .gallery__logo: img(src="./img/insta_logo.png" alt="instagram logo")
+                    p.gallery__text Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.
+                    a.button.button--subscribe(href="https://www.instagram.com/hairroomkaliningrad/") Подписаться
+
+            .instafeed#instafeed
+
+        section.location
+            a#contacts.nav-link
+            .map-label
+              .map-label__content
+                p.title__description.title__description--right.title__description--map Hairroom Kaliningrad
+
+                p.map-label__info-title E-mail
+                p.map-label__info-text hairroom@gmail.com
+
+                p.map-label__info-title Телефон
+                p.map-label__info-text +7 4012 52-37-76
+
+                p.map-label__info-title Адрес
+                p.map-label__info-text г. Калининград,<br> ул. Иванникова, д.12<br><sub>(ориентир напротив гостиницы Radisson)</sub>
+                
+            #map.location__map
+
+        footer.site-footer
+            .site-footer__container
+                header.site-footer__header
+                    .site-footer__logo: img(src="./img/hr_logo_hor_black.svg" alt="Hair Room логотип")
+                    p.site-footer__title-location HAIR ROOM. Калининград
+                    p.site-footer__description Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа
+
+                ul.site-footer__navigation
+                    li: a.site-footer__navigation-title(href="#") Главная
+                    li: a(href="#about") О Салоне
+                    li: a(href="#services") Услуги
+                    li: a(href="#services") Прайс-лист
+                    li: a(href="#services") Контакты
+                    li: a(href="#services") Франшиза
+
+                .site-footer__contacts
+                    p.site-footer__contacts-title Контакты
+
+                    p.site-footer__info-title Адрес:
+                    p.site-footer__info-text г. Калининград ул. Иванникова, д. 12
+
+                    p.site-footer__info-title Телефон:
+                    a.site-footer__info-text(href="tel: 523776") + 7 4012 52 37 76
+
+                    p.site-footer__info-title E-mail:
+                    a.site-footer__info-text(href="mailto: hairroom@gmail.com") hairroom@gmail.com
+
+                .site-footer__worktime
+                    p.site-footer__contacts-title Время работы
+
+                    p.site-footer__info-title Ежедневно:
+                    p.site-footer__info-text С 10 <sup>00</sup> до 20<sup>00</sup>
+                    
+                    p.site-footer__info-title Воскресенье:
+                    p.site-footer__info-text.site-footer__info-text--bold - выходной
+                    
+                p.site-footer__copyright copyright &copy; 2018<br><b>hairroom</b>
+
+        nav.scroll-spy
+            ul.scroll-spy__list
+                li: a.scroll-spy__link(id="about-link" data-label="Салон" href="#about") Салон
+                li: a.scroll-spy__link(id="services-link" data-label="Услуги" href="#services") Услуги
+                li: a.scroll-spy__link(id="price-link" data-label="Прайс" href="#price") Прайс
+                li: a.scroll-spy__link(id="gallery-link" data-label="Галлерея" href="#gallery") Галлерея
+                li: a.scroll-spy__link(id="contacts-link" data-label="Контакты" href="#contacts") Контакты
+
+        script(src="map.js")
+        script(src="scripts.js")
+        script(src="instagram.js")
+        script(src="//w96839.yclients.com/widgetJS")
+        script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&callback=initMap")
