@@ -77,14 +77,14 @@
             </header>
             <form class="form__content" id="franshize-form" method="POST" action="http://localhost/HairRoom/mail.php">
               <div class="form__group">
-                <input class="form__group-input" type="text" name="name" placeholder="Имя"/>
-                <input class="form__group-input" type="phone" name="phone" placeholder="Телефон"/>
+                <input class="form__group-input" type="text" name="имя" placeholder="Имя"/>
+                <input class="form__group-input" type="phone" name="телефон" placeholder="Телефон"/>
               </div>
               <div class="form__group form__group--full">
-                <input class="form__group-input" type="text" name="city" placeholder="Желаемый город"/>
+                <input class="form__group-input" type="text" name="город" placeholder="Желаемый город"/>
               </div>
               <div class="form__group form__group--full">
-                <input class="form__group-input" type="email" name="email" placeholder="E-mail"/>
+                <input class="form__group-input" type="email" name="электронная почта" placeholder="E-mail"/>
               </div>
               <p class="form__policy">Заполняя контактную форму<br>вы соглашаетесь с <a href="<?php echo esc_url(home_url("/"));?>/policy">политикой&nbsp;конфиденциальности</a></p>
               <div class="form__button"><input type="submit" id="franshize-submit" value="Оставить заявку" class="button button--form" /></div>
@@ -98,7 +98,7 @@
         </ul>
         <div class="order-popup" id="order-popup">
           <div class="order-popup__content">
-            <h2 class="order-popup">Отправка заявки</h2><a class="button order-popup__button" href="#" hidden="hidden">ОК</a>
+            <h2 class="order-popup__title">Спасибо за заявку!</h2><a class="button order-popup__button" href="#" hidden="hidden">ОК</a>
           </div>
         </div>
       </div>

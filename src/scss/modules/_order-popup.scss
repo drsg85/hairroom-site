@@ -32,11 +32,11 @@
 
         // box model
         margin: 0 auto;
-        max-width: 0;
+        max-width: calc(100% - 50px);
         padding: 40px;
 
         // visual
-        background-color: rgba($white, 0.8);
+        background-color: $white;
         border: 1px solid $accent;
         overflow: hidden;
         opacity: 0;
@@ -45,9 +45,14 @@
 
         &--shown {
             // box model
-            max-width: 800px;
+            // max-width: calc(100% -50px);
             opacity: 1;
             visibility: visible;
+
+            @include atTabletsPortrait {
+                // box model
+                max-width: 800px;
+            }
         }
     }
 
@@ -63,6 +68,26 @@
         color: $black;
         font-family: $mainFont;
         font-size: 1.5rem;
+    }
+
+    &__button {
+        // box model
+        margin-top: 20px;
+        border: 1px solid $accent;
+
+        // visual
+        transition: 0.3 ease-in-out;
+
+        // typography
+        color: #000000;
+
+        &:hover {
+            // visual
+            background-color: $accent;
+
+            // typography
+            color: $white;
+        }
     }
 
 }

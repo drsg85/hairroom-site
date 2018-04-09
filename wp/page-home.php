@@ -87,7 +87,7 @@ $social_vk = get_field("social_vk");
         <p class="title__description title__description--right">Hair Room <?php echo $city; ?></p>
         <ul class="socials">
           <li><a href="<?php echo $social_in; ?>" target="_blank">instagram</a></li>
-          <li><a href="<?php echo $social_fb; ?>" target="_blank">facebook</a></li>
+          <li><a href="<?php echo $social_fb; ?>" target="_blank">facebook</a></li> 
           <li><a href="<?php echo $social_vk; ?>" target="_blank">vkontakte</a></li>
         </ul>
       </section>

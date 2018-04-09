@@ -145,6 +145,7 @@
         margin: 0;
         margin-bottom: 30px;
         display: inline-block;
+        
 
         // typography
         color: $copyColor;
@@ -152,6 +153,14 @@
         font-weight: 400;
         font-size: 1rem;
         text-decoration: none;
+
+        span {
+            // box model
+            margin: 0 2px;
+            display: inline-block;
+            vertical-align: middle;
+            transform: translateY(-0.4rem);
+        }
     }
 
     &__logo {
