@@ -1515,6 +1515,7 @@ ul {
       transition: 0.3s ease-in-out; }
 
 .tabs {
+  margin-top: 60px;
   margin-bottom: 40px;
   height: 450px; }
   @media (max-width: 360px) {
@@ -1533,36 +1534,9 @@ ul {
     margin-bottom: 20px;
     margin-left: -10px;
     list-style: none; }
-    .tabs__list::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 10px;
-      height: 1px;
-      width: 150%;
-      background-color: rgba(153, 153, 153, 0.25); }
-      @media (min-width: 700px) {
-        .tabs__list::after {
-          width: 100%; } }
   @media (min-width: 700px) {
     .tabs__list-item {
       padding-right: 80px; } }
-  .tabs__list-item--current {
-    display: block; }
-    .tabs__list-item--current .tabs__link {
-      position: relative;
-      color: #d74299; }
-      .tabs__list-item--current .tabs__link::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        -webkit-transform: translateX(10px);
-                transform: translateX(10px);
-        height: 1px;
-        width: 100%;
-        width: calc(100% - 20px);
-        background-color: #ee7aad; }
   .tabs__link {
     display: inline-block;
     vertical-align: top;
@@ -1631,6 +1605,10 @@ ul {
           bottom: -100px;
           left: 100px;
           z-index: -2; } }
+    .card__container--masters {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
   .card__wrapper {
     position: relative;
     width: 300px;
@@ -2397,6 +2375,168 @@ ul {
 .background {
   background-image: url("./img/footer-bg.jpg");
   background-position: 0 0%; }
+
+.masters {
+  position: relative;
+  z-index: 0;
+  padding: 25px;
+  padding-bottom: 100px;
+  padding-right: 0;
+  background: linear-gradient(205deg, #f7e9f4 20%, #c978b5);
+  background-size: cover; }
+  @media (min-width: 700px) {
+    .masters {
+      padding: 50px;
+      padding-right: 0;
+      padding-bottom: 250px; } }
+  @media (min-width: 1200px) {
+    .masters {
+      padding-left: 85px;
+      padding-bottom: 400px;
+      background: linear-gradient(20deg, #e8c5e0, rgba(211, 195, 221, 0.8)) 90%;
+      -webkit-box-shadow: 0px 48px 116px -29px rgba(125, 30, 86, 0.77);
+              box-shadow: 0px 48px 116px -29px rgba(125, 30, 86, 0.77); } }
+  .masters__header {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 25px; }
+    .masters__header::after {
+      content: url("./img/finger.png");
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+      @media (max-width: 360px) {
+        .masters__header::after {
+          top: 20%; } }
+      @media (min-width: 700px) {
+        .masters__header::after {
+          left: 300px; } }
+      @media (min-width: 1200px) {
+        .masters__header::after {
+          display: none; } }
+  .masters__suptitle {
+    color: #d74299;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 4px; }
+  .masters__title-section {
+    margin: 0;
+    padding: 0;
+    color: #48a6be;
+    text-transform: uppercase;
+    font-size: 3.33rem;
+    font-weight: 900;
+    letter-spacing: 4px; }
+  .masters__wrapper {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    border-radius: 5px;
+    overflow: hidden; }
+    .masters__wrapper:hover .card__content {
+      display: block; }
+    .masters__wrapper::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 150px;
+      left: 0;
+      width: 100%;
+      height: calc(100% + 300px);
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-position: 50px 150px;
+      background: linear-gradient(to bottom, rgba(219, 102, 154, 0) 0px, rgba(219, 102, 154, 0.8) 150px, rgba(198, 22, 141, 0.8) 100%); }
+  .masters__cards {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden; }
+    @media (min-width: 1200px) {
+      .masters__cards {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        overflow: hidden; } }
+    .masters__cards::before {
+      content: url("./img/pattern-lg-cards.png");
+      display: none; }
+  .masters__card {
+    margin-right: 25px;
+    overflow: hidden; }
+    .masters__card-description {
+      width: 155px;
+      position: absolute;
+      top: 195px;
+      right: 30px;
+      font-size: 0.875rem;
+      line-height: 20px;
+      text-align: right;
+      color: #8a185a;
+      text-transform: uppercase; }
+    .masters__card-title {
+      margin: 30px 0;
+      margin-top: 0;
+      padding-left: 15px;
+      color: #8a185a;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 1.25; }
+    .masters__card-img {
+      position: relative;
+      display: inline-block;
+      z-index: 0;
+      width: 300px;
+      height: 450px;
+      background-size: cover;
+      -webkit-box-shadow: 0px 23px 51px -9px rgba(165, 68, 122, 0.96);
+              box-shadow: 0px 23px 51px -9px rgba(165, 68, 122, 0.96);
+      border-radius: 5px; }
+      .masters__card-img::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: -webkit-gradient(linear, left top, left bottom, from(#c6168d), to(#db669a));
+        background: linear-gradient(180deg, #c6168d, #db669a);
+        opacity: 0;
+        border-radius: 5px; }
+      .masters__card-img img {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%; }
+  .masters__buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+
+.masters__wrapper:hover .card__ribbons {
+  background-color: #ffffff; }
+
+.masters__wrapper:hover .card__ribbon {
+  color: #c6168d; }
+
+.masters__wrapper:hover::after {
+  top: -300px;
+  display: block;
+  background-position: 100px; }
 
 .instafeed {
   display: -webkit-box;

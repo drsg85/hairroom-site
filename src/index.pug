@@ -94,22 +94,12 @@ html(lang="ru")
 
                 .about__content
                     .tabs
-                        ul.tabs__list(id="tabs" role="tablist")
-                            li.tabs__list-item.tabs__list-item--current(data-tab="tab-1"): a.tabs__link Миссия
-                            li.tabs__list-item(data-tab="tab-2"): a.tabs__link Подход
-                            li.tabs__list-item(data-tab="tab-3"): a.tabs__link Мастера
+                        //- ul.tabs__list(id="tabs" role="tablist")
+                        //-     //- li.tabs__list-item.tabs__list-item--current(data-tab="tab-1"): a.tabs__link Миссия
 
                         .tabs__content.tabs__content--current#tab-1
                             p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
                             p.tabs__copy Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.
-
-                        .tabs__content#tab-2
-                            p.tabs__copy Текст вкладки "подход"
-                            p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
-
-                        .tabs__content#tab-3
-                            p.tabs__copy Текст вкладки "мастера"
-                            p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
 
                 .about__buttons
                     a.button.button--pink(href="#") Online Запись
@@ -432,76 +422,69 @@ html(lang="ru")
                         p.shares__offers.shares__offers--white Акции
                         p.shares__text.shares__text--white Скидки для участников программы
         
-        section.services
-            a#services.nav-link
-            header.services__header
+        section.masters
+            a#masters.nav-link
+            header.masters__header
                 //- p.services__suptitle Наши
-                h2.services__title-section Наши Мастера
+                h2.masters__title-section Наши Мастера
             
-            .card__container
+            .card__container.card__container--masters
                 article.card
-                    header.card__title Наращивание<br>ресниц
-                    .services__wrapper
-                        .card__ribbons
-                            p.card__ribbon New
-                        img.card__img(src="./img/card-women5.jpg")
+                    header.card__title Анастасия
+                    .masters__wrapper
+                        img.card__img(src="./img/master.png")
                         .card__content
                             // changes class
-                            p.title__description.title__description--left Hair Room Услуги
-                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            p.title__description.title__description--left Hair Room мастера
+                            p.card__description Мастер по наращиванию ресниц
                             .card__buttons
                                 a.button.button--pink.button--card.ms_booking(href="#") Записаться
 
                 article.card
-                    header.card__title Дополнительные<br>услуги
-                    .services__wrapper
-                        .card__ribbons
-                            p.card__ribbon New
-                        img.card__img(src="./img/card-women4.jpg")
+                    header.card__title Екатерина
+                    .masters__wrapper
+                        img.card__img(src="./img/master1.jpeg")
                         .card__content
                             // changes class
                             p.title__description.title__description--left Hair Room Услуги
-                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            p.card__description мастер<br>ногтевого сервиса и маникюра
                             .card__buttons
                                 a.button.button--pink.button--card.ms_booking(href="#") Записаться
-
+                
                 article.card
-                    header.card__title Уход за волосами<br>волос
-                    .services__wrapper
-                        .card__ribbons
-                            p.card__ribbon New
-                        img.card__img(src="./img/card-women3.jpg")
-                        .card__content
-                            // changes class
-                            p.title__description.title__description--left Hair Room Услуги
-                            p.card__description бесцветный розовый с нейтрализацией желтизны
-                            .card__buttons
-                                a.button.button--pink.button--card.ms_booking(href="#") Записаться
-
-
-                article.card
-                    header.card__title Наращивание<br>волос
+                    header.card__title Юлия
                     .services__wrapper
                         img.card__img(src="./img/card-women2.jpg")
                         .card__content
                             // changes class
                             p.title__description.title__description--left Hair Room Услуги
-                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            p.card__description мастер по маникюру
                             .card__buttons
                                 a.button.button--pink.button--card.ms_booking(href="#") Записаться
-                
+
                 article.card
-                    header.card__title Наращивание<br>волос
-                    .services__wrapper
-                        .card__ribbons
-                            p.card__ribbon Trend
-                        img.card__img(src="./img/card-women1.jpg")
+                    header.card__title Анжелика
+                    .masters__wrapper
+                        img.card__img(src="./img/master2.png")
                         .card__content
                             // changes class
                             p.title__description.title__description--left Hair Room Услуги
-                            p.card__description бесцветный розовый с нейтрализацией желтизны
+                            p.card__description мастер по наращивания волос
                             .card__buttons
                                 a.button.button--pink.button--card.ms_booking(href="#") Записаться
+                
+                //- article.card
+                //-     header.card__title Наращивание<br>волос
+                //-     .services__wrapper
+                //-         .card__ribbons
+                //-             p.card__ribbon Trend
+                //-         img.card__img(src="./img/card-women1.jpg")
+                //-         .card__content
+                //-             // changes class
+                //-             p.title__description.title__description--left Hair Room Услуги
+                //-             p.card__description бесцветный розовый с нейтрализацией желтизны
+                //-             .card__buttons
+                //-                 a.button.button--pink.button--card.ms_booking(href="#") Записаться
         
         section.gallery
             a#gallery.nav-link

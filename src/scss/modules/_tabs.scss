@@ -1,5 +1,6 @@
 .tabs {
     // box model
+    margin-top: 60px;
     margin-bottom: 40px;
     height: 450px;
 
@@ -27,26 +28,26 @@
         // visual
         list-style: none;
 
-        &::after {
-            content: "";
+        // &::after {
+        //     content: "";
 
-            // positioning
-            position: absolute;
-            bottom: 0;
-            left: 10px;
+        //     // positioning
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 10px;
 
-            // box model
-            height: 1px;
-            width: 150%;
+        //     // box model
+        //     height: 1px;
+        //     width: 150%;
 
-            // visual
-            background-color: rgba($notationColor, 0.25);
+        //     // visual
+        //     background-color: rgba($notationColor, 0.25);
 
-            @include atTabletsPortrait {
-                // box model
-                width: 100%;
-            }
-        }
+        //     @include atTabletsPortrait {
+        //         // box model
+        //         width: 100%;
+        //     }
+        // }
     }
 
     &__list-item {
@@ -57,37 +58,37 @@
             padding-right: 80px;
         }
 
-        &--current {
+        // &--current {
 
-            // box model
-            display: block;
+        //     // box model
+        //     display: block;
 
-            .tabs__link {
-                // positioning
-                position: relative;
+        //     .tabs__link {
+        //         // positioning
+        //         position: relative;
 
-                // typography
-                color: $titleColor;
+        //         // typography
+        //         color: $titleColor;
 
-                &::after {
-                    content: "";
+        //         &::after {
+        //             content: "";
 
-                    // positioning
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    transform: translateX(10px);
+        //             // positioning
+        //             position: absolute;
+        //             left: 0;
+        //             bottom: 0;
+        //             transform: translateX(10px);
 
-                    // box model
-                    height: 1px;
-                    width: 100%;
-                    width: calc(100% - 20px);
+        //             // box model
+        //             height: 1px;
+        //             width: 100%;
+        //             width: calc(100% - 20px);
         
-                    // visual
-                    background-color: $accent;
-                }
-            }
-        }
+        //             // visual
+        //             background-color: $accent;
+        //         }
+        //     }
+        // }
     }
 
     &__link {

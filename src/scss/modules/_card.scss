@@ -49,6 +49,11 @@
 
             }
         }
+
+        &--masters {
+            // box model
+            justify-content: flex-start;
+        }
     }
 
     &__wrapper {
