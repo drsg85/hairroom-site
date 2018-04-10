@@ -1,7 +1,11 @@
 .gallery {
     // box model
     padding-top: 30px;
-    
+
+    @include atDesktop {
+        // box model
+        margin-top: 260px;
+    }
     &__header {
         // positioning
         position: relative;

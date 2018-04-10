@@ -9,38 +9,39 @@ class FranshizeFormSender {
     events() {
         document.addEventListener("submit", (e) => {
             e.preventDefault();
-
-            if(this.validation(e.target)) {
-                this.sendForm(e.target);
-                this.setupPopup();
-            } else {
-                console.log('form is not valid');
-            }
+            this.sendForm(e.target);
+            this.setupPopup();
+            // if(this.validation(e.target)) {
+            //     this.sendForm(e.target);
+            //     this.setupPopup();
+            // } else {
+            //     console.log('form is not valid');
+            // }
         })
     }
 
-    validation(form) {
-        let inputs = form.querySelectorAll(".form__group-input");
-        let isFormValid = true;
+    // validation(form) {
+    //     let inputs = form.querySelectorAll(".form__group-input");
+    //     let isFormValid = true;
 
-        for (let input of inputs) {
-            let isValid = true;
-            if (input.value === "") {
-                isValid = false;
-                isFormValid = false;
-                console.log('input empty');
-            }
+    //     for (let input of inputs) {
+    //         let isValid = true;
+    //         if (input.value === "") {
+    //             isValid = false;
+    //             isFormValid = false;
+    //             console.log('input empty');
+    //         }
 
-        if(!isFormValid) {
-          let errorLabel = document.createElement("div");
-          errorLabel.classList.add("form__group-input__error");
-          input.style.background = "white";
-          input.parentElement.appendChild(errorLabel);
-        }
-    }
+    //     if(!isFormValid) {
+    //       let errorLabel = document.createElement("div");
+    //       errorLabel.classList.add("form__group-input__error");
+    //       input.style.background = "white";
+    //       input.parentElement.appendChild(errorLabel);
+    //     }
+    // }
 
-        return isFormValid;
-    }
+    //     return isFormValid;
+    // }
 
     sendForm(data) {
         const form = data.querySelectorAll('.form__group-input');
@@ -58,7 +59,7 @@ class FranshizeFormSender {
 
         const xhr = new XMLHttpRequest();
         const jsonData = JSON.stringify(sendData);
-        xhr.open('POST', 'https://oldboyacademy.com/order.php', true);
+        xhr.open('POST', 'https://hairrooms.com/order.php', true);
         xhr.send(jsonData);
     }
 

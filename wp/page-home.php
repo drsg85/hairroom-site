@@ -105,24 +105,9 @@ $social_vk = get_field("social_vk");
         </header>
         <div class="about__content">
           <div class="tabs">
-            <ul class="tabs__list" id="tabs" role="tablist">
-              <li class="tabs__list-item tabs__list-item--current" data-tab="tab-1"><a class="tabs__link">Миссия</a></li>
-              <li class="tabs__list-item" data-tab="tab-2"><a class="tabs__link" >Подход</a></li>
-              <li class="tabs__list-item" data-tab="tab-3"><a class="tabs__link" >Мастера</a></li>
-            </ul>
             <div class="tabs__content tabs__content--current" id="tab-1">
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
               <p class="tabs__copy">Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.</p>
-            </div>
-            <div class="tabs__content" id="tab-2">
-              <p class="tabs__copy">Текст вкладки "подход"</p>
-              <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
-              <p class="tabs__copy">Позвольте себе успех</p>
-            </div>
-            <div class="tabs__content" id="tab-3">
-              <p class="tabs__copy">Текст вкладки "мастера"</p>
-              <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
-              <p class="tabs__copy">Позвольте себе успех</p>
             </div>
           </div>
         </div>
@@ -246,7 +231,7 @@ $social_vk = get_field("social_vk");
                   </tr>
                   <tr>
                     <td>Середина спины</td>
-                    <td><b>4000 - 4500</b> <span>руб.</span></td>
+                    <td><b>4000 - 5000</b> <span>руб.</span></td>
                   </tr>
                 </table>
                 <?php
@@ -274,16 +259,8 @@ $social_vk = get_field("social_vk");
                   <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
-                    <td>короткие</td>
-                    <td><b>1500</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Средние</td>
-                    <td><b>2000</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Длинные</td>
-                    <td><b>3000</b> <span>руб.</span></td>
+                    <td>Стоимость работ</td>
+                    <td><b>800 - 2500</b> <span>руб.</span></td>
                   </tr>
                 </table>
                 <?php
@@ -312,7 +289,7 @@ $social_vk = get_field("social_vk");
                   <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
                     <td>Короткие</td>
-                    <td><b>2000</b> <span>руб.</span></td>
+                    <td><b>2000 - 2500</b> <span>руб.</span></td>
                   </tr>
                   <tr>
                     <td>До плеч</td>
@@ -324,7 +301,7 @@ $social_vk = get_field("social_vk");
                   </tr>
                   <tr>
                     <td>Середина спины</td>
-                    <td><b>4000 - 4500</b> <span>руб.</span></td>
+                    <td><b>3500 - 4000</b> <span>руб.</span></td>
                   </tr>
                 </table>
                 <?php
@@ -352,45 +329,8 @@ $social_vk = get_field("social_vk");
                   <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
-                    <td>Короткие</td>
-                    <td><b>2000</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Средние</td>
-                    <td><b>2000</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Длинные</td>
-                    <td><b>3000</b> <span>руб.</span></td>
-                  </tr>
-                </table>
-                <?php 
-                  }
-                }
-                ?>
-              </div>
-              <div class="price-inner__column">
-              <?php 
-              $args = array(
-                'category_name'=> 'stowage'
-              );
-                
-              query_posts($args);
-
-                if(have_posts()) {
-                  while(have_posts()) {
-                    the_post();
-                    
-                    // vars
-                    $price_name = get_field("price_name");
-                    $price_description = get_field("price_description");
-              ?>
-                <table class="price__table">
-                  <caption class="price__caption"><?php echo $price_name; ?></caption>
-                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
-                  <tr>
-                    <td>Любой длины</td>
-                    <td><b>800 - 2000</b> <span>руб.</span></td>
+                    <td>Стоимость работ</td>
+                    <td><b>1000</b> <span>руб.</span></td>
                   </tr>
                 </table>
                 <?php 
@@ -486,12 +426,8 @@ $social_vk = get_field("social_vk");
                   <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
-                    <td>до 150 капсул</td>
-                    <td><b>2000 - 3000</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>до 200 капсул</td>
-                    <td><b>3000</b> <span>руб.</span></td>
+                    <td>Стоимость работ:</td>
+                    <td><b>1000 - 3000</b> <span>руб.</span></td>
                   </tr>
                 </table>
                 <?php
@@ -579,7 +515,7 @@ $social_vk = get_field("social_vk");
                   <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
                     <td>Однотонное покрытие</td>
-                    <td><b>800</b><span>руб.</span></td>
+                    <td><b>800</b> <span>руб.</span></td>
                   </tr>
                 </table>
                 <?php 
@@ -711,11 +647,11 @@ $social_vk = get_field("social_vk");
                   <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
                     <td>2D обьем</td>
-                    <td><b>1000</b> <span>руб.</span></td>
+                    <td><b>1600</b> <span>руб.</span></td>
                   </tr>
                   <tr>
                     <td>3D обьем</td>
-                    <td><b>1500</b> <span>руб.</span></td>
+                    <td><b>2000</b> <span>руб.</span></td>
                   </tr>
                   <tr>
                     <td>5D обьем</td>
@@ -751,12 +687,8 @@ $social_vk = get_field("social_vk");
                 <table class="price__table">
                   <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
-                    <td>Обычное</td>
-                    <td><b>500</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Хной</td>
-                    <td><b>700</b> <span>руб.</span></td>
+                    <td>Пинцет + воск</td>
+                    <td><b>300</b> <span>руб.</span></td>
                   </tr>
                 </table>
                 <?php
@@ -782,12 +714,12 @@ $social_vk = get_field("social_vk");
                 <table class="price__table">
                   <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
-                    <td>Дневной</td>
-                    <td><b>800 - 1000 </b> <span>руб.</span></td>
+                    <td>Хна</td>
+                    <td><b>400 </b> <span>руб.</span></td>
                   </tr>
                   <tr>
-                    <td>Вечерний</td>
-                    <td><b>1500 - 2000</b> <span>руб.</span></td>
+                    <td>Краска</td>
+                    <td><b>300 </b> <span>руб.</span></td>
                   </tr>
                 </table>
                 <?php
@@ -815,38 +747,15 @@ $social_vk = get_field("social_vk");
                   <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
-                    <td>Одна зона</td>
-                    <td><b>150 - 200</b> <span>руб.</span></td>
+                    <td>Хна, воск, пинцет</td>
+                    <td><b>700</b> <span>руб.</span></td>
                   </tr>
-                </table>
-                <?php 
-                    }
-                  }
-                ?>
-              </div>
-              <div class="price-inner__column price-inner__column--right">
-                <?php 
-                    $args = array(
-                      'category_name'=> 'haircut'
-                    );
-                    query_posts($args);
-                    
-                    if(have_posts()) {
-                      while(have_posts()) {
-                        the_post();
-
-                        // vars
-                        $price_name = get_field("price_name");
-                        $price_description = get_field("price_description");
-                  ?>
-                <table class="price__table">
-                  <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
-                    <td>Женская</td>
-                    <td><b>300 - 1200</b> <span>руб.</span></td>
+                    <td>Краска, воск, пинцет</td>
+                    <td><b>500</b> <span>руб.</span></td>
                   </tr>
                 </table>
-                <?php
+                <?php 
                     }
                   }
                 ?>
@@ -854,40 +763,6 @@ $social_vk = get_field("social_vk");
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="shares">
-      <div class="shares__content">
-      <?php 
-        $args = array(
-          'category_name'=> 'offers'
-        );
-
-        query_posts($args);
-
-        
-        if(have_posts()) {
-          while(have_posts()) {
-            the_post();
-            
-            // vars
-            $shares_title = get_field("shares_name");
-            $shares_image = get_field("shares_img");
-      
-      ?>
-        <article class="shares__card">
-          <div class="shares__img">
-            <img src="<?php echo $shares_image; ?>" alt="HairRoom скидки"/>
-          </div>
-          <header class="shares__header">
-            <p class="shares__offers">Акции</p>
-            <p class="shares__text"><?php echo $shares_title; ?></p>
-          </header>
-        </article>
-      <?php
-          }
-        }
-      ?>
       </div>
     </section>
     <section class="gallery"><a class="nav-link" id="gallery"></a>

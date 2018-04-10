@@ -1896,6 +1896,9 @@ ul {
 
 .gallery {
   padding-top: 30px; }
+  @media (min-width: 1200px) {
+    .gallery {
+      margin-top: 260px; } }
   .gallery__header {
     position: relative;
     padding: 55px 30px;

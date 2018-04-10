@@ -3,6 +3,17 @@
     Template Name: Franshize Page
 
 */
+
+    // Contacts
+    $city = get_field("city");
+    $phone = get_field("phone");
+    $phone_link = get_field("phone_link");
+    $address = get_field("address");
+    $mail = get_field("mail");
+    $mail_link = get_field("mail_link");
+    $landmark = get_field("landmark");
+    $work_time = get_field("work_time");
+
     // Social
     $social_in = get_field("social_in");
     $social_fb = get_field("social_fb");
@@ -122,13 +133,13 @@
           <p class="site-footer__contacts-title">Контакты</p>
           <p class="site-footer__info-title">Адрес:</p>
           <p class="site-footer__info-text">г. Калининград ул. Иванникова, д. 12</p>
-          <p class="site-footer__info-title">Телефон:</p><a class="site-footer__info-text" href="tel: 523776">+ 7 4012 52 37 76</a>
-          <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto: hairroom@gmail.com">hairroom@gmail.com</a>
+          <p class="site-footer__info-title">Телефон:</p><a class="site-footer__info-text" href="tel: <?php the_field("phone_link", 5); ?>"><?php the_field("phone",5) ;?></a>
+          <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto:<?php the_field("mail_link", 5); ?>"><?php the_field("mail",5) ;?></a>
         </div>
         <div class="site-footer__worktime">
           <p class="site-footer__contacts-title">Время работы</p>
           <p class="site-footer__info-title">Ежедневно:</p>
-          <p class="site-footer__info-text">С 10 <sup>00</sup> до 20<sup>00</sup></p>
+          <p class="site-footer__info-text"><?php the_field("work_time", 5); ?></p>
           <p class="site-footer__info-title">Воскресенье:</p>
           <p class="site-footer__info-text site-footer__info-text--bold">- выходной</p>
         </div>
