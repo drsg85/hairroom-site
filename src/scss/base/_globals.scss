@@ -17,6 +17,20 @@ body {
     // visual
     overflow-x: hidden;
 
+    &::-webkit-scrollbar {
+        @include atDesktop {
+            // box model
+            width: 10px;
+            height: 8px;
+            background-color: $accent;
+
+            &-thumb {
+                border: 1px solid $black;
+                background: white;
+            }
+    }
+}
+
 }
 
 ul {

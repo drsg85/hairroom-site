@@ -155,25 +155,27 @@
         
         // typography
         color: $secondaryColor;
+
+        
+        &:hover {
+            // visual
+            background-color: $accent;
+            transition: 0.3s ease-in-out;
+            border-color: $accent;
+
+            // typography
+            color: #fff;
+
+        }
         
         // visual
         background-color: rgba(#f4cfe4, 0.12);
+        transition: 0.3s ease-in-out;
         
         @include atTabletsPortrait {
             // box model
             padding: 8px 0;
             
-            // typography
-            color: #fff;
-        }
-d
-
-
-        &:hover {
-            // visual
-            background-color: $accent;
-            transition: 0.3s ease-in-out;
-
             // typography
             color: #fff;
         }

@@ -33,7 +33,7 @@
         @include atDesktop {
             // box model
             padding: 0 85px !important;
-            padding-bottom: 85px !important;
+            padding-bottom: 100px !important;
             margin-bottom: 0 !important;
 
             // visual
@@ -155,7 +155,7 @@
         transform: translateX(-50%);
 
         @include atTabletsLandscape {
-            content: url("http://localhost/HairRoom/wp-content/themes/HairRoom/img/hero_hr-lg.png");
+            content: url("http://localhost/HairRoom/wp-content/themes/HairRoom/img/hero_hr-lg-1200.png");
 
             // positioning
             right: -100px;

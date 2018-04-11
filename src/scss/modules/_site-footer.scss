@@ -46,6 +46,11 @@
         @include atTabletsLandscape {
             flex-wrap: wrap;
         }
+
+        &--franshize {
+            // box model
+            justify-content: flex-start;
+        }
     }
 
     &__header {
@@ -70,6 +75,10 @@
 
         // typography
         color: $black;
+
+        &--franshize {
+            margin-right: 100px;
+        }
     }
 
     &__contacts {
@@ -79,6 +88,10 @@
         @include atDesktop {
             // box model
             width: auto;
+        }
+
+        &--franshize {
+            margin-right: 100px;
         }
     }
 

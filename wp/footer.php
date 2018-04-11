@@ -15,11 +15,11 @@ $work_time = get_field("work_time");
 <section class="location"><a class="nav-link" id="contacts"></a>
       <div class="map-label">
         <div class="map-label__content">
-          <p class="title__description title__description--right title__description--map">Hairroom <?php echo $city; ?></p>
+          <p class="title__description title__description--right title__description--map">Hairroom Kaliningrad</p>
           <p class="map-label__info-title">E-mail</p>
-          <p class="map-label__info-text"><?php the_field("mail", 5); ?></p>
+          <a class="map-label__info-text" href="mailto: info@hairrooms.ru"><?php the_field("mail", 5); ?></a>
           <p class="map-label__info-title">Телефон</p>
-          <p class="map-label__info-text"><?php the_field("phone", 5); ?></p>
+          <a class="map-label__info-text" href="tel: <?php the_field("phone_link", 5) ;?>"><?php the_field("phone", 5); ?></a>
           <p class="map-label__info-title">Адрес</p>
           <p class="map-label__info-text"><?php the_field("address", 5); ?><sub><?php echo $landmark;?></sub></p>
         </div>

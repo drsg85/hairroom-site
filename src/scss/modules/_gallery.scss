@@ -6,6 +6,7 @@
         // box model
         margin-top: 260px;
     }
+
     &__header {
         // positioning
         position: relative;
@@ -48,8 +49,10 @@
             
             @include atDesktop {
                 content: url("./img/hero_hr-lg.png");
+
                 // positioning
                 position: absolute;
+                z-index: -1;
                 bottom: 75px;
                 left: 50px;
             }

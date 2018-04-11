@@ -8,6 +8,7 @@
 // Info
 $address = get_field("address");
 $phone = get_field("phone");
+$phone_header = get_field("phone_header");
 $phone_link = get_field("phone_link");
 
 // Slogan
@@ -51,7 +52,7 @@ $social_vk = get_field("social_vk");
       <nav class="main-nav">
         <div class="logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/hr_logo_think.svg" alt="HairRoom Logo"/></div>
         <div class="info">
-          <p class="info__address"><?php echo $address; ?></p><a class="info__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone; ?></a>
+          <p class="info__address"><?php echo $address; ?></p><a class="info__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone_header; ?></a>
         </div>
         <div class="menu-icon">
           <div class="menu-icon__middle"></div>
@@ -66,7 +67,7 @@ $social_vk = get_field("social_vk");
             <li><a href="<?php echo esc_url(home_url("/")); ?>#contacts">Контакты</a></li>
             <div class="main-menu__franchise"><a href="<?php echo esc_url(home_url("/franshize")); ?>">Франшиза</a></div>
           </ul>
-          <div class="be-friends"><a href="http://instagram.com">
+          <div class="be-friends"><a href="<?php echo $social_in; ?>">
               <p class="be-friends__text">Давайте дружить</p>
               <p class="be-friends__social"><?php echo $social_network;?></p></a></div>
         </nav>
@@ -87,8 +88,6 @@ $social_vk = get_field("social_vk");
         <p class="title__description title__description--right">Hair Room <?php echo $city; ?></p>
         <ul class="socials">
           <li><a href="<?php echo $social_in; ?>" target="_blank">instagram</a></li>
-          <li><a href="<?php echo $social_fb; ?>" target="_blank">facebook</a></li> 
-          <li><a href="<?php echo $social_vk; ?>" target="_blank">vkontakte</a></li>
         </ul>
       </section>
     </header>
@@ -774,7 +773,7 @@ $social_vk = get_field("social_vk");
         <p class="gallery__slogan">Давайте дружить</p>
         <div class="gallery__content">
           <div class="gallery__logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/insta_logo.png" alt="instagram logo"/></div>
-          <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe" href="https://www.instagram.com/hairroomkaliningrad/">Подписаться</a>
+          <p class="gallery__text">Для подписчиков нашей группы в Instagram мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe" href="https://www.instagram.com/hairroomkaliningrad/">Подписаться</a>
         </div>
       </div>
       <div class="instafeed" id="instafeed"></div>

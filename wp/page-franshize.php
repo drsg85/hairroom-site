@@ -66,10 +66,10 @@
               </div>
             </ul>
           </nav>
-          <div class="be-friends be-friends--franshize"><a href="http://instagram.com">
+          <!-- <div class="be-friends be-friends--franshize"><a href="<?php the_field('social_in', 5); ?>">
               <p class="be-friends__text">Давайте дружить</p>
               <p class="be-friends__social">instagram</p></a>
-          </div>
+          </div> -->
         </nav>
         <div class="hero--franshize__content">
           <div class="hero__img hero__img--franshize">
@@ -102,11 +102,9 @@
             </form>
           </div>
         </div>
-        <ul class="socials socials--franshize">
+        <!-- <ul class="socials socials--franshize">
           <li><a href="<?php echo $social_in; ?>" target="_blank">instagram</a></li>
-          <li><a href="<?php echo $social_fb; ?>" target="blanck">facebook</a></li>
-          <li><a href="<?php echo $social_vk; ?>" target="_blank">vkontakte</a></li>
-        </ul>
+        </ul> -->
         <div class="order-popup" id="order-popup">
           <div class="order-popup__content">
             <h2 class="order-popup__title">Спасибо за заявку!</h2><a class="button order-popup__button" href="#" hidden="hidden">ОК</a>
@@ -115,34 +113,23 @@
       </div>
     </header>
     <footer class="site-footer site-footer--franshize">
-      <div class="site-footer__container">
-        <header class="site-footer__header">
+      <div class="site-footer__container site-footer__container--franshize">
+        <header class="site-footer__header site-footer__header--franshize">
           <div class="site-footer__logo"><img src="<?php bloginfo('stylesheet_directory') ;?>/img/hr_logo_hor_black.svg" alt="Hair Room логотип"/></div>
-          <p class="site-footer__title-location">HAIR ROOM. Калининград</p>
+          <p class="site-footer__title-location">HAIR ROOM</p>
           <p class="site-footer__description">Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа</p>
         </header>
-        <ul class="site-footer__navigation">
-          <li><a class="site-footer__navigation-title" href="#">Главная</a></li>
-          <li><a href="<?php echo esc_url(home_url("/#about")); ?>">О Салоне</a></li>
-          <li><a href="<?php echo esc_url(home_url("/#services")); ?>">Услуги</a></li>
-          <li><a href="<?php echo esc_url(home_url("/#price")); ?>">Прайс-лист</a></li>
-          <li><a href="<?php echo esc_url(home_url("/#contacts")); ?>">Контакты</a></li>
-          <li><a href="">Франшиза</a></li>
-        </ul>
-        <div class="site-footer__contacts">
+        <div class="site-footer__contacts site-footer__contacts--franshize">
           <p class="site-footer__contacts-title">Контакты</p>
-          <p class="site-footer__info-title">Адрес:</p>
-          <p class="site-footer__info-text">г. Калининград ул. Иванникова, д. 12</p>
-          <p class="site-footer__info-title">Телефон:</p><a class="site-footer__info-text" href="tel: <?php the_field("phone_link", 5); ?>"><?php the_field("phone",5) ;?></a>
-          <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto:<?php the_field("mail_link", 5); ?>"><?php the_field("mail",5) ;?></a>
+          <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto:<?php the_field("mail", 5) ?>"><?php the_field("mail", 5) ;?></a>
         </div>
-        <div class="site-footer__worktime">
+        <!-- <div class="site-footer__worktime">
           <p class="site-footer__contacts-title">Время работы</p>
           <p class="site-footer__info-title">Ежедневно:</p>
           <p class="site-footer__info-text"><?php the_field("work_time", 5); ?></p>
           <p class="site-footer__info-title">Воскресенье:</p>
           <p class="site-footer__info-text site-footer__info-text--bold">- выходной</p>
-        </div>
+        </div> -->
         <p class="site-footer__copyright">copyright &copy; 2018<br><b>hairroom</b></p>
       </div>
     </footer>

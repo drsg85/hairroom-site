@@ -4,6 +4,7 @@
     height: 85px;
     width: 86px;
     padding: 8px;
+    margin-left: -8px;
     padding-left: 0;
     padding-right: 0;
     border-bottom-left-radius: 5px;
@@ -54,6 +55,7 @@
 
     @include atDesktop {
         // box model
+        margin-left: -20px;
         height: 180px;
         width: 180px;
     }

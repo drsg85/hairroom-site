@@ -64,6 +64,7 @@
 
     &__info-text {
         // box model
+        display: inline-block;
         margin: 0;
         margin-bottom: 30px;
 
@@ -72,12 +73,7 @@
         font-family: $textFont;
         font-weight: 400;
         font-size: 1.25rem;
-
-        // sub {
-        //     // typography
-        //     color: $notationColor;
-        //     font-size: 0.75rem;
-        // }
+        text-decoration: none;
 
         span {
             // positioning

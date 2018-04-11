@@ -94,9 +94,6 @@ html(lang="ru")
 
                 .about__content
                     .tabs
-                        //- ul.tabs__list(id="tabs" role="tablist")
-                        //-     //- li.tabs__list-item.tabs__list-item--current(data-tab="tab-1"): a.tabs__link Миссия
-
                         .tabs__content.tabs__content--current#tab-1
                             p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
                             p.tabs__copy Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.
@@ -425,7 +422,6 @@ html(lang="ru")
         section.masters
             a#masters.nav-link
             header.masters__header
-                //- p.services__suptitle Наши
                 h2.masters__title-section Наши Мастера
             
             .card__container.card__container--masters
@@ -472,19 +468,6 @@ html(lang="ru")
                             p.card__description мастер по наращивания волос
                             .card__buttons
                                 a.button.button--pink.button--card.ms_booking(href="#") Записаться
-                
-                //- article.card
-                //-     header.card__title Наращивание<br>волос
-                //-     .services__wrapper
-                //-         .card__ribbons
-                //-             p.card__ribbon Trend
-                //-         img.card__img(src="./img/card-women1.jpg")
-                //-         .card__content
-                //-             // changes class
-                //-             p.title__description.title__description--left Hair Room Услуги
-                //-             p.card__description бесцветный розовый с нейтрализацией желтизны
-                //-             .card__buttons
-                //-                 a.button.button--pink.button--card.ms_booking(href="#") Записаться
         
         section.gallery
             a#gallery.nav-link
@@ -508,7 +491,7 @@ html(lang="ru")
                 p.title__description.title__description--right.title__description--map Hairroom Kaliningrad
 
                 p.map-label__info-title E-mail
-                p.map-label__info-text hairroom@gmail.com
+                a.map-label__info-text(href="mailto: info@hairrooms.ru") info@hairrooms.ru
 
                 p.map-label__info-title Телефон
                 p.map-label__info-text +7 4012 52-37-76
