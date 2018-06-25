@@ -69,7 +69,7 @@ $work_time = get_field("work_time");
     </nav>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/map.js<?php echo '?v=' . rand(); ?>"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts.js<?php echo '?v=' . rand(); ?>"></script>
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/instagram.js<?php echo '?v=' . rand(); ?>"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/instagram1.js<?php echo '?v=' . rand(); ?>"></script>
     <script src="https://w96839.yclients.com/widgetJS"></script>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&amp;callback=initMap"></script>
     <?php wp_footer(); ?>

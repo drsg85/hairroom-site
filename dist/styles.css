@@ -101,9 +101,9 @@ ul {
 @media (min-width: 1200px) {
   .site-header {
     position: relative;
+    z-index: 0;
     background-image: url("./img/pattern-lg.jpg");
-    background-color: #ffffff;
-    z-index: 0; }
+    background-color: #ffffff; }
     .site-header::after {
       content: url("./img/hero_hr-lg.png");
       position: absolute;
@@ -182,9 +182,9 @@ ul {
         font-family: "Open Sans", sans-serif;
         font-weight: 600; } }
   .be-friends span {
-    font-size: 1.125rem;
     display: block;
     padding-top: 5px;
+    font-size: 1.125rem;
     letter-spacing: 6px; }
 
 .hero {
@@ -477,7 +477,7 @@ ul {
     .info__phone span {
       -webkit-transform: translateY(-0.5rem);
               transform: translateY(-0.5rem);
-      display: inline-block;
+      display: inline;
       vertical-align: middle;
       margin: 0 2px;
       color: #ee7aad; }
@@ -1436,8 +1436,7 @@ ul {
       .button--ghost {
         padding: 8px 0;
         color: #fff; } }
-    d
-.button--ghost:hover {
+    .button--ghost:hover {
       background-color: #ee7aad;
       -webkit-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
@@ -2094,7 +2093,7 @@ ul {
 
 @media (min-width: 1200px) {
   .instafeed img:last-child {
-    display: block; } }
+    display: none; } }
 
 .map {
   position: relative;

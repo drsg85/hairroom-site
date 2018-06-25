@@ -28,7 +28,6 @@
     }
 
     &__container {
-        // box model
         
         @include atTabletsPortrait {
             // box model
@@ -44,6 +43,7 @@
         }
 
         @include atTabletsLandscape {
+            // box model
             flex-wrap: wrap;
         }
     }
@@ -200,7 +200,6 @@
             padding-bottom: 20px;
 
             // typography
-            
             &:first-child, &:last-child {
                 // box model
                 padding-bottom: 0px;

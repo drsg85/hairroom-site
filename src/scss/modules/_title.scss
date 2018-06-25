@@ -5,12 +5,6 @@
 
     &__sup {
 
-        // @include atTabletsPortrait {
-        //     // typography
-        //     font-weight: normal;
-        //     letter-spacing: 5px;
-        // }
-
         &--mrtop {
             // box model
             padding-top: 100px;
@@ -18,16 +12,6 @@
 
             // typography
             color: $titleColor;
-
-            // @include atTabletsPortrait {
-            //     // box model
-            //     padding-top: 25px;
-            // }
-            
-            // @include atDesktop {
-            //     // box model
-            //     padding-top: 0;
-            // }
         }
 
         &--gallery {
@@ -46,11 +30,6 @@
         display: none;
         margin: 0;
         padding: 0;
-
-        // @include atDesktop {
-        //     // box model
-        //     display: block;
-        // }
         
         &--franshize {
             // positioning
@@ -118,8 +97,6 @@
             text-transform: uppercase;
             letter-spacing: 2px;
 
-            // typography
-
             @include atTabletsPortrait {
                 // positioning
                 top: 205px;
@@ -162,11 +139,5 @@
         letter-spacing: 1px;
         font-size: 3.33rem;
         font-weight: 700;
-
-
-        // @include atTabletsPortrait {
-        //     // typography
-        //     font-size: 4rem;
-        // }
     }
 }

@@ -50,7 +50,6 @@
     }
 
     &__list-item {
-        // box model
 
         @include atTabletsPortrait {
             // box model
@@ -135,14 +134,6 @@
         font-family: $textFont;
         font-weight: 400;
         line-height: 1.75;
-
-        // @include atTabletsPortrait {
-        //     max-width: 410px;
-        // }
-
-        // @include atDesktop {
-        //     max-width: 470px;
-        // }
     }
 
     &__current {

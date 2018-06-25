@@ -14,17 +14,6 @@
 
         @include atTabletsPortrait {
             // box model
-            // padding-top: 180px;
-
-            // visual
-            // background-image: url("./img/pattern.jpg");
-            // background-size: cover;
-            // background-position: 100% 30%;
-            // background-repeat: no-repeat;
-        }
-
-        @include atTabletsPortrait {
-            // box model
             padding: 55px 50px;
         }
 
@@ -35,7 +24,6 @@
 
             // visual
             background-size: cover;
-            // background-image: url("./img/pattern_gallery.png");
             background-position: 0 0;
 
         }
@@ -88,12 +76,6 @@
             font-size: 2.66rem;
             font-family: $mainFont;
         }
-
-        // @include atDesktop {
-        //     // box model
-        //     font-size: 3rem;
-        //     padding-bottom: 70px;
-        // }
     }
 
     &__subscribe {
@@ -119,12 +101,9 @@
             height: 320px;
             padding: 30px;
             
-            // display: none;
-
             // visual
             background-image: url("./img/gallery_subscribe_bg.jpg");
             background-size: cover;
-            // box-shadow: 0px 19px 35px -7px rgba($black,0.7);
         }
 
         @include atDesktop {
@@ -135,7 +114,6 @@
             width: 20%;
             height: 380px;
         }
-
         
     }
 
@@ -244,53 +222,47 @@
         @include atTabletsPortrait {
                 // box model
                 display: block;
-
-                // visual
-                // background-color: #000000;
-                // background-image: url("./img/gallery_subscribe_bg.jpg");
-                // background-position: -20px 0;
-                // background-size: cover;
             }
         }
     }
 
-        img {
-            // positioning
-            position: relative;
+    img {
+        // positioning
+        position: relative;
 
+        // box model
+        display: block;
+        width: 100%;
+        max-height: 487px;
+        object-fit: cover;
+        
+        @include atTabletsPortrait {
             // box model
-            display: block;
-            width: 100%;
-            max-height: 487px;
-            object-fit: cover;
-            
-            @include atTabletsPortrait {
-                // box model
-                width: 33.33%;
-                max-height: 320px;
+            width: 33.33%;
+            max-height: 320px;
 
-                &::after {
-                        content: "";
-                        position: absolute;
-                        z-index: -1;
-                        top: 300px;
-                        left: 0;
-                        width: 100%;
-                        // height: 150px;
-                        height: calc(100% - 150px);
-                        transition: all 0.3s ease-in-out;
-                        background-position: 50px 150px;
-                        background: linear-gradient(to bottom, rgba(219, 102, 154, 0) 0px, rgba(219, 102, 154 , 0.8) 150px, rgba(198, 22, 141, 0.8) 100%);
-                }
-            }
-            
-            @include atDesktop {
-                // box model
-                width: 20%;
-                max-height: 380px;
+            &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: 300px;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100% - 150px);
+                    transition: all 0.3s ease-in-out;
+                    background-position: 50px 150px;
+                    background: linear-gradient(to bottom, rgba(219, 102, 154, 0) 0px, rgba(219, 102, 154 , 0.8) 150px, rgba(198, 22, 141, 0.8) 100%);
             }
         }
+        
+        @include atDesktop {
+            // box model
+            width: 20%;
+            max-height: 380px;
+        }
+    }
 }
+
 .gallery img:hover::after {
         // positioning
         top: -300px;
@@ -301,6 +273,7 @@
         // visual
         background-position: 100px;
 }
+
 .instafeed img:last-child {
     @include atTabletsPortrait {
         // box model
@@ -309,7 +282,7 @@
 
     @include atDesktop {
         // box model
-        display: block;
+        display: none;
     }
 }
 

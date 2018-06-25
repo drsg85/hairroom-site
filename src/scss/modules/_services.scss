@@ -116,6 +116,7 @@
 
         &::after {
             content: "";
+            // positioning
             position: absolute;
             z-index: -1;
             top: 150px;

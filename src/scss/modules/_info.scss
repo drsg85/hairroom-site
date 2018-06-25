@@ -24,11 +24,6 @@
         padding-left: 0;
     }
 
-    // @include atTabletsLandscapeIpad {
-    //     // box model
-    //     padding-top: 40px;
-    // }
-
     &__address {
         // box model
         margin: 0;
@@ -85,7 +80,7 @@
             transform: translateY(-0.5rem);
 
             // box model
-            display: inline-block;
+            display: inline;
             vertical-align: middle;
             margin: 0 2px;
 

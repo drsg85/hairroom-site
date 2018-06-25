@@ -103,9 +103,12 @@
     }
 
     span {
-        font-size: 1.125rem;
+        // box model
         display: block;
         padding-top: 5px;
+
+        // typography
+        font-size: 1.125rem;
         letter-spacing: 6px;
     }
 }

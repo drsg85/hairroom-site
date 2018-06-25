@@ -58,7 +58,6 @@
 
     &__header {
         // box model
-        
         padding: 30px 30px;
 
         @include atTabletsPortrait {
@@ -152,20 +151,13 @@
             text-align: left;
 
             // visual
-            // background-color:$white;
             transition: all 0.3s ease-in-out;
         }
         
         @include atTabletsPortrait {
             // box model
-                // display: inline-block;
             display: flex;
             justify-content: space-between;
-        }
-
-        @include atDesktop {
-            // box model
-            // flex-direction: column;
         }
 
         @include atDesktopLarge {
@@ -214,12 +206,13 @@
             margin-top: 5px;
             right: 25px;
 
-            // // box model
+            // box model
             width: 50px;
             height: 50px;
 
             &::before {
                 content: "";
+                // positioning
                 position: absolute;
                 left: -14px;
                 top: 30px;
@@ -233,6 +226,7 @@
 
             &::after {
                 content: "";
+                // positioning
                 position: absolute;
                 top: 13px;
                 left: -14px;

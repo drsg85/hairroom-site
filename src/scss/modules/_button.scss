@@ -19,86 +19,6 @@
     // visual
     border-radius: 35px;
     cursor: pointer;
-    
-    // &__wrapper {
-    //     // positioning
-    //     position: relative;
-
-    //     // box model
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     padding-bottom: 80px;
-
-    //     @include atTabletsPortrait {
-    //         // box model
-    //         flex-direction: row;
-    //     }
-
-    //     &--centerX {
-    //         // positioning
-    //         position: absolute;
-    //         top: 70%;
-    //         left: 45%;
-
-    //         // box model
-    //         flex-direction: column;
-
-    //         @include atDesktop {
-    //             // box model
-    //             left: 50%;
-    //         }
-    //     }
-    //     &__wrapper {
-    //     // positioning
-    //     position: relative;
-
-    //     // box model
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     padding-bottom: 80px;
-
-    //     @include atTabletsPortrait {
-    //         // box model
-    //         flex-direction: row;
-    //     }
-
-    //     &--centerX {
-    //         // positioning
-    //         position: absolute;
-    //         top: 70%;
-    //         left: 45%;
-
-    //         // box model
-    //         flex-direction: column;
-
-    //         @include atDesktop {
-    //             // box model
-    //             left: 50%;
-    //         }
-    //     }
-
-
-    //     &--inline {
-
-    //         @include atTabletsPortrait {
-    //             // box model
-    //             padding-left: 75px;
-    //             justify-content: flex-start;
-    //         }
-
-    //         @include atDesktop {
-    //             // positioning
-    //             z-index: 3;
-
-    //             // box model
-    //             flex-direction: row;
-    //         }
-    //     }
-    // }
 
     &--online-record {
         // box model
@@ -166,8 +86,6 @@
             // typography
             color: #fff;
         }
-d
-
 
         &:hover {
             // visual
@@ -218,12 +136,9 @@ d
         // typography
         font-size: 0.75rem;
 
-        // visual
-        
         @include atTabletsPortrait {
             // box model
             width: auto;
-
 
             // typography
             font-weight: 800;

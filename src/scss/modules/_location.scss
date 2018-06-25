@@ -3,7 +3,6 @@
     position: relative;
     
     @include atTabletsPortrait {
-        // background-image: url("./img/pattern.jpg");
 
         &::before {
             content: "";

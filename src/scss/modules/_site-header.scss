@@ -1,5 +1,4 @@
 .site-header {
-    // visual
     
     &--franshize {
         // box model
@@ -9,6 +8,7 @@
             // box model
             padding-top: 50px;
 
+            // visual
             background-color: #f7dfef !important
         }
         
@@ -25,7 +25,6 @@
         // visual
         background: linear-gradient(to bottom, #f7dfef 50%, #e5a0cf);
         background-image: none !important;
-
     }
 
     @include atTabletsPortrait {
@@ -38,15 +37,16 @@
     @include atDesktop {
         // positioning
         position: relative;
+        z-index: 0;
 
         // visual
         background-image: url("./img/pattern-lg.jpg");
         background-color: $white;
-        z-index: 0;
 
 
         &::after {
             content: url("./img/hero_hr-lg.png");
+            // positioning
             position: absolute;
             bottom: -160px;
             right: 0;
