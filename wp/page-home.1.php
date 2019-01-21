@@ -201,24 +201,42 @@ $social_vk = get_field("social_vk");
         ?>
       </div>
     </section>
-
-
-    <!-- Price List -->
     <section class="price"><a class="nav-link" id="price"></a>
       <div class="price__board">
         <header class="price__header">
           <p class="price__suptitle">Цены на услуги</p>
           <h2 class="price__section-title">Прайс -&nbsp;лист</h2>
         </header>
-
         <div class="price__content">
           <div class="price__group price__group--big">
             <h3 class="price__group-title">Уход<br>за волосами</h3>
             <div class="price__container">
               <div class="price-inner__column">
+              <?php 
+                    $args = array(
+                      'category_name'=> 'keratin_rectification'
+                    );
+
+                    query_posts($args);
+
+                    
+                    if(have_posts()) {
+                      while(have_posts()) {
+                        the_post();
+                        
+                        // vars
+                        $price_name = get_field("price_name");
+                        $price_description = get_field("price_description");
+              ?>
+
                 <table class="price__table">
-                  <caption class="price__caption">Кератиновое выпрямление / восстановление</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
+                    <!-- <td>Короткие</td>
+                    <td><b>2000 - 2500</b> <span>руб.</span></td>
+                  </tr>
+                  <tr> -->
                     <td>До плеч</td>
                     <td><b>3200 - 3700</b> <span>руб.</span></td>
                   </tr>
@@ -231,11 +249,71 @@ $social_vk = get_field("social_vk");
                     <td><b>4200 - 5500</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php
+                      }
+                    }
+                ?>
               </div>
-
               <div class="price-inner__column">
+              <?php 
+                $args = array(
+                  'category_name'=> 'tinting'
+                );
+                query_posts($args);
+
+                if(have_posts()) {
+                  while(have_posts()) {
+                    the_post();
+                    
+                    // vars
+                    $price_name = get_field("price_name");
+                    $price_description = get_field("price_description");
+                  
+              ?>
                 <table class="price__table">
-                  <caption class="price__caption">Ботокс / Биксипластия</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
+                  <tr>
+                    <td>короткие</td>
+                    <td><b>1500</b> <span>руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td>Средние</td>
+                    <td><b>2000</b> <span>руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td>Длинные</td>
+                    <td><b>3000</b> <span>руб.</span></td>
+                  </tr>
+                </table>
+                <?php
+                  }
+                }
+                ?>
+              </div>
+              <div class="price-inner__column">
+              <?php
+                $args = array(
+                  'category_name'=> 'botox'
+                );
+                query_posts($args);
+
+                if(have_posts()) {
+                  while(have_posts()) {
+                    the_post();
+                    
+                    // vars
+                    $price_name = get_field("price_name");
+                    $price_description = get_field("price_description");
+
+              ?>
+                <table class="price__table">
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
+                  <!-- <tr>
+                    <td>Короткие</td>
+                    <td><b>2000</b> <span>руб.</span></td>
+                  </tr> -->
                   <tr>
                     <td>До плеч</td>
                     <td><b>3000 - 3500</b> <span>руб.</span></td>
@@ -249,44 +327,101 @@ $social_vk = get_field("social_vk");
                     <td><b>4500 - 5500</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php
+                  }
+                }
+                ?>
               </div>
-
               <div class="price-inner__column">
+              <?php 
+                $args = array(
+                  'category_name'=> 'express_care'
+                );
+
+                query_posts($args);
+
+                if(have_posts()) {
+                  while(have_posts()) {
+                    the_post();
+                    
+                    // vars
+                    $price_name = get_field("price_name");
+                    $price_description = get_field("price_description");
+              ?>
                 <table class="price__table">
-                  <caption class="price__caption">Разное</caption>
-                  <caption class="price__column-description">Учитываем все ваши пожелания</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
-                    <td>Укладка</td>
-                    <td><b>800 - 2000</b> <span>руб.</span></td>
+                    <td>Короткие</td>
+                    <td><b>2000</b> <span>руб.</span></td>
                   </tr>
                   <tr>
-                    <td>Тонирование</td>
-                    <td><b>1100</b> <span>руб.</span></td>
+                    <td>Средние</td>
+                    <td><b>2000</b> <span>руб.</span></td>
                   </tr>
                   <tr>
-                    <td>Окрашивание волос в тон</td>
-                    <td><b>1600</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Мелирование волос</td>
-                    <td><b>1800</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Окрашивание корней</td>
-                    <td><b>1200</b> <span>руб.</span></td>
+                    <td>Длинные</td>
+                    <td><b>3000</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php 
+                  }
+                }
+                ?>
+              </div>
+              <div class="price-inner__column">
+              <?php 
+              $args = array(
+                'category_name'=> 'stowage'
+              );
+                
+              query_posts($args);
+
+                if(have_posts()) {
+                  while(have_posts()) {
+                    the_post();
+                    
+                    // vars
+                    $price_name = get_field("price_name");
+                    $price_description = get_field("price_description");
+              ?>
+                <table class="price__table">
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
+                  <tr>
+                    <td>Любой длины</td>
+                    <td><b>800 - 2000</b> <span>руб.</span></td>
+                  </tr>
+                </table>
+                <?php 
+                  }
+                }
+                ?>
               </div>
             </div>
           </div>
-
 
           <div class="price__group">
             <h3 class="price__group-title">наращивание волос</h3>
             <div class="price__container">
               <div class="price-inner__column price-inner__column--right">
+                <?php
+                  $args = array(
+                    'category_name'=> 'hair_extension-hair_extension'
+                  );
+                  
+                  query_posts($args);
+
+                  if(have_posts()) {
+                    while(have_posts()) {
+                      the_post();
+                      // vars
+                      $price_name = get_field("price_name");
+                      $price_description = get_field("price_description");
+                ?>
                 <table class="price__table">
-                  <caption class="price__caption">Наращивание волос</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
                     <td>до 150 капсул</td>
                     <td><b>4000</b> <span>руб.</span></td>
@@ -296,26 +431,61 @@ $social_vk = get_field("social_vk");
                     <td><b>4500</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php
+                    }
+                  }
+                ?>
               </div>
-
               <div class="price-inner__column price-inner__column--right">
+              <?php
+                $args = array(
+                  'category_name'=> 'correction'
+                );
+                
+                query_posts($args);
+                if(have_posts()) {
+                  while(have_posts()) {
+                    the_post();
+                    // vars
+                    $price_name = get_field("price_name");
+                    $price_description = get_field("price_description");
+              ?>
                 <table class="price__table">
-                  <caption class="price__caption">Коррекция</caption>
+                  <caption class="price__caption"><?php echo $price_name;?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
                     <td>до 150 капсул</td>
-                    <td><b>5000</b> <span>руб.</span></td>
+                    <td><b>5000 - 5000</b> <span>руб.</span></td>
                   </tr>
                   <tr>
                     <td>до 200 капсул</td>
-                    <td><b>5500</b> <span>руб.</span></td>
+                    <td><b>5500 - 5500</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php 
+                  }
+                }
+                ?>
               </div>
-
               <div class="price-inner__column price-inner__column--right">
+              <?php 
+                $args = array(
+                  'category_name'=> 'hair_removal'
+                );
+
+                query_posts($args);
+
+                if(have_posts()) {
+                  while(have_posts()) {
+                    the_post();
+                    // vars
+                    $price_name = get_field("price_name");
+                    $price_description = get_field("price_description");
+                
+              ?>
                 <table class="price__table">
-                  <caption class="price__caption">Снятие волос</caption>
-                  <caption class="price__column-description">Без последующего наращивания</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
                     <td>до 150 капсул</td>
                     <td><b>1000 - 2000</b> <span>руб.</span></td>
@@ -325,83 +495,190 @@ $social_vk = get_field("social_vk");
                     <td><b>1500 - 3000</b> <span>руб.</span></td>
                   </tr>
                 </table>
-              </div>
-
-              <div class="price-inner__column price-inner__column--right">
-                <table class="price__table">
-                  <caption class="price__caption">Консультация</caption>
-                  <tr>
-                    <td><b>бесплатно</b> <span></span></td>
-                  </tr>
-                  <tr>
-                </table>
+                <?php
+                  }
+                }
+                ?>
               </div>
             </div>
           </div>
-
 
           <div class="price__group price__group--big">
             <h3 class="price__group-title">Услуги маникюра</h3>
             <div class="price__container">
               <div class="price-inner__column">
+                <?php
+                  $args = array(
+                    'category_name'=> 'manicure_combined'
+                  );
+  
+                  query_posts($args);
+  
+                  if(have_posts()) {
+                    while(have_posts()) {
+                      the_post();
+                      // vars
+                      $price_name = get_field("price_name");
+                      $price_description = get_field("price_description");
+                
+                ?>
                 <table class="price__table">
-                  <caption class="price__caption">Маникюр</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
-                    <td> С однотонным покрытием</td>
-                    <td><b>1000</b>&nbsp;<span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>С покрытием + Дизайн</td>
-                    <td><b>1100</b>&nbsp;<span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>С укреплением гелем + Дизайн</td>
-                    <td><b>1300</b>&nbsp;<span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Комбинированный без последующего покрытия</td>
+                    <td>Без последующего покрытия</td>
                     <td><b>400</b>&nbsp;<span>руб.</span></td>
                   </tr>
+                </table>
+                <?php
+                    }
+                  }
+                ?>
+              </div>
+              <div class="price-inner__column">
+              <?php
+                $args = array(
+                  'category_name'=> 'gel-varnish_coating'
+                );
+                query_posts($args);
+
+                if(have_posts()) {
+                  while(have_posts()) {
+                    the_post();
+
+                      // vars
+                      $price_name = get_field("price_name");
+                      $price_description = get_field("price_description");
+              ?>
+                <table class="price__table">
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
-                    <td>Снятие чужого покрытия</td>
-                    <td><b>200</b>&nbsp;<span>руб.</span></td>
+                    <td>Без последующего покрытия</td>
+                    <td><b>1000</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php
+                  }
+                }
+                ?>
               </div>
-
               <div class="price-inner__column">
+              <?php 
+                $args = array(
+                  'category_name'=> 'express_manicure_coverage'
+                );
+                  query_posts($args);
+                  
+                  if(have_posts()) {
+                    while(have_posts()) {
+                      the_post();
+  
+                        // vars
+                        $price_name = get_field("price_name");
+                        $price_description = get_field("price_description");
+              ?>
                 <table class="price__table">
-                  <caption class="price__caption">Ногти</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
                   <tr>
-                    <td>Ремонт ногтя - Донаращивание</td>
+                    <td>Однотонное покрытие</td>
+                    <td><b>800</b><span>руб.</span></td>
+                  </tr>
+                </table>
+                <?php 
+                    }
+                  }
+                ?>
+              </div>
+              <div class="price-inner__column price-inner__column--pd">
+              <?php 
+                $args = array(
+                  'category_name'=> 'nail_design'
+                );
+                  query_posts($args);
+                    
+                  if(have_posts()) {
+                    while(have_posts()) {
+                      the_post();
+
+                      // vars
+                      $price_name = get_field("price_name");
+                      $price_description = get_field("price_description");
+                
+              ?>
+                <table class="price__table">
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
+                  <tr>
+                    <td>Cтоимость работ</td>
+                    <td><b>50 - 1000</b> <span>руб.</span></td>
+                  </tr>
+                </table>
+                <?php 
+                    }
+                  }
+                ?>
+              </div>
+              <div class="price-inner__column price-inner__column--right">
+              <?php 
+               $args = array(
+                'category_name'=> 'additional_services'
+              );
+                query_posts($args);
+                  
+                if(have_posts()) {
+                  while(have_posts()) {
+                    the_post();
+
+                    // vars
+                    $price_name = get_field("price_name");
+                    $price_description = get_field("price_description");
+              
+              ?>
+                <table class="price__table">
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <tr>
+                    <td>Снятие покрытия</td>
                     <td><b>100</b> <span>руб.</span></td>
                   </tr>
                   <tr>
-                    <td>Дизайн ногтей</td>
-                    <td><b>50 - 1000</b> <span>руб.</span></td>
+                    <td>Ремонт ногтя</td>
+                    <td><b>100</b> <span>руб.</span></td>
                   </tr>
                   <tr>
-                    <td>Наращивание ногтей</td>
-                    <td><b>1700</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Коррекция ногтей</td>
-                    <td><b>1500</b> <span>руб.</span></td>
+                    <td>Укрепление акрилом</td>
+                    <td><b>100</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php 
+                  }
+                }
+                ?>
               </div>
             </div>
           </div>
-
 
           <div class="price__group price__group--big">
             <h3 class="price__group-title">наращивание ресниц</h3>
             <div class="price__container">
               <div class="price-inner__column">
+                <?php
+                  $args = array(
+                    'category_name'=> 'eyelash_extension-eyelash_extension'
+                  );
+                  query_posts($args);
+                  
+                  if(have_posts()) {
+                    while(have_posts()) {
+                      the_post();
+
+                      // vars
+                      $price_name = get_field("price_name");
+                      $price_description = get_field("price_description");
+                ?>
                 <table class="price__table">
-                  <caption class="price__caption">Наращивание ресниц</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
-                    <td>Неполный объем</td>
+                    <td>Неполные объем</td>
                     <td><b>1000</b> <span>руб.</span></td>
                   </tr>
                   <tr>
@@ -412,84 +689,175 @@ $social_vk = get_field("social_vk");
                     <td>Полуторный объем</td>
                     <td><b>1400</b> <span>руб.</span></td>
                   </tr>
-                  <tr>
-                    <td>Снятие ресниц (после другого мастера)</td>
-                    <td><b>200 - 300</b> <span>руб.</span></td>
-                  </tr>
                 </table>
+                <?php 
+                    }
+                  }
+                ?>
               </div>
               <div class="price-inner__column">
+                  <?php 
+                    $args = array(
+                      'category_name'=> 'amount'
+                    );
+                    query_posts($args);
+                    
+                    if(have_posts()) {
+                      while(have_posts()) {
+                        the_post();
+  
+                        // vars
+                        $price_name = get_field("price_name");
+                        $price_description = get_field("price_description");
+                  ?>
                 <table class="price__table">
-                  <caption class="price__caption">2D - 3D</caption>
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
                     <td>2D объем</td>
-                    <td><b>1600</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>2.5D объем</td>
-                    <td><b>1800</b> <span>руб.</span></td>
+                    <td><b>1000</b> <span>руб.</span></td>
                   </tr>
                   <tr>
                     <td>3D объем</td>
-                    <td><b>2000</b> <span>руб.</span></td>
+                    <td><b>1500</b> <span>руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td>5D объем</td>
+                    <td><b>1800</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php 
+                      }
+                    }
+                ?>
               </div>
             </div>
           </div>
-
 
           <div class="price__group">
             <h3 class="price__group-title">Дополнительные услуги</h3>
             <div class="price__container">
               <div class="price-inner__column price-inner__column--right">
+                <?php 
+                  $args = array(
+                    'category_name'=> 'staining_eyebrow_correction'
+                  );
+                  query_posts($args);
+                  
+                  if(have_posts()) {
+                    while(have_posts()) {
+                      the_post();
+
+                      // vars
+                      $price_name = get_field("price_name");
+                      $price_description = get_field("price_description");
+                
+                ?>
                 <table class="price__table">
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
-                    <td>Окрашивание + Коррекция бровей</td>
+                    <td>Обычное</td>
                     <td><b>500</b> <span>руб.</span></td>
                   </tr>
                   <tr>
-                    <td>Окрашивание + Коррекция бровей (Хна)</td>
+                    <td>Хной</td>
                     <td><b>700</b> <span>руб.</span></td>
                   </tr>
-                  <tr>
-                    <td>MakeUp (дневной)</td>
-                    <td><b>800 - 1000</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>MakeUp (вечерний)</td>
-                    <td><b>1500 - 2000</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Окрашивание ресниц</td>
-                    <td><b>400</b> <span>руб.</span></td>
-                  </tr>
                 </table>
+                <?php
+                    }
+                  }
+                ?>
               </div>
               <div class="price-inner__column price-inner__column--right">
+                <?php
+                  $args = array(
+                    'category_name'=> 'makeup'
+                  );
+                  query_posts($args);
+                  
+                  if(have_posts()) {
+                    while(have_posts()) {
+                      the_post();
+
+                      // vars
+                      $price_name = get_field("price_name");
+                      $price_description = get_field("price_description");
+                ?>
                 <table class="price__table">
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
                   <tr>
-                    <td>Стрижка</td>
-                    <td><b>1600</b> <span>руб.</span></td>
+                    <td>Дневной</td>
+                    <td><b>800 - 1000 </b> <span>руб.</span></td>
                   </tr>
                   <tr>
-                    <td>Биофиксация (долговременная укладка)</td>
-                    <td><b>1500</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Подстрижка кончиков волос</td>
-                    <td><b>500</b> <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td>Удаление волос воском</td>
-                    <td><b>200</b> <span>руб.</span></td>
+                    <td>Вечерний</td>
+                    <td><b>1500 - 2000</b> <span>руб.</span></td>
                   </tr>
                 </table>
+                <?php
+                  }
+                }
+                ?>
               </div>
+              <div class="price-inner__column price-inner__column--right">
+                <?php 
+                   $args = array(
+                    'category_name'=> 'wax_removal'
+                  );
+                  query_posts($args);
+                  
+                  if(have_posts()) {
+                    while(have_posts()) {
+                      the_post();
+
+                      // vars
+                      $price_name = get_field("price_name");
+                      $price_description = get_field("price_description");
+                
+                ?>
+                <table class="price__table">
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <caption class="price__column-description"><?php echo $price_description; ?></caption>
+                  <tr>
+                    <td>Одна зона</td>
+                    <td><b>150 - 200</b> <span>руб.</span></td>
+                  </tr>
+                </table>
+                <?php 
+                    }
+                  }
+                ?>
+              </div>
+              <div class="price-inner__column price-inner__column--right">
+                <?php 
+                    $args = array(
+                      'category_name'=> 'haircut'
+                    );
+                    query_posts($args);
+                    
+                    if(have_posts()) {
+                      while(have_posts()) {
+                        the_post();
+
+                        // vars
+                        $price_name = get_field("price_name");
+                        $price_description = get_field("price_description");
+                  ?>
+                <table class="price__table">
+                  <caption class="price__caption"><?php echo $price_name; ?></caption>
+                  <tr>
+                    <td>Женская</td>
+                    <td><b>300 - 1200</b> <span>руб.</span></td>
+                  </tr>
+                </table>
+                <?php
+                    }
+                  }
+                ?>
               </div>
             </div>
           </div>
-<!-- до сюда -->
+          
         </div>
       </div>
     </section>
