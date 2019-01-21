@@ -1,6 +1,6 @@
 /*
     Theme Name: HairRoom
-    Description: Special theme for HairRoom.ru
+    Description: Special theme for HairRooms.ru
     Author: Daniil Vereschagin
 */
 /* cyrillic-ext */
@@ -140,9 +140,6 @@ ul {
     top: 12px !important;
     right: -235px !important;
     display: none; }
-    @media (min-width: 1200px) {
-      .be-friends--franshize {
-        display: block; } }
   .be-friends a {
     text-decoration: none; }
   @media (min-width: 1200px) {
@@ -156,7 +153,7 @@ ul {
       display: none; } }
   @media (min-width: 1800px) {
     .be-friends {
-      display: block; } }
+      display: none; } }
   .be-friends__text {
     margin: 0;
     padding: 0;
@@ -1022,9 +1019,6 @@ ul {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; } }
-  @media (min-width: 900px) {
-    .price-inner__column {
-      width: 345px; } }
   @media (min-width: 1200px) {
     .price-inner__column {
       margin-right: 10%; } }
@@ -1073,6 +1067,7 @@ ul {
 .shares {
   position: relative;
   z-index: 1;
+  display: none;
   background: -webkit-gradient(linear, left top, right top, from(#d16bb3), to(#8f6aa5));
   background: linear-gradient(to right, #d16bb3, #8f6aa5); }
   @media (min-width: 900px) {
@@ -2396,25 +2391,6 @@ ul {
 .background {
   background-image: url("./img/footer-bg.jpg");
   background-position: 0 0%; }
-
-.instafeed {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  font-size: 0;
-  text-align: center; }
-  .instafeed__image {
-    display: inline-block;
-    height: 320px;
-    width: 320px;
-    padding: 10px; }
-    .instafeed__image img {
-      height: 100%;
-      width: 100%;
-      -o-object-fit: cover;
-         object-fit: cover; }
 
 .form__img-title {
   position: relative;

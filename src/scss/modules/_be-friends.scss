@@ -22,7 +22,7 @@
 
         @include atDesktop {
             // box model
-            display: block;
+            // display: block;
         }
         
     }
@@ -51,7 +51,7 @@
 
     @include BeFriends {
         // box model
-        display: block;
+        display: none;
     }
 
     &__text {

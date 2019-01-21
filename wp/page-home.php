@@ -66,7 +66,7 @@ $social_vk = get_field("social_vk");
             <li><a href="<?php echo esc_url(home_url("/")); ?>#contacts">Контакты</a></li>
             <div class="main-menu__franchise"><a href="<?php echo esc_url(home_url("/franshize")); ?>">Франшиза</a></div>
           </ul>
-          <div class="be-friends"><a href="http://instagram.com">
+          <div class="be-friends"><a href="https://www.instagram.com/hairroomkaliningrad/">
               <p class="be-friends__text">Давайте дружить</p>
               <p class="be-friends__social"><?php echo $social_network;?></p></a></div>
         </nav>
@@ -87,8 +87,8 @@ $social_vk = get_field("social_vk");
         <p class="title__description title__description--right">Hair Room <?php echo $city; ?></p>
         <ul class="socials">
           <li><a href="<?php echo $social_in; ?>" target="_blank">instagram</a></li>
-          <li><a href="<?php echo $social_fb; ?>" target="_blank">facebook</a></li> 
-          <li><a href="<?php echo $social_vk; ?>" target="_blank">vkontakte</a></li>
+          <!-- <li><a href="<?php echo $social_fb; ?>" target="_blank">facebook</a></li> 
+          <li><a href="<?php echo $social_vk; ?>" target="_blank">vkontakte</a></li> -->
         </ul>
       </section>
     </header>
@@ -105,16 +105,16 @@ $social_vk = get_field("social_vk");
         </header>
         <div class="about__content">
           <div class="tabs">
-            <ul class="tabs__list" id="tabs" role="tablist">
+            <!-- <ul class="tabs__list" id="tabs" role="tablist">
               <li class="tabs__list-item tabs__list-item--current" data-tab="tab-1"><a class="tabs__link">Миссия</a></li>
               <li class="tabs__list-item" data-tab="tab-2"><a class="tabs__link" >Подход</a></li>
               <li class="tabs__list-item" data-tab="tab-3"><a class="tabs__link" >Мастера</a></li>
-            </ul>
+            </ul> -->
             <div class="tabs__content tabs__content--current" id="tab-1">
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
               <p class="tabs__copy">Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.</p>
             </div>
-            <div class="tabs__content" id="tab-2">
+            <!-- <div class="tabs__content" id="tab-2">
               <p class="tabs__copy">Текст вкладки "подход"</p>
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
               <p class="tabs__copy">Позвольте себе успех</p>
@@ -123,7 +123,7 @@ $social_vk = get_field("social_vk");
               <p class="tabs__copy">Текст вкладки "мастера"</p>
               <p class="tabs__copy">Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.</p>
               <p class="tabs__copy">Позвольте себе успех</p>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="about__buttons"><a class="button button--pink ms_booking" href="#">Online Запись</a><a class="button button--ghost" href="#price">Прайс-Лист</a></div>

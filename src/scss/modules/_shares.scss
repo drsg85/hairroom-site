@@ -3,6 +3,9 @@
     position: relative;
     z-index: 1;
 
+    // box model
+    display: none;
+
     // visual
     background: linear-gradient(to right, #d16bb3, #8f6aa5);
     
