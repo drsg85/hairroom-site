@@ -63,7 +63,7 @@ $work_time = get_field("work_time");
         <li><a class="scroll-spy__link" id="about-link" data-label="Салон" href="<?php echo esc_url(home_url("/")); ?>#about">Салон</a></li>
         <li><a class="scroll-spy__link" id="services-link" data-label="Услуги" href="<?php echo esc_url(home_url("/")); ?>#services">Услуги</a></li>
         <li><a class="scroll-spy__link" id="price-link" data-label="Прайс" href="<?php echo esc_url(home_url("/")); ?>#price">Прайс</a></li>
-        <li><a class="scroll-spy__link" id="gallery-link" data-label="Галлерея" href="<?php echo esc_url(home_url("/")); ?>#gallery">Галлерея</a></li>
+        <li><a class="scroll-spy__link" id="gallery-link" data-label="Галерея" href="<?php echo esc_url(home_url("/")); ?>#gallery">Галлерея</a></li>
         <li><a class="scroll-spy__link" id="contacts-link" data-label="Контакты" href="<?php echo esc_url(home_url("/")); ?>#contacts">Контакты</a></li>
       </ul>
     </nav>

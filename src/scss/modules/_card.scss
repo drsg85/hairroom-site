@@ -96,12 +96,14 @@
     
     &__title {
         // box model
+        height: 30px;
         margin: 30px 0;
         margin-top: 0;
         padding-left: 15px;
 
         // typography
         color: $text;
+        font-size: calc(10px + 0.3vw);
         text-transform: uppercase;
         font-weight: 600;
         line-height: 1.25;

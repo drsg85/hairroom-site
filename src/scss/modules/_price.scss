@@ -26,7 +26,9 @@
         padding: 30px 25px;
 
         // visual
-        background-color: #d8a8df;
+        // background-color: #d8a8df;
+        background: linear-gradient(to left, rgba(198, 22, 141, 0.75), rgba(219, 102, 154, 0.9));
+
         
         @include atTabletsPortrait {
             // box model
@@ -40,10 +42,10 @@
 
         @include atDesktop {
             // visual
-            background-image: url("./img/price_bg-lg.jpg");
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
+            // background-image: url("./img/price_bg-lg.jpg");
+            // background-attachment: fixed;
+            // background-repeat: no-repeat;
+            // background-size: cover;
         }
     }
 
@@ -180,11 +182,12 @@
         margin-bottom: 30px;
 
         // typography
-        color: $black;
+        color: pink;
         font-family: $textFont;
+        font-style: italic;
+        font-weight: 500;
         line-height: 1.5;
         text-align: left;
-        font-weight: 500;
     }
 
     td {
@@ -192,7 +195,7 @@
         width: 600px;
 
         // typography
-        color: $black;
+        color: ghostwhite;
         text-transform: uppercase;
         font-family: $textFont;
         line-height: 1.4rem;
@@ -202,7 +205,7 @@
         span {
             // typography
             font-size: 0.75rem;
-            color: $black;
+            color: ghostwhite;
             font-weight: 400;
         }
 

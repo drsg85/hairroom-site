@@ -14,24 +14,28 @@
 
     @include atTabletsPortrait {
         // positioning
-        top: 50px;
+        top: 330px;
+        left: 185px;
 
         // box model
-        width: calc(100% - 300px);
+        // width: calc(100% - 460px);
+        height: 315px;
+        width: 250px;
     }
 
     @include atTabletsLandscape {
         // box model
-        width: calc(100% - 400px);
+        // width: calc(100% - 630px);
+        width: 300px;
     }
 
     @include atDesktop {
         // positioning
         top: 200px;
-        left: 500px;
+        left: 290px;
 
         // box model
-        width: 500px;
+        width: 300px;
     }
 
     // visual

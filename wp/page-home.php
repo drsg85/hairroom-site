@@ -43,6 +43,7 @@ $social_vk = get_field("social_vk");
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?><?php echo '?v=' . rand(); ?>"/>
+    <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?160",t.onload=function(){VK.Retargeting.Init("VK-RTRG-328679-4zR4D"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-328679-4zR4D" style="position:fixed; left:-999px;" alt=""/></noscript>
     <title>HairRoom</title>
     <?php wp_head(); ?>
   </head>
@@ -62,7 +63,7 @@ $social_vk = get_field("social_vk");
             <li><a href="<?php echo esc_url(home_url("/")); ?>#about">Салон</a></li>
             <li><a href="<?php echo esc_url(home_url("/")); ?>#services">Услуги</a></li>
             <li><a href="<?php echo esc_url(home_url("/")); ?>#price">Прайс</a></li>
-            <li><a href="<?php echo esc_url(home_url("/")); ?>#gallery">Галлерея</a></li>
+            <li><a href="<?php echo esc_url(home_url("/")); ?>#gallery">Галерея</a></li>
             <li><a href="<?php echo esc_url(home_url("/")); ?>#contacts">Контакты</a></li>
             <div class="main-menu__franchise"><a href="<?php echo esc_url(home_url("/franshize")); ?>">Франшиза</a></div>
           </ul>
@@ -86,7 +87,9 @@ $social_vk = get_field("social_vk");
         <div class="hero__button"><a class="button button--online-record ms_booking" href="#">online&nbsp;запись</a></div>
         <p class="title__description title__description--right">Hair Room <?php echo $city; ?></p>
         <ul class="socials">
-          <li><a href="<?php echo $social_in; ?>" target="_blank">instagram</a></li>
+          <li class="socials__item"><a class="socials__icon socials__icon--vk" href="https://vk.com/hrkgd"></a></li>
+          <li class="socials__item"><a class="socials__icon socials__icon--inst" href="https://www.instagram.com/hairroomkaliningrad/"></a></li>
+          <!-- <li><a href="<?php echo $social_in; ?>" target="_blank">instagram</a></li> -->
           <!-- <li><a href="<?php echo $social_fb; ?>" target="_blank">facebook</a></li> 
           <li><a href="<?php echo $social_vk; ?>" target="_blank">vkontakte</a></li> -->
         </ul>
@@ -440,7 +443,7 @@ $social_vk = get_field("social_vk");
 
 
           <div class="price__group">
-            <h3 class="price__group-title">Дополнительные услуги</h3>
+            <h3 class="price__group-title">Дополнительные&nbsp;услуги</h3>
             <div class="price__container">
               <div class="price-inner__column price-inner__column--right">
                 <table class="price__table">
@@ -536,7 +539,7 @@ $social_vk = get_field("social_vk");
         <p class="gallery__slogan">Давайте дружить</p>
         <div class="gallery__content">
           <div class="gallery__logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/insta_logo.png" alt="instagram logo"/></div>
-          <p class="gallery__text">Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe" href="https://www.instagram.com/hairroomkaliningrad/">Подписаться</a>
+          <p class="gallery__text">Для подписчиков нашей группы в Instagram мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.</p><a class="button button--subscribe" href="https://www.instagram.com/hairroomkaliningrad/">Подписаться</a>
         </div>
       </div>
       <div class="instafeed" id="instafeed"></div>

@@ -115,10 +115,10 @@
         box-shadow: 0px 70px 30px -50px rgba(125,30,86,0.4);
     }
 
-    @include atTabletsLandscapeIpad {
-        // box model
-        padding: 20px 55px;
-    }
+    // @include atTabletsLandscapeIpad {
+    //     // box model
+    //     padding: 20px 55px;
+    // }
     
     @include atDesktop {
         // box model
