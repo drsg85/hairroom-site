@@ -31,6 +31,22 @@ $social_vk = get_field("social_vk");
 <html lang="ru">
   <head>
     <meta charset="utf-8"/>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(54253849, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/54253849" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+    <!— Google Tag Manager —><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W45P5SQ');</script><!— End Google Tag Manager —> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png"/>
@@ -48,6 +64,7 @@ $social_vk = get_field("social_vk");
     <?php wp_head(); ?>
   </head>
   <body>
+  <!— Google Tag Manager (noscript) —><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W45P5SQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!— End Google Tag Manager (noscript) —>
     <header class="site-header nav-link" id="about">
       <nav class="main-nav">
         <div class="logo"><img src="<?php bloginfo("stylesheet_directory"); ?>/img/hr_logo_think.svg" alt="HairRoom Logo"/></div>
@@ -443,7 +460,7 @@ $social_vk = get_field("social_vk");
 
 
           <div class="price__group">
-            <h3 class="price__group-title">Дополнительные&nbsp;услуги</h3>
+            <h3 class="price__group-title">Дополнительные услуги</h3>
             <div class="price__container">
               <div class="price-inner__column price-inner__column--right">
                 <table class="price__table">

@@ -93,7 +93,7 @@
     
     // typography
     text-align: center;
-    
+
     @include atTabletsPortrait {
         // box model
         display: inline-block;
@@ -103,7 +103,7 @@
         bottom: 27px;
         right: -15px;
     }
-
+    
     @include atTabletsLandscape {
         // positioning
         bottom: 27px;
@@ -112,7 +112,7 @@
     @include atDesktop {
         // positioning
         bottom: 30px;
-        right: 10px;
+        right: 5px;
     }
     
     @include atDesktopLarge {
@@ -120,7 +120,32 @@
         bottom: 60px;
     }
 
-    
+    &--franchise {
+        // positioning
+        position: unset;
+
+        // box model
+        flex-direction: row;
+        justify-content: center;
+
+        @include atTabletsPortrait {
+            // positioning
+            position: absolute;
+            left: 35px;
+            bottom: 46px;
+
+            // box model
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        @include atDesktop {
+            // positioning
+            bottom: 10px;
+            left: auto;
+            right: 55px;
+        }
+    }
 }
 
 .socials__item {
@@ -128,7 +153,7 @@
     display: inline-block;
     vertical-align: top;
     margin-bottom: 10px;
-    margin-right: 5px;
+    margin-right: 10px;
     padding: 0;
 }
 

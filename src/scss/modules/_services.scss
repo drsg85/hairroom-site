@@ -48,30 +48,30 @@
         margin-top: 70px;
         margin-bottom: 25px;
 
-        &::after {
-            content: url("./img/finger.png");
+        // &::after {
+        //     content: url("./img/finger.png");
 
-            // positioning
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
+        //     // positioning
+        //     position: absolute;
+        //     top: 50%;
+        //     right: 10px;
+        //     transform: translateY(-50%);
 
-            @include atSmall {
-                // positioning
-                top: 20%;
-            }
+        //     @include atSmall {
+        //         // positioning
+        //         top: 20%;
+        //     }
 
-            @include atTabletsPortrait {
-                // positioning
-                left: 300px;
-            }
+        //     @include atTabletsPortrait {
+        //         // positioning
+        //         left: 300px;
+        //     }
 
-            @include atDesktop {
-                // box model
-                display: none;
-            }
-        }
+        //     @include atDesktop {
+        //         // box model
+        //         display: none;
+        //     }
+        // }
     }
 
     &__suptitle {

@@ -91,10 +91,9 @@
             </form>
           </div>
         </div>
-        <ul class="socials socials--franshize">
-          <li><a href="<?php echo $social_in; ?>" target="_blank">instagram</a></li>
-          <li><a href="<?php echo $social_fb; ?>" target="blanck">facebook</a></li>
-          <li><a href="<?php echo $social_vk; ?>" target="_blank">vkontakte</a></li>
+        <ul class="socials socials--franchise">
+          <li class="socials__item"><a class="socials__icon socials__icon--vk" href="https://vk.com/hrkgd"></a></li>
+          <li class="socials__item"><a class="socials__icon socials__icon--inst" href="https://www.instagram.com/hairroomkaliningrad/"></a></li>
         </ul>
         <div class="order-popup" id="order-popup">
           <div class="order-popup__content">
@@ -123,7 +122,7 @@
           <p class="site-footer__info-title">Адрес:</p>
           <p class="site-footer__info-text">г. Калининград ул. Иванникова, д. 12</p>
           <p class="site-footer__info-title">Телефон:</p><a class="site-footer__info-text" href="tel: 523776">+ 7 4012 52 37 76</a>
-          <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto: hairroom@gmail.com">hairroom@gmail.com</a>
+          <p class="site-footer__info-title">E-mail:</p><a class="site-footer__info-text" href="mailto: info@hairrooms.ru">info@hairrooms.ru</a>
         </div>
         <div class="site-footer__worktime">
           <p class="site-footer__contacts-title">Время работы</p>
